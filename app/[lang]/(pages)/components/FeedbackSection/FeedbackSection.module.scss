@@ -1,0 +1,313 @@
+@import "@/styles/mixins.scss";
+
+.section {
+    padding-top: 50px;
+    margin-bottom: 130px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+
+    &__title {
+        padding: 30px 70px 0;
+        background: #b3d3ae;
+        border-radius: 20px 20px 0px 0px;
+        color: #465067;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 85%;
+        margin-bottom: -10px;
+        max-width: 400px;
+    }
+    &__greyBox {
+        background: #b3d3ae;
+        &_sm {
+            display: none;
+        }
+    }
+    &__whiteBox {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 0 0 0 20px;
+    }
+
+    &__greyBox_1 {
+        background: #b3d3ae;
+        display: flex;
+        align-items: flex-start;
+    }
+    &__whiteBox_1 {
+        width: 100%;
+        height: 65px;
+        background: white;
+        border-radius: 0 0 0 20px;
+    }
+
+    &__greyBox_2 {
+        background: white;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__whiteBox_2 {
+        width: 100%;
+        height: calc(100% - 65px);
+        background: #b3d3ae;
+        border-radius: 0 20px 0 0;
+    }
+}
+
+.contant {
+    padding: 50px 70px 90px;
+    background: #b3d3ae;
+    border-radius: 0 0 20px 20px;
+
+    &__discr {
+        color: #54994b;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__field {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    &__input {
+        padding: 20px 30px;
+        width: 100%;
+        color: #878787;
+        font-size: 18px;
+        font-family: Gilroy;
+        font-weight: 500;
+
+        border-radius: 15px;
+        background: #fff;
+    }
+    &__textarea {
+        padding: 20px 30px;
+        width: 100%;
+        height: 200px;
+        color: #878787;
+        font-size: 18px;
+        font-family: Gilroy;
+        font-weight: 500;
+
+        border-radius: 15px;
+        background: #fff;
+    }
+
+    &__btn {
+        padding: 20px 93px;
+        width: fit-content;
+        margin: 0 auto;
+
+        color: #fff;
+        min-width: 370px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+
+        border-radius: 15px;
+        background: #73a56c;
+        &:active {
+            transform: scale(0.95);
+            box-shadow: 0 1px 4px -1px var(--shadow);
+        }
+    }
+}
+
+@include respond-to("lg") {
+    .contant {
+        grid-template-columns: 1fr;
+
+        .imgBox {
+            grid-row-start: 1;
+        }
+    }
+}
+
+@include respond-to("md") {
+    .header {
+        &__title {
+            padding: 30px 40px 0;
+        }
+    }
+    .contant {
+        padding: 30px 40px 70px;
+    }
+    .section {
+        margin-bottom: 80px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &__field {
+            display: flex;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        &__row {
+            // display: grid;
+            grid-template-columns: 1fr;
+            // gap: 30px;
+        }
+
+        &__input {
+            padding: 19px 30px;
+            width: 100%;
+            color: #878787;
+            font-size: 18px;
+            font-family: Gilroy;
+            font-weight: 500;
+
+            border-radius: 15px;
+            background: #fff;
+        }
+        &__textarea {
+            padding: 20px 30px;
+            width: 100%;
+            height: 200px;
+            color: #878787;
+            font-size: 18px;
+            font-family: Gilroy;
+            font-weight: 500;
+
+            border-radius: 15px;
+            background: #fff;
+        }
+
+        &__btn {
+            padding: 20px 93px;
+            width: 100%;
+            margin: 0 auto;
+
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+
+            border-radius: 15px;
+            background: #73a56c;
+        }
+    }
+}
+
+@include respond-to("sm") {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: -1px;
+
+        &__title {
+            width: 100%;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 85%;
+            padding: 20px 50px;
+            grid-column-start: 2;
+            text-align: center;
+        }
+        &__greyBox_1 {
+            &_sm {
+                background: #b3d3ae;
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+        &__whiteBox_1 {
+            &_sm {
+                width: 100%;
+                height: 65px;
+                background: white;
+                border-radius: 0 0 0 20px;
+            }
+        }
+
+        &__greyBox_2 {
+            display: none;
+            &_sm {
+                background: white;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+        &__whiteBox_2 {
+            &_sm {
+                width: 100%;
+                height: calc(100% - 65px);
+                background: #b3d3ae;
+                border-radius: 0 20px 0 0;
+            }
+        }
+        &__greyBox {
+            height: 100%;
+            &_sm {
+                background: #b3d3ae;
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+        &__whiteBox {
+            border-radius: 0 0 0 20px;
+            &_sm {
+                width: 100%;
+                height: 65px;
+                background: white;
+                border-radius: 0 0 20px 0;
+            }
+        }
+    }
+    .contant {
+        border-radius: 0 0 20px 20px;
+        padding: 30px 20px 45px;
+
+        &__discr {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    .section {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+}

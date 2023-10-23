@@ -1,0 +1,19 @@
+@import "@/styles/mixins.scss";
+
+
+.slide {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__contant {
+        color: var(--additional-color-c-3-b, #3C3F3F);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        width: 100%;
+    }
+}

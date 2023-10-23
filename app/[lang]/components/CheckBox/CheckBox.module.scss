@@ -1,0 +1,37 @@
+.box {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    width: 100%;
+    gap: 10px;
+    padding: 0 2px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mark {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 10px;
+    @media screen and (max-width: 360px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.mark.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    color: #272727;
+    font-size: 16px;
+    font-weight: 500;
+
+    @media screen and (max-width: 360px) {
+        font-size: 10px;
+        line-height: 16px;
+    }
+}

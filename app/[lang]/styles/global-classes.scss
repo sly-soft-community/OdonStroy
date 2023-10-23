@@ -1,0 +1,9 @@
+.page {
+    position: relative;
+}
+
+.container {
+    max-width: calc(var(--max-width) + 20px);
+    margin: 0 auto;
+    padding: 0 15px;
+}

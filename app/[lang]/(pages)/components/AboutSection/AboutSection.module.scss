@@ -1,0 +1,138 @@
+@import "@/styles/mixins.scss";
+
+.section {
+    padding-top: 50px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    &__title {
+        padding: 30px 100px 0 70px;
+        background: #e8e8e8;
+        border-radius: var(--border-radius-s) var(--border-radius-s) 0px 0px;
+        color: #465067;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 85%;
+        // margin-bottom: -10px;
+    }
+    &__greyBox {
+        background: #e8e8e8;
+        &_sm {
+            display: none;
+        }
+    }
+    &__whiteBox {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 0 0 0 var(--border-radius-s);
+    }
+}
+
+.contant {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 42px 70px 40px;
+    background: #e8e8e8;
+    border-radius: 0 var(--border-radius-s) var(--border-radius-s) var(--border-radius-s);
+
+    &__discr {
+        color: #54994b;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@include respond-to("lg") {
+    .contant {
+        grid-template-columns: 1fr;
+
+        .imgBox {
+            grid-row-start: 1;
+        }
+    }
+}
+
+@include respond-to("lg") {
+    .header {
+        &__title {
+            padding: 30px 60px 30px 40px;
+        }
+    }
+    .contant {
+        padding: 30px 40px 45px;
+    }
+}
+
+@include respond-to("sm") {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+
+        &__title {
+            width: 100%;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 85%;
+            padding: 20px 70px;
+            grid-column-start: 2;
+        }
+        &__greyBox {
+            height: 100%;
+            &_sm {
+                display: block;
+                height: 100%;
+                grid-column-start: 1;
+                background: #e8e8e8;
+            }
+        }
+        &__whiteBox {
+            border-radius: 0 0 0 var(--border-radius-s);
+            &_sm {
+                border-radius: 0 0 var(--border-radius-s) 0;
+                background: white;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .contant {
+        border-radius: var(--border-radius-s);
+        padding: 30px 20px 45px;
+
+        &__discr {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    .section {
+        padding: 50px 0 0;
+    }
+}

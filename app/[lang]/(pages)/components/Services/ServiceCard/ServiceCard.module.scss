@@ -1,0 +1,152 @@
+@import "@/styles/mixins.scss";
+
+.card {
+    height: 522px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &__text {
+        position: absolute;
+        top: 369px;
+        width: 100%;
+        color: var(--additional-color-c-3-a, #1C2020);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        z-index: 10;
+        transition: 0.3s;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+
+    &__icon {
+        width: 20px;
+        transition: 0.6s;
+        z-index: 41;
+        cursor: pointer;
+    }
+
+    &__iconWrapper {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        bottom: 72px;
+        z-index: 41;
+    }
+
+    &__popBox {
+        position: absolute;
+        bottom: -522px;
+        height: 522px;
+        padding: 16px;
+        padding-top: 50px;
+        border-radius: 26px;
+        background: linear-gradient(81deg, rgba(221, 242, 138, 0.60) 11.44%, rgba(199, 243, 249, 0.60) 92.75%), #C7F3F9;
+        transition: 0.6s;
+        z-index: 40;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        width: 100%;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) {
+    .card:hover {
+        .card__text {
+            // top: 500px;
+            opacity: 0;
+        }
+
+        .card__icon {
+            transform: rotate(-180deg);
+        }
+
+        .card__popFilter_1 {
+            background: linear-gradient(180deg, rgba(0, 102, 255, 0.4) 0%, #000 100%);
+        }
+
+        .card__popBox {
+            bottom: 0;
+        }
+    }
+}
+
+@include respond-to("md") {
+    .card.open {
+        .card__icon {
+            transform: rotate(-180deg);
+        }
+
+        .card__popFilter_1 {
+            background: linear-gradient(180deg, rgba(0, 102, 255, 0.4) 0%, #000 100%);
+        }
+
+        .card__popBox {
+            bottom: 0;
+        }
+    }
+
+    .card:hover {}
+}
+
+// popBox
+
+.popBox {
+    &__contant {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        
+    }
+
+    &__title {
+        color: var(--additional-color-c-3-a, #1C2020);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 8px;
+       
+    }
+
+    &__footer {
+        // max-height: 202px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__btn {
+        color: var(--additional-color-c-3-a, #1C2020);
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.8px;
+        background: #90BB3A;
+        padding: 8px 0;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+    }
+}

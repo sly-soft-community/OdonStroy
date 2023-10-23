@@ -1,0 +1,37 @@
+@import "@/styles/mixins.scss";
+
+.footer {
+    background: var(--02-block-02, #BFD4E4);
+
+
+}
+
+.contant {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 60px;
+
+    &__link {
+        color: var(--additional-color-c-3-a, #1C2020);
+        font-family: 'Buyan';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+    }
+    @include respond-to("lg") {
+        display: none;
+    }
+
+}
