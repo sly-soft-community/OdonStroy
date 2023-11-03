@@ -26,7 +26,7 @@ const Сontacts = () => {
         <section className={styles.section} >
             <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
             <div className={styles.contant}>
-                <div className="imageBox">
+                <div className={styles.imageBox}>
                     <Image
                         src={img}
                         alt="partner image"

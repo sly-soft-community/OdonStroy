@@ -13,16 +13,32 @@
     display: grid;
     grid-template-columns: minmax(290px, 420px) minmax(340px, 440px);
     column-gap: 20px;
+
+    @include respond-to("md") {
+        grid-template-columns: 1fr;
+
+    }
 }
 
 .img {
     width: 100%;
 }
 
+.imageBox {
+    @include respond-to("md") {
+        display: none;
+    }
+}
 
-
+.box {
+    @include respond-to("md") {
+        max-width: 510px;
+        margin: 0 auto;
+    }
+}
 
 .form {
+  
     &__label {
         color: var(--additional-color-c-3-a, #1C2020);
         font-family: "Mulish";
@@ -87,9 +103,7 @@
         margin: 0 auto;
 
         @include respond-to("md") {
-            font-size: 15px;
-            line-height: 20px;
-            padding: 6px 86px;
+            width: 100%;
         }
     }
 }

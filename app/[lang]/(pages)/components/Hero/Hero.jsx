@@ -97,7 +97,7 @@ const Hero = ({ dictionary }) => {
             </div>
             <ul className={styles.infoList}>
                 {infoArray.map((item, key) =>
-                    <li className={styles.infoList__item}>
+                    <li key={key} className={styles.infoList__item}>
                         <Link className={styles.infoList__link} href={item.link}>{item.label}</Link>
                     </li>
                 )}

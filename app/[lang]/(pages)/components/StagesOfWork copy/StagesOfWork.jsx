@@ -12,7 +12,7 @@ const StagesOfWork = () => {
             <h2 className={styles.title}>Этапы работы</h2>
             <div className={styles.contantBox}>
                 {data.map((item, key) =>
-                    <div className={styles.item}>
+                    <div key={key} className={styles.item}>
 
                         <div className={styles.triangle}></div>
                         <svg style={{ visibility: 'hidden', position: 'absolute' }} width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">

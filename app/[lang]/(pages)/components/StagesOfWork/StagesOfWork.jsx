@@ -17,7 +17,7 @@ const StagesOfWork = () => {
             <h2 className={styles.title}>Этапы работы</h2>
             <div className={styles.contantBox}>
                 {data.map((item, key) =>
-                    <div className={styles.itemWrapper}>
+                    <div key={key} className={styles.itemWrapper}>
                         <div key={key} className={styles.item}>
                             <div className={styles.item__img}>{key + 1}</div>
                             <div className={styles.item__text}>
