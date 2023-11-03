@@ -9,6 +9,7 @@ export default function Home() {
                 <a href="/en">en</a>
             </nav>
             <GoToApp path={i18n.defaultLocale} />
+            
         </main>
     );
 }
