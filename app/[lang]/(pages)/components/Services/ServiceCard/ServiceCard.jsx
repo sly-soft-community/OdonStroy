@@ -11,8 +11,10 @@ const ServiceCard = ({ img, value, dictionary, contant = { title: "", text: '' }
         <div onClick={() => {
             setOpen(prev => !prev)
         }} className={open ? `${styles.card} ${styles.open}` : styles.card}>
-            <Image src={img} alt="img" className={styles.card__img} />
-            <div className={styles.card__text}>{value}</div>
+            <div className={styles.card__imgWrapper}>
+                <Image src={img} alt="img" className={styles.card__img} />
+            </div>
+            <div className={styles.card__text}><div className={styles.card__textWrapper}>{value}</div></div>
             <div className={styles.card__popBox}>
                 <div className={styles.popBox__contant}>
                     <div className={styles.popBox__title}>{contant.title}</div>

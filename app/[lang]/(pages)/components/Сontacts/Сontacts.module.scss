@@ -1,0 +1,95 @@
+@import "@/styles/mixins.scss";
+
+.section {
+    padding-top: 56px;
+}
+
+
+.contant {
+    padding: 0 10px;
+    padding-top: 24px;
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(290px, 420px) minmax(340px, 440px);
+    column-gap: 20px;
+}
+
+.img {
+    width: 100%;
+}
+
+
+
+
+.form {
+    &__label {
+        color: var(--additional-color-c-3-a, #1C2020);
+        font-family: "Mulish";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        padding-bottom: 8px;
+        display: block;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @include respond-to("md") {
+            grid-template-columns: none;
+        }
+    }
+
+    &__input {
+        padding: 10px 16px 12px;
+        width: 100%;
+        background: #f9f9f9;
+        border: 1.5px solid #78829d;
+        border-radius: 8px;
+        color: var(--additional-color-c-3-b, #3C3F3F);
+        font-family: "Mulish";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+
+        @include respond-to("md") {
+            font-size: 12px;
+            line-height: 24px;
+            padding: 6px 8px;
+        }
+    }
+
+    &__btn {
+        border-radius: 10px;
+        border: 1.5px solid var(--secondary-color-c-2-c, #2E8FB8);
+        background: var(--secondary-color-c-2-b, #004476);
+        width: 240px;
+        color: var(--additional-color-c-3-g, #FCFBFA);
+        text-align: center;
+        font-family: "Mulish";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 12px 16px;
+        display: block;
+        margin: 0 auto;
+
+        @include respond-to("md") {
+            font-size: 15px;
+            line-height: 20px;
+            padding: 6px 86px;
+        }
+    }
+}
