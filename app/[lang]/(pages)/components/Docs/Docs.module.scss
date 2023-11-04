@@ -1,0 +1,28 @@
+@import "@/styles/mixins.scss";
+
+.section {
+    padding-top: 56px;
+}
+
+.contant {
+    padding-top: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @include respond-to("md") {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.img {
+    max-width: 366px;
+    width: 100%;
+
+    @include respond-to("md") {
+        margin: 0 auto;
+    }
+}

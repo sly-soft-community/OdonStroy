@@ -1,3 +1,5 @@
+@import "@/styles/mixins.scss";
+
 .page {
     position: relative;
 }
@@ -8,3 +10,13 @@
     padding: 0 15px;
 }
 
+.title {
+    color: var(--additional-color-c-3-a, #1C2020);
+    text-align: center;
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.6px;
+}

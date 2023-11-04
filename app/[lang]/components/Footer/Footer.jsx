@@ -26,7 +26,7 @@ const Footer = ({ dictionary }) => {
                 </div>
                 <ul className={styles.navbar}>
                     {navArray.map((item, key) =>
-                        <li className={styles.navbar__item}>
+                        <li key={key} className={styles.navbar__item}>
                              <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
                         </li>
                     )}

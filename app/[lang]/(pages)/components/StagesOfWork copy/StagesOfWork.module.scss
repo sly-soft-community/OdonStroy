@@ -1,0 +1,68 @@
+.section {
+    padding-top: 64px;
+}
+
+.title {
+    color: var(--additional-color-c-3-a, #1C2020);
+    text-align: center;
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 100% */
+    letter-spacing: 1.6px;
+    margin-bottom: 32px;
+}
+
+.contantBox {
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 24px;
+    margin: 0 auto;
+}
+
+// .item {
+//     width: 530px;
+//     height: 150px;
+//     background: red;
+//     border-radius: 10px;
+//     // clip-path: polygon(13% 16%, 80% 0, 100% 100%, 0 85%);
+//     clip-path: url(#clipped);
+
+// }
+
+.item {
+    position: relative;
+    height: 150px;
+}
+
+.triangle {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    filter: url('#goo');
+    border: 1px dotted black;
+
+}
+
+.text {
+    z-index: 10;
+    position: relative;
+}
+
+.triangle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    clip-path: polygon(13% 16%, 80% 0, 100% 100%, 0 85%);
+    background: red;
+}

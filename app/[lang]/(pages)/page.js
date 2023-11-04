@@ -4,6 +4,11 @@ import { getDictionary } from "../../../get-dictionary";
 import { i18n } from "../../../i18n-config";
 import AboutCompany from "./components/AboutCompany/AboutCompany";
 import Services from "./components/Services/Services";
+import StagesOfWork from "./components/StagesOfWork/StagesOfWork";
+import Partners from "./components/Partners/Partners";
+import Reviews from "./components/Reviews/Reviews";
+import Docs from "./components/Docs/Docs";
+import Сontacts from "./components/Сontacts/Сontacts";
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -32,6 +37,11 @@ export default function Home({ params: { lang } }) {
             <Hero dictionary={dictionary} />
             <AboutCompany />
             <Services dictionary={dictionary} />
+            <StagesOfWork />
+            <Partners />
+            <Reviews />
+            <Docs />
+            <Сontacts />
         </main>
     );
 }
