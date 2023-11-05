@@ -18,8 +18,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params: { lang } }) {
     const dictionary = getDictionary(lang);
     return {
-        title: dictionary["meta-data"]["title"],
-        description: dictionary["meta-data"]["description"],
+        title: 'Одон строй',
+        description: 'строительная компания',
         alternates: {
             languages: {
                 "x-default": "/",
