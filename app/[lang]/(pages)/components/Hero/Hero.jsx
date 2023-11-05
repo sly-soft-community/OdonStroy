@@ -52,7 +52,7 @@ const Hero = ({ dictionary }) => {
     ]
 
     return (
-        <section>
+        <section className={styles.hero}>
             <div className={styles.wrapper}>
                 <div className={`${styles.contant} container`}>
                     <div className={styles.message}>
@@ -102,6 +102,7 @@ const Hero = ({ dictionary }) => {
                     </li>
                 )}
             </ul>
+            <div className={styles.hero__popFilter}></div>
         </section>
 
     );

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './AboutCompany.module.scss';
+import img from '@/media/img/about/AboutImg.png'
+import Image from "next/image";
 
 const AboutCompany = () => {
     const tileData = [
@@ -41,7 +43,13 @@ const AboutCompany = () => {
         <section className={`${styles.section}`}>
             <h2 className={styles.title}>О компании</h2>
             <div className={styles.infoBox}>
-                <div className={styles.imgBox} />
+                <div className={styles.imgBox} >
+                    <Image
+                        src={img}
+                        alt="partner image"
+                        className={styles.img}
+                    />
+                </div>
                 <div className={styles.textBox}>
                     <p className={styles.textBox__p}>Строительная компания «Одон-строй» оказывает широкий спектр услуг на территории КР, таких как:</p>
                     <ul className={styles.textBox__ul}>

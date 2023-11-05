@@ -104,16 +104,20 @@ const Partners = () => {
                         {data.map((item, i) =>
                             <SwiperSlide key={i}>
                                 <div className={styles.slide}>
-                                    <Image
-                                        src={item.img1}
-                                        alt="partner image"
-                                        className={styles.slide__img}
-                                    />
-                                    <Image
-                                        src={item.img2}
-                                        alt="partner image"
-                                        className={styles.slide__img}
-                                    />
+                                    <div className={styles.imgBox}>
+                                        <Image
+                                            src={item.img1}
+                                            alt="partner image"
+                                            className={styles.slide__img}
+                                        />
+                                    </div>
+                                    <div className={styles.imgBox}>
+                                        <Image
+                                            src={item.img2}
+                                            alt="partner image"
+                                            className={styles.slide__img}
+                                        />
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         )}

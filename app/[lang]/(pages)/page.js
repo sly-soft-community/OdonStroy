@@ -9,6 +9,7 @@ import Partners from "./components/Partners/Partners";
 import Reviews from "./components/Reviews/Reviews";
 import Docs from "./components/Docs/Docs";
 import Сontacts from "./components/Сontacts/Сontacts";
+import Footer from "@/components/Footer/Footer";
 
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({ lang: locale }));
@@ -42,6 +43,7 @@ export default function Home({ params: { lang } }) {
             <Reviews />
             <Docs />
             <Сontacts />
+            <Footer dictionary={dictionary} />
         </main>
     );
 }
