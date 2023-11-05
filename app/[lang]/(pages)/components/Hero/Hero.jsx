@@ -43,12 +43,12 @@ const Hero = ({ dictionary }) => {
     ]
 
     const infoArray = [
-        { label: 'о нас', link: '' },
-        { label: 'услуги', link: '' },
-        { label: 'этапы работ', link: '' },
-        { label: 'партнеры & отзывы', link: '' },
-        { label: 'лицензии и сертификаты', link: '' },
-        { label: 'оставьте заявку', link: '' },
+        { label: 'о нас', link: '#about' },
+        { label: 'услуги', link: '#service' },
+        { label: 'этапы работ', link: '#work' },
+        { label: 'партнеры & отзывы', link: '#rewiev' },
+        { label: 'лицензии и сертификаты', link: '#docs' },
+        { label: 'оставьте заявку', link: '#contact' },
     ]
 
     return (

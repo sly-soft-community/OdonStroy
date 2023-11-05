@@ -111,6 +111,8 @@
     border-radius: 10px;
     border: 1px dashed var(--additional-color-c-3-c, #5C5F5E);
     padding: 24px 20px;
+    transition: 1s;
+    background: white;
 
     &__title {
         color: var(--additional-color-c-3-b, #3C3F3F);
@@ -144,5 +146,6 @@
     &:hover {
         background: url('../../../media/img/tileBack.png'), lightgray 0px -248.767px / 168.75% 384.643% no-repeat;
         background-blend-mode: lighten;
+        transition: 1.3s;
     }
 }

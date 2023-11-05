@@ -8,7 +8,7 @@ const StagesOfWork = () => {
     ]
 
     return (
-        <section className={styles.section} >
+        <section id = 'work' className={styles.section} >
             <h2 className={styles.title}>Этапы работы</h2>
             <div className={styles.contantBox}>
                 {data.map((item, key) =>

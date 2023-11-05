@@ -23,9 +23,10 @@ const Сontacts = () => {
     })
 
     return (
-        <section className={styles.section} >
+        <section id='contact' className={styles.section} >
             <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
             <div className={styles.contant}>
+                <div className={styles.contant__popFolter} />
                 <div className={styles.imageBox}>
                     <Image
                         src={img}

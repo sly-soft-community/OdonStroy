@@ -80,10 +80,7 @@
     background: url('../../../media/img/home/hero_shape.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    @include respond-to("xl") {
-        left: 10px;
-
-    }
+    left: 10px;
 
     &__title {
         color: var(--additional-color-c-3-b, #3C3F3F);

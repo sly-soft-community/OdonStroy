@@ -19,4 +19,15 @@
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 1.6px;
+    padding: 0 15px;
+
+    @include respond-to("sm") {
+        text-align: center;
+        font-family: Buyan;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1.6px;
+    }
 }

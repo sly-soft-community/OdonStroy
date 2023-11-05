@@ -40,7 +40,7 @@ const AboutCompany = () => {
     ]
 
     return (
-        <section className={`${styles.section}`}>
+        <section id='about' className={`${styles.section}`}>
             <h2 className={styles.title}>О компании</h2>
             <div className={styles.infoBox}>
                 <div className={styles.imgBox} >
