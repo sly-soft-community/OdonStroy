@@ -6,11 +6,24 @@ import { getDictionary } from "../../../get-dictionary";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+export async function generateMetadata({ params: { lang } }) {
+    return {
+        title: 'Одон строй',
+        description: 'строительная компания',
+        alternates: {
+            languages: {
+                "x-default": "/",
+                ru: "/ru",
+                en: "/en",
+            },
+        },
+    };
+}
+
 export default async function RootLayout({ children, params }) {
-    const dictionary = getDictionary(params.lang);
     return (
         <div className={`${inter.className} page`}>
-            <Header dictionary={dictionary} lang={params.lang} />
             {children}
         </div>
     );

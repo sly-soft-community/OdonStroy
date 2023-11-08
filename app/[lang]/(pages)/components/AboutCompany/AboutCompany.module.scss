@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 0 10px;
     margin-bottom: 64px;
+    padding-top: 145px;
 }
 
 .title {
@@ -27,7 +28,7 @@
     margin-bottom: 20px;
 
 
-    @include respond-to("md") {
+    @include respond-to("lg") {
         justify-content: center;
         grid-template-columns: minmax(350px, 530px);
     }
@@ -39,12 +40,48 @@
     min-height: 360px;
     max-height: 420px;
     border-radius: 10px;
-    // border: 1px dashed var(--additional-color-c-3-c, #5C5F5E);
-    background: var(--02-block-02, #BFD4E4);
+
+    @include respond-to("lg") {
+        display: none;
+    }
 }
 
 .img {
-    height: 100%;
+
+    &_lg {
+        height: 100%;
+    }
+
+    &_md {
+        display: none;
+
+        @include respond-to("lg") {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        @include respond-to("sm") {
+            display: none;
+        }
+    }
+
+    &_sm {
+        display: none;
+
+        @include respond-to("sm") {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 16px;
+        }
+    }
+
+    @include respond-to("sm") {
+        height: auto;
+        width: 100%;
+    }
 }
 
 .textBox {
@@ -81,6 +118,10 @@
         border-radius: 100%;
         z-index: 10;
     }
+
+    @include respond-to("sm") {
+        padding-left: 10px;
+    }
 }
 
 // TILE BOX
@@ -99,6 +140,7 @@
     }
 
     @include respond-to("md") {
+
         &__row,
         &__row:nth-child(2) {
             justify-content: center;
@@ -111,9 +153,12 @@
     border-radius: 10px;
     border: 1px dashed var(--additional-color-c-3-c, #5C5F5E);
     padding: 24px 20px;
-    transition: 1s;
     background: white;
+    position: relative;
+    overflow: hidden;
 
+
+  
     &__title {
         color: var(--additional-color-c-3-b, #3C3F3F);
         font-family: 'Buyan';
@@ -124,6 +169,8 @@
         letter-spacing: 1.6px;
         text-align: center;
         margin-bottom: 32px;
+        position: relative;
+        z-index: 10;
 
         span {
             display: block;
@@ -140,12 +187,13 @@
         font-family: "Mulish";
         font-size: 16px;
         font-weight: 400;
-        line-height: 24px
+        line-height: 24px;
+        position: relative;
+        z-index: 10;
     }
 
     &:hover {
         background: url('../../../media/img/tileBack.png'), lightgray 0px -248.767px / 168.75% 384.643% no-repeat;
-        background-blend-mode: lighten;
-        transition: 1.3s;
     }
+
 }

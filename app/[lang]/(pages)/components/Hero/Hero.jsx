@@ -2,6 +2,8 @@
 import React from 'react';
 import styles from "./Hero.module.scss"
 import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Autoplay, Pagination, Navigation, Virtual } from 'swiper';
+
 import 'swiper/scss'
 import 'swiper/css/bundle'
 import 'swiper/scss/a11y'
@@ -32,8 +34,9 @@ import HeroSlide from './ServiceCard/HeroSlide';
 import Link from 'next/link';
 
 
+SwiperCore.use([Autoplay, Pagination, Navigation, Virtual]);
 
-const Hero = ({ dictionary }) => {
+const Hero = ({ dictionary, goTo }) => {
 
     const dataH = [
         { text: 'Лицензированная компания, работаем с 2012 года' },
@@ -63,6 +66,11 @@ const Hero = ({ dictionary }) => {
                         <Swiper
                             grabCursor={false}
                             allowTouchMove={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false
+                            }}
+                            loop={true}
                             breakpoints={{
                                 360: {
                                     slidesPerView: 1,
@@ -71,15 +79,17 @@ const Hero = ({ dictionary }) => {
                                 576: {
                                     slidesPerView: 2,
                                     slidesPerGroup: 2,
-                                    loop: true,
+                                    
                                 },
                                 768: {
                                     slidesPerView: 2,
                                     slidesPerGroup: 2,
+                                    loop: true,
                                 },
                                 1024: {
                                     slidesPerView: 4,
                                     slidesPerGroup: 4,
+                                    loop: false,
                                 },
                             }}
                         >
@@ -98,7 +108,7 @@ const Hero = ({ dictionary }) => {
             <ul className={styles.infoList}>
                 {infoArray.map((item, key) =>
                     <li key={key} className={styles.infoList__item}>
-                        <Link className={styles.infoList__link} href={item.link}>{item.label}</Link>
+                        <div className={styles.infoList__link} onClick={() => goTo(key)}>{item.label}</div>
                     </li>
                 )}
             </ul>

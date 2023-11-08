@@ -37,7 +37,6 @@ import imgFull_1 from '@/media/img/review/rewiveFull_1.png'
 import imgFull_2 from '@/media/img/review/rewiveFull_2.png'
 import imgFull_3 from '@/media/img/review/rewiveFull_3.png'
 import imgFull_4 from '@/media/img/review/rewiveFull_4.png'
-import Image from "next/image";
 import ReviewsCard from "./components/ReviewsCard"
 import ReviewsBlock from "./components/ReviewsBlock"
 import { useTransition, animated } from '@react-spring/web'
@@ -55,7 +54,7 @@ const Reviews = () => {
                 text: 'Уважаемый Эдуард Бейсембекович! От лица Фонда поддержки социальных инициатив Газпрома и от себя лично выражаю Вам и всем работникам ОсОО «Одон-строй» благодарность за строительство физкультурно-оздоровительного комплек ...'
             },
             fullDiscription: {
-                hieght: 499,
+                hieght: 510,
                 title: 'Газпром социальные инициативы',
                 sub_title: 'Приймак Владимир Викторович, ген. директор',
                 text: [
@@ -75,7 +74,7 @@ const Reviews = () => {
                 text: 'От лица коллектива ОсОО «Металлопрокатный завод им.М.В.Фрунзе» и от себя лично выражаю Вам искреннюю благодарность за плодотворное сотрудничество. Мы искренне верим, что одним из условий успешного бизнеса ...'
             },
             fullDiscription: {
-                hieght: 570,
+                hieght: 580,
                 title: 'Металлопрокатный завод  им. М. В. Фрунзе',
                 sub_title: 'Хван Денис Анотольевич, ген. директор',
                 text: [
@@ -95,7 +94,7 @@ const Reviews = () => {
                 text: 'Официальный представитель KERAMA MARAZZI в Кыргызстане выражает глубокую признательность и искреннюю благодарность за активное и плодотворное сотрудничество ОсОО "Одон- Строй". Пусть успех и процветание сопутствуют Вашей ...'
             },
             fullDiscription: {
-                hieght: 499,
+                hieght: 510,
                 title: 'KERAMA MARAZZI',
                 sub_title: 'Сагындыкова Б. К., ген. директор',
                 text: [
@@ -114,7 +113,7 @@ const Reviews = () => {
                 text: 'Уважаемый Эдуард Бейсембекович! От лица Фонда поддержки социальных инициатив Газпрома и от себя лично выражаю Вам и всем работникам ОсОО «Одон-строй» благодарность за строительство физкультурно-оздоровительного компле...'
             },
             fullDiscription: {
-                hieght: 773,
+                hieght: 783,
                 title: 'МТУ №15, Первомайского района мэрии г. Бишкек',
                 sub_title: 'М.Е.Токтоналиева, начальник МТУ №15',
                 text: [

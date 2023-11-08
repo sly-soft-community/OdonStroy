@@ -83,57 +83,59 @@ const Services = ({ dictionary }) => {
     ]
 
     return (
-        <section id='service' className={`${styles.section} container`}>
-            <div className={styles.header}>
-                <h2 className={styles.header__title}>Услуги которые мы предоставляем</h2>
-            </div>
-            <div className={`${styles.contant} container`}>
-                <Swiper
-                    grabCursor={false}
-                    allowTouchMove={true}
-                    breakpoints={{
-                        360: {
-                            slidesPerView: 1,
-                            slidesPerGroup: 1,
-                            spaceBetween: 15,
-                        },
-                        576: {
-                            slidesPerView: 2,
-                            slidesPerGroup: 2,
-                            spaceBetween: 15,
-                            loop: true,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            slidesPerGroup: 2,
-                            spaceBetween: 15,
-                        },
-                        992: {
-                            slidesPerView: 3,
-                            slidesPerGroup: 3,
-                            spaceBetween: 20,
-                        },
-                        1290: {
-                            slidesPerView: 4,
-                            slidesPerGroup: 4,
-                            spaceBetween: 20,
-                        },
-                    }}
-                    className="serviceSlider"
-                   
-                >
-                    <div className={styles.sliderWrapper}>
-                        {data.map((item, i) =>
-                            <SwiperSlide key={i}>
-                                <div className={styles.slide}>
-                                    <ServiceCard dictionary={dictionary} {...item} />
-                                </div>
-                            </SwiperSlide>
-                        )}
-                    </div>
+        <section id='service' className={`${styles.section}`}>
+            <div className="container">
+                <div className={styles.header}>
+                    <h2 className={styles.header__title}>Услуги которые мы предоставляем</h2>
+                </div>
+                <div className={`${styles.contant} container`}>
+                    <Swiper
+                        grabCursor={false}
+                        allowTouchMove={true}
+                        breakpoints={{
+                            360: {
+                                slidesPerView: 1,
+                                slidesPerGroup: 1,
+                                spaceBetween: 15,
+                            },
+                            576: {
+                                slidesPerView: 2,
+                                slidesPerGroup: 2,
+                                spaceBetween: 15,
+                                loop: true,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                slidesPerGroup: 2,
+                                spaceBetween: 15,
+                            },
+                            992: {
+                                slidesPerView: 3,
+                                slidesPerGroup: 3,
+                                spaceBetween: 20,
+                            },
+                            1290: {
+                                slidesPerView: 4,
+                                slidesPerGroup: 4,
+                                spaceBetween: 20,
+                            },
+                        }}
+                        className="serviceSlider"
+                    >
+                        <div className={styles.sliderWrapper}>
+                            {data.map((item, i) =>
+                                <SwiperSlide key={i}>
+                                    <div className={styles.slide}>
+                                        <ServiceCard dictionary={dictionary} {...item} />
+                                    </div>
+                                </SwiperSlide>
+                            )}
+                        </div>
 
-                </Swiper>
+                    </Swiper>
+                </div>
             </div>
+
 
         </section>
     );

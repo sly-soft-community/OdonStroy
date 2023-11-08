@@ -9,7 +9,13 @@
     padding-top: 120px;
     padding-bottom: 56px;
 
-    @include respond-to("md") {
+    @include respond-to("lg") {
+        background: url('../../../media/img/home/hero_bg_md.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @include respond-to("sm") {
         background: url('../../../media/img/home/hero_bg_mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
@@ -18,10 +24,13 @@
 
 .hero {
     position: relative;
+
     &__popFilter {
         display: none;
     }
+
     margin-bottom: 48px;
+
     @include respond-to("md") {
         &__popFilter {
             position: absolute;
@@ -45,10 +54,7 @@
 }
 
 .heroSlider {
-    &__slide {
-
-        // width: 310px;
-    }
+    &__slide {}
 }
 
 .sliderBox {
@@ -61,6 +67,8 @@
     height: 72px;
     padding: 0 5px;
     border-right: 2px solid #BCBCBC;
+    position: relative;
+    z-index: 100;
 }
 
 .slide_withoutBorder {
@@ -103,14 +111,39 @@
         padding-left: 30px;
     }
 
-    @include respond-to("md") {
-        display: none;
+    @include respond-to("sm") {
+        top: 201px;
+        left: 20px;
+
+        width: 280px;
+        height: 120px;
+        background: url('../../../media/img/home/hero_shape_md.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 16px 0 0 18px;
+
+        &__title {
+            color: var(--additional-color-c-3-b, #3C3F3F);
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 1.4px;
+        }
+
+        &__subtitle {
+            color: var(--additional-color-c-3-a, #1C2020);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            padding-left: 8px;
+        }
     }
 }
 
 
 .infoList {
-    
     display: flex;
     max-width: 998px;
     margin: 0 auto;
@@ -128,6 +161,7 @@
         line-height: 16px;
         letter-spacing: 1px;
         white-space: nowrap;
+        cursor: pointer;
     }
 
     @include respond-to("xl") {
@@ -138,14 +172,14 @@
 
 @include respond-to("xl") {
     .hero {
-        background: url('../../../media/img/home/hero_bg_xl.png');
+        // background: url('../../../media/img/home/hero_bg_xl.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    .slide {
-        border-right: none;
-    }
+    // .slide {
+    //     border-right: none;
+    // }
 
 }
 

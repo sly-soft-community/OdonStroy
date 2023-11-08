@@ -1,7 +1,10 @@
 @import "@/styles/mixins.scss";
 
 .section {
-    margin-bottom: 64px;
+    padding-bottom:40px;
+    // padding-top: 104px;
+    padding-top: 145px;
+    background: rgba(199, 243, 249, 0.45);
 }
 
 .header {
