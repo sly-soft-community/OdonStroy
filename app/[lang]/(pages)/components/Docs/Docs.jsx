@@ -6,7 +6,7 @@ import img2 from '@/media/img/docs/docs_2.png'
 
 const Docs = () => {
     return (
-        <section id='service' className={`${styles.section} container`}>
+        <section id='docs' className={`${styles.section} container`}>
             <div className={styles.header}>
                 <h2 className='title'>Лицензии и документы</h2>
             </div>

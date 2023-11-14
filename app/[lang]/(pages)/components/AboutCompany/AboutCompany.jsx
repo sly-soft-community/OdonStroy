@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './AboutCompany.module.scss';
+import img from '@/media/img/about/AboutImg.png'
+import img_md from '@/media/img/about/AboutImg__md.png'
+import Image from "next/image";
 
 const AboutCompany = () => {
     const tileData = [
@@ -38,16 +41,32 @@ const AboutCompany = () => {
     ]
 
     return (
-        <section className={`${styles.section}`}>
+        <section id='about' className={`${styles.section}`}>
             <h2 className={styles.title}>О компании</h2>
             <div className={styles.infoBox}>
-                <div className={styles.imgBox} />
+                <div className={styles.imgBox} >
+                    <Image
+                        src={img}
+                        alt="partner image"
+                        className={styles.img_lg}
+                    />
+                </div>
                 <div className={styles.textBox}>
                     <p className={styles.textBox__p}>Строительная компания «Одон-строй» оказывает широкий спектр услуг на территории КР, таких как:</p>
                     <ul className={styles.textBox__ul}>
                         <li className={styles.textBox__li}><div className="" /> строительство промышленных и взрывоопасных строений</li>
                         <li className={styles.textBox__li}> возведение конструкций гражданского назначения</li>
                     </ul>
+                    <Image
+                        src={img_md}
+                        alt="partner image"
+                        className={styles.img_md}
+                    />
+                    <Image
+                        src={img}
+                        alt="partner image"
+                        className={styles.img_sm}
+                    />
                     <p className={styles.textBox__p}>
                         В выстроенных процессах предприятие ориентируется на собственные силы, внедрение новых технологий, мировых стандартов качества, повышение производительности труда.
                     </p>
@@ -67,6 +86,7 @@ const AboutCompany = () => {
                                 <span>{item.title.number}</span> {item.title.text}
                             </div>
                             <div className={styles.tileItem__text}>{item.text}</div>
+                            <div className={styles.tileItem__bg} />
                         </div>
                     )}
                 </div>

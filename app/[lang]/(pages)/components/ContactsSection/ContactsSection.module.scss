@@ -4,8 +4,8 @@
     display: grid;
     grid-template-columns: 233px 1fr;
     gap: 67px;
-    padding: 0 70px;
-    margin-bottom: 140px;
+    // padding: 0 70px;
+    // margin-bottom: 70px;
 }
 
 .mapCol {
@@ -13,7 +13,7 @@
     height: 370px;
 }
 
-.title {
+.title {    
     color: #465067;
     font-size: 45px;
     font-weight: 700;

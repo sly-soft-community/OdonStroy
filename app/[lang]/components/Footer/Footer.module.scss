@@ -1,37 +1,101 @@
 @import "@/styles/mixins.scss";
 
 .footer {
-    background: var(--02-block-02, #BFD4E4);
-
-
+    background: rgba(220, 220, 219, 0.40);
 }
 
 .contant {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 20px 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @include respond-to("md") {
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 48px;
+    }
+
+}
+
+.logoBox {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &__text {
+        color: var(--additional-color-c-3-a, #1C2020);
+        font-family: "Mulish";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond-to("xl") {
+            // display: none;
+        }
+
+    }
+
+    @include respond-to("xl") {
+        flex-direction: column;
+    }
 }
 
 .navbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     height: 100%;
     align-items: center;
-    gap: 60px;
+    column-gap: 31px;
 
     &__link {
         color: var(--additional-color-c-3-a, #1C2020);
-        font-family: 'Buyan';
+        font-family: "Mulish";
         font-size: 18px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 24px;
-        letter-spacing: 0.9px;
-    }
-    @include respond-to("lg") {
-        display: none;
+
     }
 
+    @include respond-to("lg") {
+        grid-template-columns: auto auto;
+        gap: 31px;
+    }
+
+    @include respond-to("md") {
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+
+    @include respond-to("sm") {
+        align-self: flex-start;
+    }
+
+    li {
+        @include respond-to("md") {
+            display: flex;
+            justify-content: center;
+        }
+
+        @include respond-to("sm") {
+            justify-content: flex-start;
+        }
+    }
+
+}
+
+.brandRow {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 36px;
+
+    @include respond-to("sm") {
+        padding-bottom: 28px;
+    }
 }

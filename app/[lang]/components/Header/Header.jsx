@@ -5,11 +5,20 @@ import Link from 'next/link';
 import desctopLogo from '../../media/img/DesctopLogo.svg'
 import Image from "next/image";
 
-function Header({ lang, dictionary }) {
+function Header({ isFirstBlock, goTo }) {
     const navArray = [
         { label: 'Главная', link: '#' },
         { label: 'Проекты', link: '#' },
         { label: 'Контакты', link: '#' },
+    ]
+
+    const infoArray = [
+        { label: 'о нас', link: '#about' },
+        { label: 'услуги', link: '#service' },
+        { label: 'этапы работ', link: '#work' },
+        { label: 'партнеры & отзывы', link: '#rewiev' },
+        { label: 'лицензии и сертификаты', link: '#docs' },
+        { label: 'оставьте заявку', link: '#contact' },
     ]
     return (
         <div className={styles.wrapper} >
@@ -37,6 +46,19 @@ function Header({ lang, dictionary }) {
                     <div className={styles.header__burger_icon} />
                 </div>
             </header>
+            {
+                !isFirstBlock &&
+                <nav className={styles.nav}>
+                    <ul className={styles.navList}>
+                        {infoArray.map((item, key) =>
+                            <li key={key} className={styles.navList__item}>
+                                <div className={styles.navList__link} onClick={() => goTo(key )}>{item.label}</div>
+                            </li>
+                        )}
+                    </ul>
+                </nav>
+            }
+
         </div>
     );
 };

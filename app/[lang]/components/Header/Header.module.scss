@@ -5,6 +5,7 @@
     background: white;
     font-family: "Buyan";
     position: absolute;
+    z-index: 1000;
 }
 
 .header {
@@ -48,11 +49,42 @@
         line-height: 16px;
         letter-spacing: 0.54px;
         font-family: "Buyan";
+        cursor: pointer;
     }
 }
 
 .header__burger {
     display: none;
+}
+
+.nav {
+    border-top: 1px solid gray; 
+    border-bottom: 1px solid gray; 
+}
+
+.navList {   
+    display: flex;
+    max-width: 998px;
+    margin: 0 auto;
+    gap: 60px;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link {
+        color: var(--additional-color-c-3-a, #1C2020);
+        font-family: 'Buyan';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    @include respond-to("lg") {
+        display: none;
+    }
 }
 
 @include respond-to("md") {
