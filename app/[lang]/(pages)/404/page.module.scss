@@ -1,0 +1,47 @@
+.backgroundWrapper {
+    background-image: url('../../media/img/contacts/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: center;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content {
+    display: flex;
+}
+
+.errorDiscription {
+    padding-top: 232px;
+}
+
+
+
+
+
+.box {
+    max-width: 100%;
+}
+
+.h1 {
+    color: var(--text-neutral-c-1-a, #242834);
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1.6px;
+}
+
+.description {
+    color: var(--text-neutral-c-1-b, #40475D);
+    width: 530px;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
