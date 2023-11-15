@@ -1,0 +1,89 @@
+.title {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.96px;
+    padding: 128px 0 0;
+    text-align: center;
+
+}
+
+.content {
+    padding-top: 32px;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    max-width: 640px;
+    margin: auto;
+}
+
+.smallTitle {
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.paragraph {
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.list {
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 10px;
+
+
+}
+
+.table,
+.th,
+.td {
+    border: 1px solid var(--additional-color-c-3-d, #87898C);
+    border-collapse: collapse;
+
+}
+
+.td {
+    padding: 8px;
+    color: var(--additional-color-c-3-b, #3C3F3F);
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.tableList {
+    &__item {
+        position: relative;
+        padding-left: 27px;
+    }
+
+    &__item::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        left: 13px;
+        background: black;
+        width: 3px;
+        height: 3px;
+        border-radius: 100%;
+    }
+}
