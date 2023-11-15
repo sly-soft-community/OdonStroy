@@ -3,20 +3,21 @@ import styles from './AboutCompany.module.scss';
 import img from '@/media/img/about/AboutImg.png'
 import img_md from '@/media/img/about/AboutImg__md.png'
 import Image from "next/image";
+import CountUp from 'react-countup'
 
 const AboutCompany = () => {
     const tileData = [
         [
             {
                 title: {
-                    number: '11',
+                    number: 11,
                     text: 'год на рынке'
                 },
                 text: 'Благодаря многолетнему труду мы не только построили огромное количество недвижимости на трерритории КР, но и создали прочные связи с международными партнерами в смежных сферах.'
             },
             {
                 title: {
-                    number: '37',
+                    number: 37,
                     text: 'реализованных объекта'
                 },
                 text: 'Грамотное планирование, организация и полноэтапный контроль — вот секрет нашего успеха!'
@@ -25,14 +26,14 @@ const AboutCompany = () => {
         [
             {
                 title: {
-                    number: '65 240',
+                    number: 65240,
                     text: 'застроенных м2'
                 },
                 text: 'Мы курируем полный цикл проектирования, что помогает нам оставаться одними из лидеров строительного рынка КР.'
             },
             {
                 title: {
-                    number: '30 ',
+                    number: 30,
                     text: 'лет гарантии'
                 },
                 text: 'В нашу компетенцию входит не только надзор над правильным использованием строительного оборудования, но и оценка качества проведенных работ!'
@@ -83,7 +84,8 @@ const AboutCompany = () => {
                     {tileData[0].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
                             <div className={styles.tileItem__title}>
-                                <span>{item.title.number}</span> {item.title.text}
+                                <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                {item.title.text}
                             </div>
                             <div className={styles.tileItem__text}>{item.text}</div>
                             <div className={styles.tileItem__bg} />
@@ -94,7 +96,10 @@ const AboutCompany = () => {
                     {tileData[1].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
                             <div className={styles.tileItem__title}>
-                                <span>{item.title.number}</span> {item.title.text}
+                                <CountUp
+                                    startOnMount={true}
+                                    redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                {item.title.text}
                             </div>
                             <div className={styles.tileItem__text}>{item.text}</div>
                         </div>
