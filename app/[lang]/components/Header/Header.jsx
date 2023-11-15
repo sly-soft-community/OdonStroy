@@ -40,7 +40,7 @@ function Header({ isFirstBlock, goTo }) {
                                 <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
                             </li>)}
                     </ul>
-                    <button className={styles.header__btn}>Оставьте заявку</button>
+                    <button onClick={() => goTo(5)} className={styles.header__btn}>Оставьте заявку</button>
                 </div>
                 <div className={styles.header__burger}>
                     <div className={styles.header__burger_icon} />
