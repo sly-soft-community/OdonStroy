@@ -83,7 +83,7 @@ const page = () => {
                         </div>
 
                     </div>
-                    <div >
+                    <div className={styles.map} >
                         <Map />
                     </div>
                 </section>
