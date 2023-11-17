@@ -10,7 +10,8 @@ import Сontacts from "../Сontacts/Сontacts";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { useState } from "react";
 import Header from "../../../components/Header/Header";
-
+import SuperModalBox from "@/components/SuperModalBox/SuperModalBox"
+import ModalWindow from "../ModalWindow/ModalWindow"
 
 const pluginWrapper = () => {
     /*
@@ -23,9 +24,9 @@ const pluginWrapper = () => {
 
 export default function LandingContant() {
     const [isFirstBlock, setIsFirstBlock] = useState(true)
+    const [modalView, setModalView] = useState(false)
 
     const onLeave = (origin, destination, direction) => {
-        console.log("onLeave", { origin, destination, direction });
         if (origin.isFirst) {
             setIsFirstBlock(false)
         }
@@ -45,13 +46,16 @@ export default function LandingContant() {
             </>
         },
         { component: <Docs /> },
-        { component: <Сontacts /> },
+        { component: <Сontacts openModal={() => setModalView(true)} /> },
     ];
 
 
 
     return (
         <main>
+            <ModalWindow
+                isOpen={modalView}
+                setClose={() => setModalView(false)} />
             <Header isIndexPage={true} goTo={(key) => fullpage_api.moveTo(key + 2)} isFirstBlock={isFirstBlock} />
             <ReactFullpage
                 navigation
