@@ -157,8 +157,15 @@
     position: relative;
     overflow: hidden;
 
+    &__count {
+        display: block;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 110px;
+        letter-spacing: 4.8px;
+        font-family: 'Buyan';
+    }
 
-  
     &__title {
         color: var(--additional-color-c-3-b, #3C3F3F);
         font-family: 'Buyan';
@@ -172,14 +179,7 @@
         position: relative;
         z-index: 10;
 
-        span {
-            display: block;
-            font-size: 96px;
-            font-weight: 700;
-            line-height: 110px;
-            letter-spacing: 4.8px;
-            font-family: 'Buyan';
-        }
+       
     }
 
     &__text {

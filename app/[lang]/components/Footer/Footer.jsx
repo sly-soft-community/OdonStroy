@@ -10,7 +10,7 @@ const Footer = ({ dictionary }) => {
         { label: 'Главная', link: '/' },
         { label: 'Галерея', link: '/' },
         { label: 'Контакты', link: '/' },
-        { label: 'Политика конфиденциальности', link: '/' },
+        { label: 'Политика конфиденциальности', link: '/ru/privacy' },
     ]
 
     return (

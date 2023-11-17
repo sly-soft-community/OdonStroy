@@ -5,7 +5,12 @@
     background: white;
     font-family: "Buyan";
     position: absolute;
-    z-index: 1000;
+    z-index: 800;
+
+    &.fixed {
+        position: fixed;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .header {
@@ -58,11 +63,11 @@
 }
 
 .nav {
-    border-top: 1px solid gray; 
-    border-bottom: 1px solid gray; 
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
-.navList {   
+.navList {
     display: flex;
     max-width: 998px;
     margin: 0 auto;
