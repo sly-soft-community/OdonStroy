@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "./page.module.scss";
 import Image from 'next/image';
-import map from '@/media/map.svg'
 import Сontacts from "./components/Сontacts/Сontacts";
 import call from '@/media/img/contacts/phoneCall.svg'
 import mail from '@/media/img/contacts/mail.svg'
@@ -9,6 +8,23 @@ import navigation from '@/media/img/contacts/navigation.svg'
 import inst from '@/media/img/contacts/inst.svg'
 import whatsapp from '@/media/img/contacts/whatsapp.svg'
 import background from '@/media/img/contacts/background.jpg'
+import Map from "./components/Map/Map"
+
+
+export async function generateMetadata({ params: { lang } }) {
+    return {
+        title: "Одон Строй | Контакты",
+        description: "Одон Строй | Строительство зданий из металлоконструкций ✅Лицензированная компания✅Гарантия на обслуживание⚡️Получите консультацию на сайте",
+        alternates: {
+            languages: {
+                "x-default": "/",
+                ru: "/ru",
+                en: "/en",
+            },
+        },
+    };
+}
+
 const page = () => {
     return (
         <div className={styles.backgroundWrapper}>
@@ -68,7 +84,7 @@ const page = () => {
 
                     </div>
                     <div >
-                        <Image src={map} alt="" className={styles.map} />
+                        <Map />
                     </div>
                 </section>
                 <section>

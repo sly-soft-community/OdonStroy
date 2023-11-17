@@ -8,7 +8,7 @@ import "./[lang]/globals.scss";
 
 
 
-export default function NotFound() {
+export default async function NotFound() {
     const tilte = 'Упс… Страница не найдена'
     const desciption = 'Ой! Кажется, вы потерялись на стройплощадке. Но не волнуйтесь, вы можете вернуться на главную страницу или связаться с нами.'
 
@@ -28,10 +28,10 @@ export default function NotFound() {
                                 </div>
                                 <div className={styles.btnBox}>
 
-                                    <button onClick className={styles.btnBox__catalog}>
+                                    <button  className={styles.btnBox__catalog}>
                                         На главную страницу
                                     </button>
-                                    <button onClick className={styles.btnBox__mainPage}>
+                                    <button  className={styles.btnBox__mainPage}>
                                         Свяжитесь с нами
                                     </button>
 

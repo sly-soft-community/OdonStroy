@@ -36,7 +36,7 @@ export default function LandingContant() {
     const originalPages = [
         { component: <Hero goTo={(key) => fullpage_api.moveTo(key + 2)} /> },
         { component: <AboutCompany /> },
-        { component: <Services  /> },
+        { component: <Services /> },
         { component: <StagesOfWork /> },
         {
             component: <>
@@ -52,7 +52,7 @@ export default function LandingContant() {
 
     return (
         <main>
-            <Header goTo={(key) => fullpage_api.moveTo(key + 2)} isFirstBlock={isFirstBlock} />
+            <Header isIndexPage={true} goTo={(key) => fullpage_api.moveTo(key + 2)} isFirstBlock={isFirstBlock} />
             <ReactFullpage
                 navigation
                 pluginWrapper={pluginWrapper}

@@ -5,11 +5,11 @@ import Link from 'next/link';
 import desctopLogo from '../../media/img/DesctopLogo.svg'
 import Image from "next/image";
 
-function Header({ isFirstBlock, goTo }) {
+function Header({ isFirstBlock = true, goTo, isIndexPage = false }) {
     const navArray = [
         { label: 'Главная', link: '#' },
         { label: 'Проекты', link: '#' },
-        { label: 'Контакты', link: '#' },
+        { label: 'Контакты', link: '/ru/contact' },
     ]
 
     const infoArray = [
@@ -21,17 +21,19 @@ function Header({ isFirstBlock, goTo }) {
         { label: 'оставьте заявку', link: '#contact' },
     ]
     return (
-        <div className={styles.wrapper} >
+        <div className={`${styles.wrapper} ${!isIndexPage && styles.fixed}`} >
             <header className={`${styles.header} container`}>
                 <div className={styles.logoBox}>
-                    <Image
-                        src={desctopLogo}
-                        width={200}
-                        height={40}
-                        priority={true}
-                        alt="Logo"
-                        loader={({ src }) => src}
-                    />
+                    <Link href='/ru' >
+                        <Image
+                            src={desctopLogo}
+                            width={200}
+                            height={40}
+                            priority={true}
+                            alt="Logo"
+                            loader={({ src }) => src}
+                        />
+                    </Link>
                 </div>
                 <div className={styles.box}>
                     <ul className={styles.navbar}>
@@ -52,7 +54,7 @@ function Header({ isFirstBlock, goTo }) {
                     <ul className={styles.navList}>
                         {infoArray.map((item, key) =>
                             <li key={key} className={styles.navList__item}>
-                                <div className={styles.navList__link} onClick={() => goTo(key )}>{item.label}</div>
+                                <div className={styles.navList__link} onClick={() => goTo(key)}>{item.label}</div>
                             </li>
                         )}
                     </ul>
