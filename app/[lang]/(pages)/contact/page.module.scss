@@ -1,3 +1,5 @@
+@import "@/styles/mixins.scss";
+
 .backgroundWrapper {
     background-image: url('../../media/img/contacts/background.jpg');
     background-size: cover;
@@ -9,13 +11,20 @@
     // max-width: 1120px;
     margin: 0 auto;
     padding: 0 15px;
-    
+
 
 }
 
 .contactUs {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
+=======
+    @include respond-to("md") {
+        flex-direction: column;
+        align-items: center;
+    }
+>>>>>>> 0046276905e1a93d01850a540593900561ea3fc4
 }
 
 .title {
@@ -26,7 +35,11 @@
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 1.6px;
+<<<<<<< HEAD
     padding: 105px 0 0;
+=======
+    padding: 110px 0 0;
+>>>>>>> 0046276905e1a93d01850a540593900561ea3fc4
     text-align: center;
     padding-bottom: 24px;
 
@@ -71,6 +84,7 @@
     display: flex;
     flex-shrink: 0;
     margin-right: 8px;
+    
 }
 
 .map {
@@ -81,11 +95,16 @@
     max-width: 750px;
     overflow: hidden;
     border-radius: 15px;
+    
 }
 
 .messagers {
     display: flex;
     gap: 32px;
-    align-items: center;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-top: 16px;
+    
+
 
 }
