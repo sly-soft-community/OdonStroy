@@ -28,7 +28,7 @@ export async function generateMetadata({ params: { lang } }) {
 const page = () => {
     return (
         <div className={styles.backgroundWrapper}>
-            <main className={styles.wrapper}>
+            <main className='container'>
                 <h1 className={styles.title}>
                     Свяжитесь с нами
                 </h1>
