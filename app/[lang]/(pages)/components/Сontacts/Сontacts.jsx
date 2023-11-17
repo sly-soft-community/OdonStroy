@@ -7,11 +7,11 @@ import img from '@/media/img/contacts/contact.svg'
 import Image from "next/image";
 import Footer from '@/components/Footer/Footer';
 import emailjs from "@emailjs/browser";
-import ModalWindow from "../ModalWindow/ModalWindow"
 
 
-const Сontacts = () => {
-    const [modalWindow, setModalWindow] = useState( true)
+
+const Сontacts = ({ openModal }) => {
+    const [modalWindow, setModalWindow] = useState(true)
     const form = useRef();
     const formik = useFormik({
         initialValues: {
@@ -37,6 +37,7 @@ const Сontacts = () => {
                 )
                 .then(
                     (result) => {
+                        openModal()
                         resetForm();
                     },
                     (error) => {
@@ -48,7 +49,6 @@ const Сontacts = () => {
 
     return (
         <div className={styles.lastBlock}>
-            {/* {modalWindow && <ModalWindow />} */}
             <section id='contact' className={styles.section} >
                 <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
                 <div className={styles.contant}>

@@ -1,11 +1,7 @@
 @import "@/styles/mixins.scss";
 
-.page {
-    min-height: 100vh;
-}
-
 .backgroundWrapper {
-    background-image: url('./[lang]/media/img/contacts/background.jpg');
+    background-image: url('../[lang]/media/img/contacts/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     @include respond-to("lg") {
@@ -17,7 +13,6 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
-    
 }
 
 .content {

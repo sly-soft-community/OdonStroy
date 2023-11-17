@@ -4,10 +4,12 @@ import styles from "./Header.module.scss"
 import Link from 'next/link';
 import desctopLogo from '../../media/img/DesctopLogo.svg'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 function Header({ isFirstBlock = true, goTo, isIndexPage = false }) {
     const navArray = [
-        { label: 'Главная', link: '#' },
+        { label: 'Главная', link: '/ru' },
         { label: 'Проекты', link: '#' },
         { label: 'Контакты', link: '/ru/contact' },
     ]
@@ -20,6 +22,7 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false }) {
         { label: 'лицензии и сертификаты', link: '#docs' },
         { label: 'оставьте заявку', link: '#contact' },
     ]
+    const router = useRouter();
     return (
         <div className={`${styles.wrapper} ${!isIndexPage && styles.fixed}`} >
             <header className={`${styles.header} container`}>
@@ -42,7 +45,7 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false }) {
                                 <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
                             </li>)}
                     </ul>
-                    <button onClick={() => goTo(5)} className={styles.header__btn}>Оставьте заявку</button>
+                    <button onClick={() => isIndexPage ? goTo(5): router.push(`/ru`)} className={styles.header__btn}>Оставьте заявку</button>
                 </div>
                 <div className={styles.header__burger}>
                     <div className={styles.header__burger_icon} />

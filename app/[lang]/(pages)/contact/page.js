@@ -33,7 +33,6 @@ const page = () => {
                     Свяжитесь с нами
                 </h1>
                 <section className={styles.contactUs}>
-
                     <div className={styles.contactRow}>
                         <div>
                             <h2 className={styles.titleRow}>

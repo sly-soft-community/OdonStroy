@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from "./global-error.module.scss";
+import styles from "../global-error.module.scss";
 import Image from 'next/image'
 import error from '@/media/img/error.svg'
-import Header from "./[lang]/components/Header/Header";
-import Footer from "./[lang]/components/Footer/Footer";
-import "./[lang]/globals.scss";
+import Header from "../[lang]/components/Header/Header";
+import Footer from "../[lang]/components/Footer/Footer";
+import "../[lang]/globals.scss";
 
 export async function generateMetadata({ params: { lang } }) {
     return {
@@ -20,14 +20,14 @@ export async function generateMetadata({ params: { lang } }) {
     };
 }
 
-export default function page() {
+export default async function NotFound() {
     const tilte = 'Упс… Страница не найдена'
     const desciption = 'Ой! Кажется, вы потерялись на стройплощадке. Но не волнуйтесь, вы можете вернуться на главную страницу или связаться с нами.'
 
     
 
     return (
-        <div className = {styles.page}>
+        <div>
             <Header
                 isFirstBlock={true}
             />
