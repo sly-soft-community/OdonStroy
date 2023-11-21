@@ -1,4 +1,4 @@
-import GoToApp from "./[lang]/components/GoToApp/GoToApp";
+import GoToApp from "./ru/components/GoToApp/GoToApp";
 import { i18n } from "../i18n-config";
 
 export default function Home() {

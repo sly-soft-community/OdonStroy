@@ -2,9 +2,9 @@ import React from 'react';
 import styles from "../global-error.module.scss";
 import Image from 'next/image'
 import error from '@/media/img/error.svg'
-import Header from "../[lang]/components/Header/Header";
-import Footer from "../[lang]/components/Footer/Footer";
-import "../[lang]/globals.scss";
+import Header from "../ru/components/Header/Header";
+import Footer from "../ru/components/Footer/Footer";
+import "../ru/globals.scss";
 
 export async function generateMetadata({ params: { lang } }) {
     return {

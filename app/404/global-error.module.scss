@@ -1,7 +1,7 @@
 @import "@/styles/mixins.scss";
 
 .backgroundWrapper {
-    background-image: url('../[lang]/media/img/contacts/background.jpg');
+    background-image: url('../ru/media/img/contacts/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     @include respond-to("lg") {
