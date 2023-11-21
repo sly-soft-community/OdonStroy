@@ -1,5 +1,5 @@
 import { GoogleAnalytics } from "./analytics/GoogleAnalytics";
-import SuperModalBox from "@/components/SuperModalBox/SuperModalBox"
+import SuperModalBox from "./ru/components/SuperModalBox/SuperModalBox"
 
 export const metadata = {
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
