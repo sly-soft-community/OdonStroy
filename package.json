@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "@fullpage/react-fullpage": "^0.1.40",
     "@react-google-maps/api": "^2.18.1",
+    "@react-input/mask": "^1.0.20",
     "@react-spring/web": "^9.7.3",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",

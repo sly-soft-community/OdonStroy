@@ -5,10 +5,12 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    animation: slideout .8s ease-in-out;
+    animation: fadeOut .3s ease-in-out;
     top: 0;
     left: 0;
     display: none;
+    background: rgba(#000000, .3);
+
 }
 
 .wrapper.active {
@@ -19,9 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: slidein .8s ease-in-out;
+    animation: fadeIn .3s ease-in-out;
     top: 0;
     left: 0;
+    background: rgba(#000000, .3);
+    cursor: pointer;
 }
 
 
@@ -34,11 +38,14 @@
     background: url('./modal-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
+    animation: slideout .3s ease-in-out;
     border-radius: 32px;
     overflow: hidden;
+    cursor: default;
+}
 
-
+.box.active {
+    animation: slidein .3s ease-in-out;
 }
 
 .popfilter {
@@ -126,25 +133,48 @@
 }
 
 
+@keyframes fadeIn {
+    0% {
+        display: flex;
+        background: rgba(#000000, .0);
+    }
+
+    100% {
+        background: rgba(#000000, .3);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        display: flex;
+        background: rgba(#000000, .3);
+    }
+
+    100% {
+        background: rgba(#000000, .0);
+    }
+
+}
+
 @keyframes slidein {
     from {
-        top: 3000px;
+        transform: scale(.2);
         display: flex;
     }
 
     to {
-        top: 0px;
+        transform: scale(1);
     }
 }
 
 @keyframes slideout {
     from {
-        top: 0px;
+        transform: scale(1);
         display: flex;
     }
 
     to {
-        top: -3000px;
+        transform: scale(0);
         display: none;
     }
 }

@@ -15,39 +15,40 @@ const Footer = ({ dictionary }) => {
 
     return (
         <footer className={`${styles.footer}`}>
-            <div className={`container ${styles.contant}`}>
-                <div className={styles.logoBox}>
+            <div className="container">
+                <div className={`${styles.contant}`}>
+                    <div className={styles.logoBox}>
+                        <Image
+                            src={desctopLogo}
+                            width={200}
+                            height={40}
+                            priority={true}
+                            alt="Logo"
+                        />
+                        <div className={styles.logoBox__text}>
+                            <span>© 2012-2023 Одон-Строй.</span>
+                            <span>Все права защищены.</span>
+                        </div>
+                    </div>
+                    <ul className={styles.navbar}>
+                        {navArray.map((item, key) =>
+                            <li key={key} className={styles.navbar__item}>
+                                <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
+                            </li>
+                        )}
+
+                    </ul>
+                </div>
+                <div className={`${styles.brandRow}`}>
                     <Image
-                        src={desctopLogo}
-                        width={200}
-                        height={40}
+                        src={logoSly}
+                        width={227}
+                        height={50}
                         priority={true}
                         alt="Logo"
                     />
-                    <div className={styles.logoBox__text}>
-                        <span>© 2012-2023 Одон-Строй.</span>
-                        <span>Все права защищены.</span>
-                    </div>
                 </div>
-                <ul className={styles.navbar}>
-                    {navArray.map((item, key) =>
-                        <li key={key} className={styles.navbar__item}>
-                            <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
-                        </li>
-                    )}
-
-                </ul>
             </div>
-            <div className={`container ${styles.brandRow}`}>
-                <Image
-                    src={logoSly}
-                    width={227}
-                    height={50}
-                    priority={true}
-                    alt="Logo"
-                />
-            </div>
-
         </footer>
     );
 };

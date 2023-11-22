@@ -1,12 +1,18 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./Сontacts.module.scss"
 import CheckBox from '@/components/CheckBox/CheckBox'
 import { useFormik } from 'formik'
 import img from '@/media/img/contacts/contactCall.svg'
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import loaderImg from "@/media/icons/my-loader.svg"
+import { useMask } from '@react-input/mask';
+
 
 const Сontacts = () => {
+    const [loader, setLoader] = useState(false)
+    const inputRef = useMask({ mask: '+996 ___ ___ ___', replacement: { _: /\d/ } });
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -16,10 +22,32 @@ const Сontacts = () => {
             theme: '',
             submitPrivacyPolicy: false,
             submitNewsletter: false,
-            submitDataProcessing: false,
         },
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2))
+            if (!values.submitPrivacyPolicy) return;
+            if (!values.submitNewsletter) return;
+            let eValues = values;
+            Object.keys(eValues).forEach((item) => {
+                if (values[item].length === 0) return;
+            });
+            setLoader(true)
+            emailjs
+                .sendForm(
+                    "service_jlzngye",
+                    "template_ikwy10c",
+                    form.current,
+                    process.env.NEXT_PUBLIC_EMAIL_JS_KEY
+                )
+                .then(
+                    (result) => {
+                        // openModal()
+                        resetForm()
+                        setLoader(false)
+                    },
+                    (error) => {
+                        console.log('error', error.text);
+                    }
+                );
         },
     })
 
@@ -33,7 +61,7 @@ const Сontacts = () => {
                             <div className={styles.form__col}>
                                 <label className={styles.form__label} htmlFor="firstName">Ваше имя</label>
                                 <input
-                                    placeholder="Имя ..."
+                                    placeholder="Ф.И.О."
                                     id="firstName"
                                     name="firstName"
                                     onChange={formik.handleChange}
@@ -45,7 +73,8 @@ const Сontacts = () => {
                             <div className={styles.form__col}>
                                 <label className={styles.form__label} htmlFor="lastName">Ваш номер</label>
                                 <input
-                                    placeholder="Номер ..."
+                                    ref={inputRef}
+                                    placeholder="+996 ххх ххх ххх"
                                     id="lastName"
                                     name="lastName"
                                     onChange={formik.handleChange}
@@ -68,7 +97,8 @@ const Сontacts = () => {
                         </div>
                         <div className={styles.form__field}>
                             <CheckBox
-                                label="Даю согласие на обработку моих персональных данных, согласно политике конфиденциальности"
+                                label="Даю согласие на обработку моих персональных данных, согласно"
+                                link={true}
                                 value={formik.values.submitPrivacyPolicy}
                                 onClick={e => formik.setFieldValue('submitPrivacyPolicy', e)}
                             />
@@ -83,7 +113,14 @@ const Сontacts = () => {
                         <button
                             className={styles.form__btn}
                             type="submit">
-                            Отправить форму
+                            <span>
+                                Отправить форму
+                            </span>
+                            {loader ? <Image
+                                src={loaderImg}
+                                alt="partner image"
+                                className={styles.loader}
+                            /> : ''}
                         </button>
                     </div>
                 </form>

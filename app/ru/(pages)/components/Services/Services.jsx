@@ -36,7 +36,7 @@ import img2 from '@/media/service/service-card-2.png'
 import img3 from '@/media/service/service-card-3.png'
 import img4 from '@/media/service/service-card-4.png'
 
-const Services = ({ dictionary }) => {
+const Services = ({ dictionary, goToContact }) => {
     const pagination = {
         clickable: true,
         // el: <div className = {styles.custom}> </div>,
@@ -126,7 +126,7 @@ const Services = ({ dictionary }) => {
                             {data.map((item, i) =>
                                 <SwiperSlide key={i}>
                                     <div className={styles.slide}>
-                                        <ServiceCard dictionary={dictionary} {...item} />
+                                        <ServiceCard goToContact = {goToContact} dictionary={dictionary} {...item} />
                                     </div>
                                 </SwiperSlide>
                             )}
