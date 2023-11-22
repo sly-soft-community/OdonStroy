@@ -7,7 +7,7 @@ import Image from "next/image";
 const ModalWindow = ({ setClose, isOpen }) => {
     return (
         <div onClick={() => setClose()} className={isOpen ? `${styles.wrapper} ${styles.active}` : styles.wrapper}>
-            <div onClick={(e) => e.stopPropagation()} className={styles.box}>
+            <div onClick={(e) => e.stopPropagation()} className={isOpen ? `${styles.box} ${styles.active}` : styles.box}>
                 <div className={styles.popfilter}>
                     <div className={styles.header}>
                         <div className={styles.header__infoBox}>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import icon from '@/media/icons/ServiceArrow.svg'
 import { useState } from "react";
 
-const ServiceCard = ({ img, value, dictionary, contant = { title: "", text: '' } }) => {
+const ServiceCard = ({ img, value, goToContact, contant = { title: "", text: '' } }) => {
     const [open, setOpen] = useState(false)
     return (
         <div onClick={() => {
@@ -21,7 +21,7 @@ const ServiceCard = ({ img, value, dictionary, contant = { title: "", text: '' }
                     <div className={styles.popBox__text}>{contant.text}</div>
                 </div>
                 <div className={styles.popBox__footer}>
-                    <button className={styles.popBox__btn}>Получить консультацию</button>
+                    <button onClick={() => goToContact()} className={styles.popBox__btn}>Получить консультацию</button>
                 </div>
             </div>
             <div className={styles.card__iconWrapper}>

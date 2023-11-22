@@ -37,12 +37,12 @@ export default function LandingContant() {
     const originalPages = [
         { component: <Hero goTo={(key) => fullpage_api.moveTo(key + 2)} /> },
         { component: <AboutCompany /> },
-        { component: <Services /> },
+        { component: <Services goToContact = {() => fullpage_api.moveTo(7)} /> },
         { component: <StagesOfWork /> },
         {
             component: <>
-                <Reviews />
                 <Partners />
+                <Reviews />
             </>
         },
         { component: <Docs /> },
@@ -61,7 +61,15 @@ export default function LandingContant() {
                 navigation
                 pluginWrapper={pluginWrapper}
                 onLeave={onLeave}
-                scrollHorizontally={true}
+                scrollOverflowMacStyle = {true}
+                dropEffect = {true}
+                // resetSliders = {true}
+                // fitToSectionDelay = {false}
+                // scrollingSpeed = {1700}
+                // scrollHorizontally={true}
+                // scrollBar = {true}
+                // scrollOverflow = {true}
+                // continuousVertical = {true}
                 render={() =>
                     console.log("render prop change") || (
                         <ReactFullpage.Wrapper>

@@ -1,19 +1,16 @@
-'use client'
-import React, { useRef, useState } from 'react';
-import styles from "./Сontacts.module.scss"
+import React, { useRef } from 'react';
+import styles from "./ModalWindow.module.scss"
+import xcross from "./x-cross.svg"
+import Image from "next/image";
 import CheckBox from '@/components/CheckBox/CheckBox'
 import { useFormik } from 'formik'
 import img from '@/media/img/contacts/contact.svg'
-import Image from "next/image";
-import Footer from '@/components/Footer/Footer';
 import emailjs from "@emailjs/browser";
-import loaderImg from "@/media/icons/my-loader.svg"
 import { useMask } from '@react-input/mask';
 
 
-const Сontacts = ({ openModal }) => {
+const ModalWindow = ({ setClose, isOpen }) => {
     const form = useRef();
-    const [loader, setLoader] = useState(false)
     const inputRef = useMask({ mask: '+996 ___ ___ ___', replacement: { _: /\d/ } });
     const formik = useFormik({
         initialValues: {
@@ -25,10 +22,11 @@ const Сontacts = ({ openModal }) => {
         onSubmit: (values, { resetForm }) => {
             if (!values.submitPrivacyPolicy) return;
             let eValues = values;
+            delete eValues.submitPrivacyPolicy;
             Object.keys(eValues).forEach((item) => {
                 if (values[item].length === 0) return;
             });
-            setLoader(true)
+
             emailjs
                 .sendForm(
                     "service_jlzngye",
@@ -39,8 +37,7 @@ const Сontacts = ({ openModal }) => {
                 .then(
                     (result) => {
                         openModal()
-                        resetForm()
-                        setLoader(false)
+                        resetForm();
                     },
                     (error) => {
                         console.log('error', error.text);
@@ -50,13 +47,22 @@ const Сontacts = ({ openModal }) => {
     })
 
     return (
-        <div className={styles.lastBlock}>
-            <section id='contact' className={styles.section} >
+        <div onClick={() => setClose()} className={isOpen ? `${styles.wrapper} ${styles.active}` : styles.wrapper}>
+            <div onClick={(e) => e.stopPropagation()} className={isOpen ? `${styles.modalBox} ${styles.active}` : styles.modalBox}>
+                <div className={styles.header}>
+                    <Image
+                        onClick={() => setClose()}
+                        src={xcross}
+                        alt="partner image"
+                        className={styles.header__icon}
+                    />
+                </div>
                 <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
                 <div className={styles.contant}>
                     <div className={styles.contant__popFolter} />
                     <div className={styles.imageBox}>
                         <Image
+                            priority = {true}
                             src={img}
                             alt="partner image"
                             className={styles.img}
@@ -80,10 +86,10 @@ const Сontacts = ({ openModal }) => {
                                 <div className={styles.form__col}>
                                     <label className={styles.form__label} htmlFor="lastName">Ваш номер</label>
                                     <input
+                                        ref={inputRef}
                                         placeholder="+996 ххх ххх ххх"
                                         id="phone"
                                         name="phone"
-                                        ref={inputRef}
                                         onChange={formik.handleChange}
                                         value={formik.values.phone}
                                         className={styles.form__input}
@@ -104,9 +110,9 @@ const Сontacts = ({ openModal }) => {
                             </div>
                             <div className={styles.form__field}>
                                 <CheckBox
+                                    link={true}
                                     label="Даю согласие на обработку моих персональных данных, согласно "
                                     value={formik.values.submitPrivacyPolicy}
-                                    link={true}
                                     onClick={e => {
                                         formik.setFieldValue('submitPrivacyPolicy', e)
                                     }}
@@ -115,22 +121,14 @@ const Сontacts = ({ openModal }) => {
                             <button
                                 className={styles.form__btn}
                                 type="submit">
-                                <span>
-                                    Отправить форму
-                                </span>
-                                {loader ? <Image
-                                    src={loaderImg}
-                                    alt="partner image"
-                                    className={styles.loader}
-                                /> : ''}
+                                Отправить форму
                             </button>
                         </div>
                     </form>
                 </div>
-            </section>
-            <Footer />
+            </div>
         </div>
     );
 };
 
-export default Сontacts;
+export default ModalWindow;
