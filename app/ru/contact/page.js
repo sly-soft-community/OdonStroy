@@ -86,7 +86,7 @@ const page = () => {
                         <Map />
                     </div>
                 </section>
-                <section>
+                <section id='form'>
                     <Сontacts />
                 </section>
             </main>

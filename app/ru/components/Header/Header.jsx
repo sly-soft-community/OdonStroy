@@ -8,13 +8,15 @@ import { useRouter } from "next/navigation";
 import ModalWindow from '@/contact/components/ModalWindow/ModalWindow';
 
 
-function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal }) {
+function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal, isContact = false }) {
     const navArray = [
         { label: 'Главная', link: '/ru' },
         { label: 'Проекты', link: '#' },
         { label: 'Контакты', link: '/ru/contact' },
     ]
     const [modalView, setModalView] = useState(false)
+    const [open, setOpen] = useState(false)
+
     const infoArray = [
         { label: 'о нас', link: '#about' },
         { label: 'услуги', link: '#service' },
@@ -40,19 +42,36 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal }) {
                         loader={({ src }) => src}
                         onClick={() => isIndexPage ? goTo(-1) : router.push(`/ru`)}
                     />
+                    <div
+                        onClick={() => {
+                            setOpen(prev => !prev)
+                        }}
+                        className={styles.header__burger}>
+                        <div className={open ? `${styles.header__burger_icon} ${styles.open}`
+                            : styles.header__burger_icon} />
+                    </div>
                 </div>
-                <div className={styles.box}>
+                <div className={open ? `${styles.box} ${styles.open}` : styles.box}>
                     <ul className={styles.navbar}>
                         {navArray.map((item, key) =>
-                            <li key={key} className={styles.navbar__item}>
+                            <li key={key} onClick={() => setOpen(false)} className={styles.navbar__item}>
                                 <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
                             </li>)}
                     </ul>
-                    <button onClick={() => isIndexPage ? goTo(5) : setModalView(true)} className={styles.header__btn}>Оставьте заявку</button>
+                    <button onClick={() => {
+                        if (isIndexPage) {
+                            goTo(5)
+                        } else {
+                            if (isContact) {
+                                router.push('/ru/contact/#form')
+                            } else {
+                                setModalView(true)
+                            }
+                        }
+                        setOpen(false)
+                    }} className={styles.header__btn}>Оставьте заявку</button>
                 </div>
-                <div className={styles.header__burger}>
-                    <div className={styles.header__burger_icon} />
-                </div>
+
             </header>
             {
                 !isFirstBlock &&
