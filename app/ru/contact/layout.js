@@ -9,7 +9,7 @@ export default async function RootLayout({ children }) {
 
     return (
         <div className={` page`}>
-            <Header />
+            <Header isContact = {true} />
             {children}
             <Footer />
         </div>
