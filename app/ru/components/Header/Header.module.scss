@@ -50,6 +50,25 @@
     align-items: center;
 }
 
+.modalPopup {
+    background: #1C202033;
+    opacity: 0;
+    transition: .7s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+
+    &.active {
+        display: block;
+        transition: .7s;
+        opacity: 1;
+    }
+}
+
+
 .navbar {
     display: flex;
     gap: 60px;
@@ -102,14 +121,20 @@
 }
 
 @include respond-to("md") {
-    .logoBox  {
+    .logoBox {
         width: 100%;
         height: 100%;
-        padding: 16px 10px !important;
+        padding: 4px 20px !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        img {
+            width: 115px;
+            height: 32px;
+        }
     }
+
     .header {
         padding: 0 !important;
     }
@@ -139,8 +164,9 @@
         border-radius: 0 0 30px 30px;
 
         &.open {
-            top: 66px;
+            top: 39px;
         }
+
         &__item_sm {
             display: block;
         }
@@ -153,23 +179,22 @@
         width: 100%;
         gap: 8px;
         margin-right: 0;
-        
+
     }
 
     .header__burger {
         display: flex;
         align-items: center;
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
         cursor: pointer;
         justify-self: end;
-        margin-right: 5px;
         z-index: 600;
 
         &_icon {
             display: block;
             background: rgba(39, 39, 39, 1);
-            width: 24px;
+            width: 22px;
             height: 2px;
             border-radius: 1px;
             position: relative;
@@ -180,7 +205,7 @@
             display: block;
             position: absolute;
             background: rgba(39, 39, 39, 1);
-            width: 24px;
+            width: 22px;
             height: 2px;
             bottom: 8px;
             transition: 0.4s;
@@ -191,7 +216,7 @@
             display: block;
             position: absolute;
             background: rgba(39, 39, 39, 1);
-            width: 24px;
+            width: 22px;
             height: 2px;
             top: 8px;
             transition: 0.4s;

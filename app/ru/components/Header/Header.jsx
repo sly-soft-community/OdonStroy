@@ -73,6 +73,7 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal, isC
                 </div>
 
             </header>
+            <div className={open ? `${styles.modalPopup} ${styles.active}` : styles.modalPopup} />
             {
                 !isFirstBlock &&
                 <nav className={styles.nav}>

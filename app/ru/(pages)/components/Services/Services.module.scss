@@ -2,9 +2,14 @@
 
 .section {
     padding-bottom: 15px;
-    // padding-top: 104px;
     padding-top: 135px;
     background: rgba(199, 243, 249, 0.45);
+
+    @include respond-to("md") {
+        padding-top: 135px;
+        padding-bottom: 25px;
+        min-height: 100vh;
+    }
 }
 
 .header {
@@ -28,9 +33,7 @@
     padding-bottom: 0px;
 }
 
-.slide {
-    // padding-bottom: 60px;
-}
+
 
 
 
@@ -48,9 +51,6 @@
     }
 
     .section {
-        // background: #e8e8e8;
-        margin-top: 50px;
-        padding-bottom: 0;
         border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
     }
 }

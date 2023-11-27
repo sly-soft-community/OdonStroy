@@ -3,6 +3,12 @@
 .section {
     padding-bottom: 56px;
     padding-top: 145px;
+
+    @include respond-to("md") {
+        padding-bottom: 56px;
+        padding-top: 65px;
+    }
+
 }
 
 .title {

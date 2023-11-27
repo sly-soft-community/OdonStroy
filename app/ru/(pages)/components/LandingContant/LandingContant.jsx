@@ -63,13 +63,6 @@ export default function LandingContant() {
                 onLeave={onLeave}
                 scrollOverflowMacStyle = {true}
                 dropEffect = {true}
-                // resetSliders = {true}
-                // fitToSectionDelay = {false}
-                // scrollingSpeed = {1700}
-                // scrollHorizontally={true}
-                // scrollBar = {true}
-                // scrollOverflow = {true}
-                // continuousVertical = {true}
                 render={() =>
                     console.log("render prop change") || (
                         <ReactFullpage.Wrapper>
