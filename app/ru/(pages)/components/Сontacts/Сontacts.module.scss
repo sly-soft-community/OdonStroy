@@ -7,10 +7,19 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+
+    @include respond-to("md") {
+        padding-top: 65px;
+
+    }
 }
 
 .section {
     padding-bottom: 112px;
+
+    @include respond-to("md") {
+        padding-bottom: 76px;
+    }
 }
 
 .loader {

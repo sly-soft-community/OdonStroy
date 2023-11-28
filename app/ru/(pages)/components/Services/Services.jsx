@@ -121,12 +121,15 @@ const Services = ({ dictionary, goToContact }) => {
                             },
                         }}
                         className="serviceSlider"
+                        modules={[Pagination, Navigation, Virtual]}
+                        pagination={pagination}
+
                     >
                         <div className={styles.sliderWrapper}>
                             {data.map((item, i) =>
                                 <SwiperSlide key={i}>
                                     <div className={styles.slide}>
-                                        <ServiceCard goToContact = {goToContact} dictionary={dictionary} {...item} />
+                                        <ServiceCard goToContact={goToContact} dictionary={dictionary} {...item} />
                                     </div>
                                 </SwiperSlide>
                             )}

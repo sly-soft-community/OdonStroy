@@ -43,7 +43,16 @@ import img10 from '@/media/img/partner/Partner_10.png'
 import Image from "next/image";
 
 const Partners = () => {
-
+    const pagination = {
+        clickable: true,
+        // el: <div className = {styles.custom}> </div>,
+        renderCustom: function (swiper, current, total) {
+            return current + ' of ' + total;
+        },
+        renderBullet: function (index, className) {
+            return '<span class=" mySwiper ' + className + '">' + '' + '</span>'
+        },
+    }
     const data = [
         {
             img1: img1,
@@ -97,8 +106,9 @@ const Partners = () => {
                             slidesPerGroup: 4,
                         },
                     }}
-                    className="serviceSlider"
-
+                    className="partnerSlider"
+                    modules={[Pagination, Navigation, Virtual]}
+                    pagination={pagination}
                 >
                     <div className={styles.sliderWrapper}>
                         {data.map((item, i) =>
