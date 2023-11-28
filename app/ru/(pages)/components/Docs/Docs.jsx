@@ -6,24 +6,27 @@ import img2 from '@/media/img/docs/docs_2.png'
 
 const Docs = () => {
     return (
-        <section id='docs' className={`${styles.section} container`}>
-            <div className={styles.header}>
-                <h2 className='title'>Лицензии и документы</h2>
-            </div>
-            <div className={`${styles.contant}`}>
-                <Image
-                    src={img1}
-                    alt="partner image"
-                    className={styles.img}
-                />
-                <Image
-                    src={img2}
-                    alt="partner image"
-                    className={styles.img}
-                />
-            </div>
-
-        </section>
+        <div className={styles.sectionWrapper}>
+            <section id='docs' className={`${styles.section} `}>
+                <div className='container'>
+                    <div className={styles.header}>
+                        <h2 className='title'>Лицензии и документы</h2>
+                    </div>
+                    <div className={`${styles.contant}`}>
+                        <Image
+                            src={img1}
+                            alt="partner image"
+                            className={styles.img}
+                        />
+                        <Image
+                            src={img2}
+                            alt="partner image"
+                            className={styles.img}
+                        />
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 

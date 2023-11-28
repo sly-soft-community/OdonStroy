@@ -2,13 +2,27 @@
 
 .section {
     padding-bottom: 15px;
-    padding-top: 135px;
-    background: rgba(199, 243, 249, 0.45);
+    padding-top: 35px;
+    background: url('./Union.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin: auto 0 ;
 
     @include respond-to("md") {
-        padding-top: 135px;
+        min-height: 85vh;
+        
+    }
+}
+
+.sectionWrapper {
+    padding-top: 120px;
+    @include respond-to("md") {
+        padding-top: 85px;
         padding-bottom: 25px;
+        // display: flex;
         min-height: 100vh;
+        align-items: center;
     }
 }
 
@@ -22,11 +36,12 @@
         font-weight: 700;
         line-height: 32px;
         letter-spacing: 1.6px;
+        padding-bottom: 32px;
     }
 }
 
 .contant {
-    padding-top: 50px;
+    // padding-top: 50px;
 }
 
 .sliderWrapper {

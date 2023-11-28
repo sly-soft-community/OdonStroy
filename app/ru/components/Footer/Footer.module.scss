@@ -1,8 +1,8 @@
 @import "@/styles/mixins.scss";
 
 .footer {
-    background: rgba(220, 220, 219, 0.40);
-    // min-height: 232px;
+    background: var(--additional-color-c-3-g, #FCFBFA);
+    box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
 .contant {

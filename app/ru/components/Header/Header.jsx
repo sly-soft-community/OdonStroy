@@ -6,9 +6,15 @@ import desctopLogo from '../../media/img/DesctopLogo.svg'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ModalWindow from '@/contact/components/ModalWindow/ModalWindow';
+import { NavMark } from '../NavMark';
 
 
-function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal, isContact = false }) {
+function Header({ isFirstBlock = true,
+    goTo,
+    isIndexPage = false,
+    openModal,
+    isContact = false,
+    scrollTo }) {
     const navArray = [
         { label: 'Главная', link: '/ru' },
         { label: 'Проекты', link: '#' },
@@ -55,7 +61,9 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal, isC
                     <ul className={styles.navbar}>
                         {navArray.map((item, key) =>
                             <li key={key} onClick={() => setOpen(false)} className={styles.navbar__item}>
-                                <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
+                                <NavMark href={item.link} >
+                                    <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
+                                </NavMark>
                             </li>)}
                     </ul>
                     <button onClick={() => {
@@ -63,7 +71,7 @@ function Header({ isFirstBlock = true, goTo, isIndexPage = false, openModal, isC
                             goTo(5)
                         } else {
                             if (isContact) {
-                                router.push('/ru/contact/#form')
+                                scrollTo()
                             } else {
                                 setModalView(true)
                             }

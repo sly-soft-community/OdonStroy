@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 const Footer = ({ dictionary }) => {
     const navArray = [
-        { label: 'Главная', link: '/' },
-        { label: 'Галерея', link: '/' },
-        { label: 'Контакты', link: '/' },
+        { label: 'Главная', link: '/ru' },
+        { label: 'Проекты', link: '/' },
+        { label: 'Контакты', link: '/ru/contact/' },
         { label: 'Политика конфиденциальности', link: '/ru/privacy' },
     ]
 

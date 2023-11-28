@@ -6,4 +6,5 @@ const nextConfig = withExportImages({
     trailingSlash: true,
 });
 
+
 module.exports = nextConfig;

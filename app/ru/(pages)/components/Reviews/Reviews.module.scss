@@ -17,10 +17,64 @@
     max-width: 860px;
     margin: 0 auto;
     padding-top: 24px;
+
     @include respond-to("md") {
         display: none;
     }
 }
+
 .viewBox.active {
     height: var(--height);
+}
+
+.sliderNav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px;
+    gap: 16px;
+
+    &__prev,
+    &__next {
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--additional-color-c-3-d, #3C3F3F);
+        filter: opacity(50%);
+
+        img {
+            filter: opacity(50%);
+        }
+    }
+
+    &__prev.active,
+    &__next.active {
+        filter: none;
+        cursor: pointer;
+
+        img {
+            filter: none;
+        }
+    }
+
+    &__prev {
+        transform: rotate(180deg);
+    }
+
+    @include respond-to("md") {
+
+        &__prev,
+        &__next,
+        &__prev.active,
+        &__next.active {
+            filter: none;
+            cursor: pointer;
+
+            img {
+                filter: none;
+            }
+        }
+    }
 }
