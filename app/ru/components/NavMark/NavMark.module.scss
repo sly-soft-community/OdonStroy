@@ -1,0 +1,21 @@
+.box {
+    position: relative;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.markLine {
+    background: #AED43D;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+}
+
+.markLine_top {
+    top: -4px;
+}
+
+.markLine_bottom {
+    bottom: -4px;
+    left: 0;
+}

@@ -1,0 +1,120 @@
+@import "@/styles/mixins.scss";
+
+.backgroundWrapper {
+    background-image: url('../../../media/img/contacts/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: center;
+    padding-bottom: 96px;
+}
+
+.wrapper {
+    // max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+
+}
+
+.contactUs {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to("md") {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+}
+
+.title {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    padding: 110px 0 0;
+    text-align: center;
+    padding-bottom: 24px;
+
+    @include respond-to("md") {
+        color: var(--additional-color-c-3-a, #1C2020);
+        text-align: center;
+        font-family: "Buyan";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1.4px;
+    }
+}
+
+.contactRow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 110px;
+    max-width: 274px;
+
+    @include respond-to("md") {
+        margin-left: 0;
+    }
+
+}
+
+.titleRow {
+    font-family: "Buyan";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #4E772B;
+    // color: var(--primary-gradient-color-c-4-c, linear-gradient(81deg, #4E772B 11.44%, #90BB3A 92.75%));
+    background-clip: text;
+
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    color: var(--additional-color-c-3-b, #3C3F3F);
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.contactItem {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 8px;
+
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    min-width: 300px;
+    max-width: 750px;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+.messagers {
+    display: flex;
+    gap: 32px;
+    justify-content: space-evenly;
+    margin-top: auto;
+    margin-top: 16px;
+
+
+
+}

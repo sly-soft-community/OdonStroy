@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import styles from "./Reviews.module.scss"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Virtual } from 'swiper'
@@ -40,6 +40,8 @@ import imgFull_4 from '@/media/img/review/rewiveFull_4.png'
 import ReviewsCard from "./components/ReviewsCard"
 import ReviewsBlock from "./components/ReviewsBlock"
 import { useTransition, animated } from '@react-spring/web'
+import Arrow from "./arrow-right.svg"
+import Image from "next/image";
 
 
 
@@ -102,7 +104,6 @@ const Reviews = () => {
                 ],
                 img: imgFull_4,
             }
-
         },
         {
             active: false,
@@ -133,19 +134,32 @@ const Reviews = () => {
         setView({ view: state, hieght: newState[key].fullDiscription.hieght })
         setData(newState)
     }
+    const [actualSlide, setActualSlide] = useState(1)
     const transition = useTransition(data, {
         trail: 60,
         from: { opacity: 0, scale: 0 },
         enter: { opacity: 1, scale: 1 },
         leave: { opacity: 0, scale: 0 },
     })
+    const rewievSliderRef = useRef(null)
+    const handlePrev = useCallback(sliderRef => {
+        if (!sliderRef.current) return
+        sliderRef.current.swiper.slidePrev()
+    }, [])
+
+    const handleNext = useCallback(sliderRef => {
+        if (!sliderRef.current) return
+        sliderRef.current.swiper.slideNext()
+    }, [])
+
 
 
     return (
-        <section id = 'rewiev' className={styles.section} >
+        <section id='rewiev' className={styles.section} >
             <h2 className='title'>Отзывы</h2>
             <div className={`container ${styles.contant}`}>
                 <Swiper
+                    ref={rewievSliderRef}
                     grabCursor={false}
                     allowTouchMove={true}
                     breakpoints={{
@@ -155,7 +169,7 @@ const Reviews = () => {
                         },
                         576: {
                             slidesPerView: 1,
-                            slidesPerGroup: 2,
+                            slidesPerGroup: 1,
                             loop: true,
                         },
                         768: {
@@ -171,8 +185,11 @@ const Reviews = () => {
                             slidesPerGroup: 4,
                         },
                     }}
-                    className="serviceSlider"
-
+                    className="revieSlider"
+                    onSlideChange={(e) => {
+                        setActualSlide(e.activeIndex + 1)
+                    }}
+                    modules={[Pagination, Navigation, Virtual]}
                 >
                     <div className={styles.sliderWrapper}>
                         {data.map((item, i) =>
@@ -182,19 +199,41 @@ const Reviews = () => {
                         )}
                     </div>
                 </Swiper>
+                <div className={styles.sliderNav}>
+                    <div
+                        onClick={() => handlePrev(rewievSliderRef)}
+                        className={actualSlide === 2 ?
+                            `${styles.sliderNav__prev} ${styles.active}` : styles.sliderNav__prev}>
+                        <Image
+                            src={Arrow}
+                            alt="partner image"
+                            className={styles.img_sm}
+                        />
+                    </div>
+                    <div
+                        onClick={() => handleNext(rewievSliderRef)}
+                        className={actualSlide === 1 ? `${styles.sliderNav__next} ${styles.active}`
+                            : styles.sliderNav__next}>
+                        <Image
+                            src={Arrow}
+                            alt="partner image"
+                            className={styles.img_sm}
+                        />
+                    </div>
+                </div>
                 <div
                     style={{ '--height': `${view.hieght}px` }}
                     className={view.view ? `${styles.viewBox} ${styles.active}`
                         : styles.viewBox}>
                     {
                         transition((style, item) => (
-                            <animated.div
+                            item.active && <animated.div
                                 style={{
                                     ...style,
                                 }}
                                 className={styles.item}
                             >
-                                {item.active ? <ReviewsBlock item={item.fullDiscription} /> : <div></div>}
+                                <ReviewsBlock item={item.fullDiscription} />
                             </animated.div>
                         ))
                     }
