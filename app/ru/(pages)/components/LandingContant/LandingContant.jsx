@@ -37,7 +37,7 @@ export default function LandingContant() {
     const originalPages = [
         { component: <Hero goTo={(key) => fullpage_api.moveTo(key + 2)} /> },
         { component: <AboutCompany /> },
-        { component: <Services goToContact = {() => fullpage_api.moveTo(7)} /> },
+        { component: <Services goToContact={() => fullpage_api.moveTo(7)} /> },
         { component: <StagesOfWork /> },
         {
             component: <>
@@ -61,18 +61,18 @@ export default function LandingContant() {
                 navigation
                 pluginWrapper={pluginWrapper}
                 onLeave={onLeave}
-                scrollOverflowMacStyle = {true}
-                dropEffect = {true}
+                scrollOverflowMacStyle={true}
+                dropEffect={true}
                 render={() =>
-                    console.log("render prop change") || (
-                        <ReactFullpage.Wrapper>
-                            {originalPages.map((item, key) => (
-                                <div key={key} className="section">
-                                    {item.component}
-                                </div>
-                            ))}
-                        </ReactFullpage.Wrapper>
-                    )
+                (
+                    <ReactFullpage.Wrapper>
+                        {originalPages.map((item, key) => (
+                            <div key={key} className="section">
+                                {item.component}
+                            </div>
+                        ))}
+                    </ReactFullpage.Wrapper>
+                )
                 }
             />
         </main>

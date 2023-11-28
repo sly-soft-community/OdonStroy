@@ -18,7 +18,6 @@ const ContactContant = () => {
     const artRef1 = useRef(null);
     gsap.registerPlugin(ScrollToPlugin);
     const scrollTo = (target) => {
-        console.log('asdasdasdsad', window)
         gsap.to('body', { duration: .6, scrollTo: '#form' })
         // gsap.to('body', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true });
         // gsap.to('#form', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true })
