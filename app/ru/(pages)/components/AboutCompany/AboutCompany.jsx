@@ -83,25 +83,29 @@ const AboutCompany = () => {
                 <div className={styles.tileBox__row}>
                     {tileData[0].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
-                            <div className={styles.tileItem__title}>
-                                <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
-                                {item.title.text}
+                            <div className={styles.tileItem__wrapper}>
+                                <div className={styles.tileItem__title}>
+                                    <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                    {item.title.text}
+                                </div>
+                                <div className={styles.tileItem__text}>{item.text}</div>
+                                <div className={styles.tileItem__bg} />
                             </div>
-                            <div className={styles.tileItem__text}>{item.text}</div>
-                            <div className={styles.tileItem__bg} />
                         </div>
                     )}
                 </div>
                 <div className={styles.tileBox__row}>
                     {tileData[1].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
-                            <div className={styles.tileItem__title}>
-                                <CountUp
-                                    startOnMount={true}
-                                    redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
-                                {item.title.text}
+                            <div className={styles.tileItem__wrapper}>
+                                <div className={styles.tileItem__title}>
+                                    <CountUp
+                                        startOnMount={true}
+                                        redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                    {item.title.text}
+                                </div>
+                                <div className={styles.tileItem__text}>{item.text}</div>
                             </div>
-                            <div className={styles.tileItem__text}>{item.text}</div>
                         </div>
                     )}
                 </div>

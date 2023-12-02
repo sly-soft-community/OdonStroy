@@ -172,15 +172,15 @@
 
 @include respond-to("xl") {
     .hero {
-        // background: url('../../../media/img/home/hero_bg_xl.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
 
-    // .slide {
-    //     border-right: none;
-    // }
-
+@include respond-to("sm") {
+    .slide {
+        border-right: none;
+    }
 }
 
 @include respond-to("md") {

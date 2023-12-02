@@ -8,7 +8,7 @@ import Reviews from "../Reviews/Reviews";
 import Docs from "../Docs/Docs";
 import Сontacts from "../Сontacts/Сontacts";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../../components/Header/Header";
 import SuperModalBox from "@/components/SuperModalBox/SuperModalBox"
 import ModalWindow from "../ModalWindow/ModalWindow"
@@ -48,6 +48,10 @@ export default function LandingContant() {
         { component: <Docs /> },
         { component: <Сontacts openModal={() => setModalView(true)} /> },
     ];
+
+    useEffect(() => { 
+        fullpage_api.moveTo(1)
+    }, [])
 
 
 

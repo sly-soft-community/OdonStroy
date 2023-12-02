@@ -103,15 +103,15 @@ const Сontacts = () => {
                                 onClick={e => formik.setFieldValue('submitPrivacyPolicy', e)}
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <CheckBox
                                 label="Я хочу получать новости и анонсы от компании"
                                 value={formik.values.submitNewsletter}
                                 onClick={e => formik.setFieldValue('submitNewsletter', e)} // Исправлено имя поля с 'submitPrivacyPolicy' на 'submitNewsletter'
                             />
-                        </div>
+                        </div> */}
                         <button
-                            className={styles.form__btn}
+                            className={formik.values.submitPrivacyPolicy ? `${styles.form__btn} ${styles.active}` : styles.form__btn}
                             type="submit">
                             <span>
                                 Отправить форму

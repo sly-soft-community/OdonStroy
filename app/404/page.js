@@ -5,29 +5,23 @@ import error from '@/media/img/error.svg'
 import Header from "../ru/components/Header/Header";
 import Footer from "../ru/components/Footer/Footer";
 import "../ru/globals.scss";
+import Link from 'next/link';
 
 export async function generateMetadata({ params: { lang } }) {
     return {
         title: "Одон Строй | Не найдена",
         description: "Одон Строй | Строительство зданий из металлоконструкций ✅Лицензированная компания✅Гарантия на обслуживание⚡️Получите консультацию на сайте",
-        alternates: {
-            languages: {
-                "x-default": "/",
-                ru: "/ru",
-                en: "/en",
-            },
-        },
     };
 }
 
-export default async function NotFound() {
+export default function page() {
     const tilte = 'Упс… Страница не найдена'
     const desciption = 'Ой! Кажется, вы потерялись на стройплощадке. Но не волнуйтесь, вы можете вернуться на главную страницу или связаться с нами.'
 
-    
+
 
     return (
-        <div>
+        <div className={styles.page}>
             <Header
                 isFirstBlock={true}
             />
@@ -41,14 +35,16 @@ export default async function NotFound() {
                                     {desciption}
                                 </div>
                                 <div className={styles.btnBox}>
-
-                                    <button  className={styles.btnBox__catalog}>
-                                        На главную страницу
-                                    </button>
-                                    <button  className={styles.btnBox__mainPage}>
-                                        Свяжитесь с нами
-                                    </button>
-
+                                    <Link href={'/ru'}>
+                                        <button className={styles.btnBox__catalog}>
+                                            На главную страницу
+                                        </button>
+                                    </Link>
+                                    <Link href={'/ru/contact'}>
+                                        <button className={styles.btnBox__mainPage}>
+                                            Свяжитесь с нами
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
