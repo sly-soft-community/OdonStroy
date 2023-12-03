@@ -34,53 +34,55 @@ function Header({ isFirstBlock = true,
     const router = useRouter();
     return (
         <div className={`${styles.wrapper} ${!isIndexPage && styles.fixed}`} >
-            <header className={`${styles.header} container`}>
-                <ModalWindow
-                    setClose={() => setModalView(false)}
-                    isOpen={modalView} />
-                <div className={styles.logoBox}>
-                    <Image
-                        src={desctopLogo}
-                        width={200}
-                        height={40}
-                        priority={true}
-                        alt="Logo"
-                        loader={({ src }) => src}
-                        onClick={() => isIndexPage ? goTo(-1) : router.push(`/ru`)}
-                    />
-                    <div
-                        onClick={() => {
-                            setOpen(prev => !prev)
-                        }}
-                        className={styles.header__burger}>
-                        <div className={open ? `${styles.header__burger_icon} ${styles.open}`
-                            : styles.header__burger_icon} />
+            <div className={styles.headerWrapper}>
+                <header className={`${styles.header} container`}>
+                    <ModalWindow
+                        setClose={() => setModalView(false)}
+                        isOpen={modalView} />
+                    <div className={styles.logoBox}>
+                        <Image
+                            src={desctopLogo}
+                            width={200}
+                            height={40}
+                            priority={true}
+                            alt="Logo"
+                            loader={({ src }) => src}
+                            onClick={() => isIndexPage ? goTo(-1) : router.push(`/ru`)}
+                        />
+                        <div
+                            onClick={() => {
+                                setOpen(prev => !prev)
+                            }}
+                            className={styles.header__burger}>
+                            <div className={open ? `${styles.header__burger_icon} ${styles.open}`
+                                : styles.header__burger_icon} />
+                        </div>
                     </div>
-                </div>
-                <div className={open ? `${styles.box} ${styles.open}` : styles.box}>
-                    <ul className={styles.navbar}>
-                        {navArray.map((item, key) =>
-                            <li key={key} onClick={() => setOpen(false)} className={styles.navbar__item}>
-                                <NavMark href={item.link} >
-                                    <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
-                                </NavMark>
-                            </li>)}
-                    </ul>
-                    <button onClick={() => {
-                        if (isIndexPage) {
-                            goTo(5)
-                        } else {
-                            if (isContact) {
-                                scrollTo()
+                    <div className={open ? `${styles.box} ${styles.open}` : styles.box}>
+                        <ul className={styles.navbar}>
+                            {navArray.map((item, key) =>
+                                <li key={key} onClick={() => setOpen(false)} className={styles.navbar__item}>
+                                    <NavMark href={item.link} >
+                                        <Link className={styles.navbar__link} href={item.link} >{item.label}</Link>
+                                    </NavMark>
+                                </li>)}
+                        </ul>
+                        <button onClick={() => {
+                            if (isIndexPage) {
+                                goTo(5)
                             } else {
-                                setModalView(true)
+                                if (isContact) {
+                                    scrollTo()
+                                } else {
+                                    setModalView(true)
+                                }
                             }
-                        }
-                        setOpen(false)
-                    }} className={styles.header__btn}>Оставьте заявку</button>
-                </div>
+                            setOpen(false)
+                        }} className={styles.header__btn}>Оставьте заявку</button>
+                    </div>
+                </header>
+            </div>
 
-            </header>
             <div className={open ? `${styles.modalPopup} ${styles.active}` : styles.modalPopup} />
             {
                 !isFirstBlock &&

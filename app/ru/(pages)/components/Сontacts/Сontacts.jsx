@@ -113,7 +113,7 @@ const Сontacts = ({ openModal }) => {
                                 />
                             </div>
                             <button
-                                className={styles.form__btn}
+                                className={formik.values.submitPrivacyPolicy? `${styles.form__btn} ${styles.active}` : styles.form__btn}
                                 type="submit">
                                 <span>
                                     Отправить форму

@@ -3,10 +3,9 @@
 .section {
     padding-bottom: 15px;
     padding-top: 35px;
-    background: url('./Union.png');
+    background: url('./Union.svg');
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center;
     margin: auto 0 ;
 
     @include respond-to("md") {
