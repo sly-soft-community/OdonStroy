@@ -3,7 +3,7 @@ import React from 'react';
 import styles from "./Partners.module.scss"
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Virtual } from 'swiper'
+import { Autoplay, Navigation, Pagination, Virtual } from 'swiper'
 import 'swiper/scss'
 import 'swiper/css/bundle'
 import 'swiper/scss/a11y'
@@ -106,8 +106,12 @@ const Partners = () => {
                             slidesPerGroup: 4,
                         },
                     }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
                     className="partnerSlider"
-                    modules={[Pagination, Navigation, Virtual]}
+                    modules={[Pagination, Navigation, Virtual, Autoplay]}
                     pagination={pagination}
                 >
                     <div className={styles.sliderWrapper}>

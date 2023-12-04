@@ -193,7 +193,7 @@ const Reviews = () => {
                 >
                     <div className={styles.sliderWrapper}>
                         {data.map((item, i) =>
-                            <SwiperSlide key={i}>
+                            <SwiperSlide className={styles.slide} key={i}>
                                 <ReviewsCard setActive={(state) => activeHandler(state, i)} item={{ ...item.shortData, active: item.active }} />
                             </SwiperSlide>
                         )}
