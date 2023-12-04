@@ -55,6 +55,7 @@ const Сontacts = () => {
         <section className={styles.section} >
             <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
             <div className={styles.contant}>
+                <div className={styles.contant__popFolter}/>
                 <form className={styles.box} onSubmit={formik.handleSubmit}>
                     <div className={styles.form__wrapper}>
                         <div className={styles.form__row}>

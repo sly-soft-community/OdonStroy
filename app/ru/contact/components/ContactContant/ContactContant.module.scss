@@ -6,6 +6,11 @@
     background-repeat: no-repeat;
     // background-position: center;
     padding-bottom: 96px;
+
+    @include respond-to("md") {
+        background: center /cover no-repeat url("../../../media/img/contacts/background_sm.png"),
+            lightgrey 35%;
+    }
 }
 
 .wrapper {

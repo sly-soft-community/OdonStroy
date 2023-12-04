@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './AboutCompany.module.scss';
 import img from '@/media/img/about/AboutImg.png'
 import img_md from '@/media/img/about/AboutImg__md.png'
 import Image from "next/image";
 import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor';
 
 const AboutCompany = () => {
+
     const tileData = [
         [
             {
@@ -43,7 +45,7 @@ const AboutCompany = () => {
 
     return (
         <section className={`${styles.section}`}>
-            <h2 className={styles.title}>О компании</h2>
+            <h2 id='title' className={styles.title}>О компании</h2>
             <div className={styles.infoBox}>
                 <div className={styles.imgBox} >
                     <Image
@@ -79,31 +81,35 @@ const AboutCompany = () => {
                     </p>
                 </div>
             </div>
-            <div className={styles.tileBox}>
-                <div className={styles.tileBox__row}>
+            <div id='tileBox' className={styles.tileBox}>
+                <div id='tileRow_1' className={styles.tileBox__row}>
                     {tileData[0].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
                             <div className={styles.tileItem__wrapper}>
-                                <div className={styles.tileItem__title}>
-                                    <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
-                                    {item.title.text}
-                                </div>
+                                <VisibilitySensor partialVisibility offset={{ bottom: 0 }}>
+                                    {({ isVisible }) => <div className={styles.tileItem__title}>
+                                        {isVisible ? <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                            : <span className={styles.tileItem__count}>0</span>}
+                                        {item.title.text}
+                                    </div>}
+                                </VisibilitySensor>
                                 <div className={styles.tileItem__text}>{item.text}</div>
                                 <div className={styles.tileItem__bg} />
                             </div>
                         </div>
                     )}
                 </div>
-                <div className={styles.tileBox__row}>
+                <div id='tileRow_2' className={styles.tileBox__row}>
                     {tileData[1].map((item, key) =>
                         <div key={`re${key}`} className={styles.tileItem}>
                             <div className={styles.tileItem__wrapper}>
-                                <div className={styles.tileItem__title}>
-                                    <CountUp
-                                        startOnMount={true}
-                                        redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
-                                    {item.title.text}
-                                </div>
+                                <VisibilitySensor partialVisibility offset={{ top: 0 }}>
+                                    {({ isVisible }) => <div className={styles.tileItem__title}>
+                                        {isVisible ? <CountUp redraw={true} start={0} className={styles.tileItem__count} end={item.title.number} />
+                                            : <span className={styles.tileItem__count}>0</span>}
+                                        {item.title.text}
+                                    </div>}
+                                </VisibilitySensor>
                                 <div className={styles.tileItem__text}>{item.text}</div>
                             </div>
                         </div>

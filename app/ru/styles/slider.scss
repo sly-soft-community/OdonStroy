@@ -143,6 +143,39 @@
 
     }
 }
+.docsSlider {
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0px !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal::after {
+        content: "5";
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(39, 39, 39, 1);
+        margin-left: 9px;
+        display: none !important;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal::before {
+        content: "1";
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(39, 39, 39, 1);
+        margin-right: 9px;
+        display: none !important;
+
+    }
+}
 
 @include respond-to("lg") {
     .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -185,6 +218,35 @@
 
         .swiper-pagination-bullets.swiper-pagination-horizontal::after {
             content: "3";
+            display: block !important;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(39, 39, 39, 1);
+            margin-left: 9px;
+        }
+
+        .swiper-pagination-bullets.swiper-pagination-horizontal::before {
+            content: "1";
+            display: block !important;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(39, 39, 39, 1);
+            margin-right: 9px;
+        }
+    }
+    .docsSlider {
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: 0px !important;
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center !important;
+        }
+
+        .swiper-pagination-bullets.swiper-pagination-horizontal::after {
+            content: "2";
             display: block !important;
             font-weight: 700;
             font-size: 18px;
@@ -257,7 +319,19 @@
             content: "5";
 
         }
-
-
     }
+    // .docsSlider {
+    //     .swiper-pagination-bullets.swiper-pagination-horizontal {
+    //         bottom: 0px !important;
+    //         width: 100% !important;
+    //         display: flex !important;
+    //         justify-content: center;
+    //         align-items: center !important;
+    //     }
+
+    //     .swiper-pagination-bullets.swiper-pagination-horizontal::after {
+    //         content: "2";
+
+    //     }
+    // }
 }

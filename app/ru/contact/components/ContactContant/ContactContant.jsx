@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from "./ContactContant.module.scss";
 import Image from 'next/image';
 import call from '@/media/img/contacts/phoneCall.svg'
@@ -17,12 +17,32 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 const ContactContant = () => {
     const artRef1 = useRef(null);
     gsap.registerPlugin(ScrollToPlugin);
+    // gsap.registerPlugin(ScrollTrigger);
     const scrollTo = (target) => {
         gsap.to('body', { duration: .6, scrollTo: '#form' })
         // gsap.to('body', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true });
-        gsap.to('#form', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true })
+        // gsap.to('#form', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true })
         // gsap.to('#form', { rotation: 180, x: 100, duration: 1, repeat: -2, yoyo: true })
     }
+    // useEffect(() => {
+    //     gsap.to("#contactUs", {
+    //         scrollTrigger: {
+    //             trigger: "#contactUs",
+    //             start: "top top",
+    //             end: "bottom top",
+    //             scrub: true,
+    //         },
+    //         // yPercent: 50,
+    //         // scale: 3,
+    //         // opacity: 0,
+    //         x: 1200,
+    //         // duration: 2,
+    //         // delay: 2,
+    //         // lerp: 0.06,
+    //         // ease: "power1.inOut"
+    //         // duration: { min: 0.2, max: 3 }
+    //     });
+    // })
     return (
         <>
             <Header
@@ -33,7 +53,7 @@ const ContactContant = () => {
                     <h1 className={styles.title}>
                         Свяжитесь с нами
                     </h1>
-                    <section className={styles.contactUs}>
+                    <section id = 'contactUs' className={styles.contactUs}>
                         <div className={styles.contactRow}>
                             <div>
                                 <h2 className={styles.titleRow}>
