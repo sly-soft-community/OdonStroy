@@ -1,7 +1,9 @@
+@import "@/styles/mixins.scss";
+
 .wrapper {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 15px;
+    // max-width: 1300px;
+    // margin: 0 auto;
+    // padding: 0 15px;
 }
 
 .title {
@@ -14,5 +16,118 @@
     letter-spacing: 0.96px;
     padding: 128px 0 0;
     text-align: center;
+    padding-bottom: 24px;
 
+}
+
+.gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+
+
+    @include respond-to("lg") {
+        grid-template-columns: 1fr 1fr;
+
+    }
+    @include respond-to("md") {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+.largeProject {
+    // grid-column: span 2; 
+    // grid-row: span 2;    
+}
+
+.smallProject {
+    // grid-column: span 1; 
+    // grid-row: span 1; 
+}
+
+// .gridBox1 {
+//     display: grid;
+//     grid-template-columns: minmax(600px, 860px) minmax(350px, 420px);
+//     grid-template-rows: repeat(2, 1fr);
+//     gap: 20px;
+//     // @include respond-to("lg") {
+//     //     grid-template-columns: 1fr 1fr;
+
+//     // }
+// }
+
+// .gridBox2 {
+//     display: grid;
+//     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) minmax(350px, 420px);
+//     gap: 20px;
+//     padding-top: 24px;
+//     // @include respond-to("lg") {
+//     //     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) ;
+//     // }
+// }
+
+// .gridBox3 {
+//     display: grid;
+//     grid-template-rows: repeat(2, 1fr);
+//     grid-template-columns: minmax(350px, 420px) minmax(600px, 860px);
+//     gap: 20px;
+//     padding-top: 24px;
+//     // @include respond-to("lg") {
+//     // grid-template-columns: minmax(350px, 420px) minmax(350px, 420px);
+
+//     // }
+
+// }
+
+// .gridBox4 {
+//     display: grid;
+//     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) minmax(350px, 420px);
+//     gap: 20px;
+//     padding-top: 24px;
+//     // @include respond-to("lg") {
+//     // grid-template-columns: minmax(350px, 420px) minmax(350px, 420px);
+
+//     // }
+// }
+
+.boxBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+}
+
+.btn {
+    color: var(--additional-color-c-3-a, #1C2020);
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    background: linear-gradient(82deg, #90BB3A 0%, #DDF28A 100%);
+    max-width: 278px;
+    padding: 8px 40px;
+    border-radius: 10px;
+}
+
+.titleObj {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.96px;
+    padding: 64px 0 0;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.mapObj {
+    max-width: 1300px;
+    // width: 100%;
+    margin-bottom: 200px;
 }
