@@ -78,7 +78,9 @@ const ContactContant = () => {
                                         </a>
                                     </div>
                                     <div>
+                                        <a href="https://api.whatsapp.com/send/?phone=996995553355&text&type=phone_number&app_absent=0/" className="">
                                         <Image src={whatsapp} alt="" className={styles.item__img} />
+                                        </a>
                                     </div>
                                 </div>
 

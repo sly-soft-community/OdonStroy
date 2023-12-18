@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { redirect } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive'
 import styles from "./page.module.scss";
 import projectsSmall1 from '@/media/img/projects/projectsSmall1.png'
@@ -18,7 +19,8 @@ import Image from 'next/image';
 import mapObj from '@/media/mapObj.png'
 import LargeProject from './components/LargeProject/LargeProject';
 import SmallProject from './components/SmallProject/SmallProject';
-
+import DescriptionProject from './components/DescriptionProject/DescriptionProject';
+    
 const page = () => {
     const projectsData = [
         {
@@ -74,39 +76,41 @@ const page = () => {
 
 
     return (
-        <main>
-            <div className='container'>
-                <h1 className={styles.title}>
-                    Портфолио наших Проектов
-                </h1>
-                <div className={styles.gridWrapper}>
-                    {projectsData.map((project) => (
-                        project.type === 'large' ? (
-                            <LargeProject
-                                style={isTabletOrMobile ? project.style.md : project.style.xl}
-                                key={project.id} s title={project.title} image={project.image} className={styles.largeProject} />
-                        ) : (
-                            <SmallProject key={project.id} title={project.title} image={project.image} className={styles.smallProject} />
-                        )
-                    ))}
-                </div>
-                <div className={styles.boxBtn}>
-                    <button className={styles.btn}>
-                        Получить консультацию
-                    </button>
-                </div>
-            </div>
-            <div className='container'>
-                <h1 className={styles.titleObj}>
-                    География объектов
-                </h1>
-                <Image
-                    src={mapObj}
-                    alt="mapObj"
-                    className={styles.mapObj}
-                />
-            </div>
-        </main>
+        redirect("/ru")
+        // <main>
+        //     <div className='container'>
+        //         <h1 className={styles.title}>
+        //             Портфолио наших Проектов
+        //         </h1>
+        //         <div className={styles.gridWrapper}>
+        //             {projectsData.map((project) => (
+        //                 project.type === 'large' ? (
+        //                     <LargeProject
+        //                         style={isTabletOrMobile ? project.style.md : project.style.xl}
+        //                         key={project.id} s title={project.title} image={project.image} className={styles.largeProject} />
+        //                 ) : (
+        //                     <SmallProject key={project.id} title={project.title} image={project.image} className={styles.smallProject} />
+        //                 )
+        //             ))}
+        //         </div>
+        //         <div className={styles.boxBtn}>
+        //             <button className={styles.btn}>
+        //                 Получить консультацию
+        //             </button>
+        //         </div>
+        //         <DescriptionProject/>
+        //     </div>
+        //     <div className='container'>
+        //         <h1 className={styles.titleObj}>
+        //             География объектов
+        //         </h1>
+        //         <Image
+        //             src={mapObj}
+        //             alt="mapObj"
+        //             className={styles.mapObj}
+        //         />
+        //     </div>
+        // </main>
     );
 };
 

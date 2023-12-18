@@ -40,6 +40,7 @@ const Footer = ({ dictionary }) => {
                     </ul>
                 </div>
                 <div className={`${styles.brandRow}`}>
+                    <a href="https://slysoft.dev" className="">
                     <Image
                         src={logoSly}
                         width={227}
@@ -47,6 +48,8 @@ const Footer = ({ dictionary }) => {
                         priority={true}
                         alt="Logo"
                     />
+                    </a>
+                   
                 </div>
             </div>
         </footer>

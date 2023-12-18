@@ -1,0 +1,51 @@
+.wrapper{
+    display: flex;
+}
+.title {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+}
+
+.description {
+    max-width: 530px;
+    margin-top: 16px;
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.itemBox {
+    display: flex;            
+    gap: 80px;                 
+    text-align: center;
+
+}
+
+.item {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.92px;
+}
+
+.info {
+margin-top: 8px;
+    color: #000;
+    font-family: "Buyan";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+}
