@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./ReviewsBlock.module.scss";
 import Image from "next/image";
 
-const ReviewsBlock = ({ item }) => {
+const ReviewsBlock = ({ item, setActive }) => {
     return (
         <div className={styles.box}>
             <div className={styles.imgWrapper}>
@@ -20,6 +20,10 @@ const ReviewsBlock = ({ item }) => {
                         {item}
                     </p>)}
             </div>
+            <button onClick={() => setActive(false)} className={styles.btn}>
+                        Скрыть
+                    </button>
+                
         </div>
     );
 };
