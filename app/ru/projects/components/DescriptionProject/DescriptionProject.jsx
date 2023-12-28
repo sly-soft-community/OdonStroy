@@ -2,39 +2,63 @@ import React from 'react';
 import styles from "./DescriptionProject.module.scss";
 import Image from 'next/image';
 import slider from '@/media/img/projects/pojectSlider/slider.png'
+import leftArrow from '@/media/img/projects/pojectSlider/leftArrow.svg'
+import rightArrow from '@/media/img/projects/pojectSlider/rightArrow.svg'
 
-const DescriptionProject = () => {
+const DescriptionProject = ({ project, style }) => {
     const data = [
-        { id: 1, item: '123', info: 'Инфа' },
-        { id: 2, item: '1 234', info: 'Инфа' },
-        { id: 3, item: '6 524', info: 'Застроенных м2' },
+        { id: 1, item: 'общая квадратура', info: '1000 м2' },
+        { id: 2, item: 'квадратура здания', info: '200 м2' },
+        { id: 3, item: 'работа выполнена за', info: '3 месяца' },
     ];
     return (
-        <div className={styles.wrapper}>
-            <div>
-                <h1 className={styles.title}>Заголовок Проекта</h1>
-                <p className={styles.description}>описание. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Lobortis elementum nibh tellus molestie. Nunc eget lorem dolor sed viverra ipsum nunc. Ac turpis egestas sed tempus. In fermentum posuere urna nec tincidunt praesent. Et ligula ullamcorper malesuada proin libero. Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
-                <div className={styles.itemBox}>
-                    {data.map((itemData) => (
-                        <div key={itemData.id}>
-                            <div className={styles.item}>{itemData.item}</div>
-                            <div className={styles.info}>{itemData.info}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className={styles.slider}>
+        project ?
+            <div style={style} className={styles.wrapper}>
                 <div>
-                <Image
-                    src={slider}
-                    alt="icon"
-                    className={styles.img}
-                />
+                    <h1 className={styles.title}>{project.title}</h1>
+                    <p className={styles.description}>
+                        {project.projectDetail.text}
+                    </p>
+                    <div className={styles.itemBox}>
+                        <div>
+                            <div className={styles.item}>общая квадратура</div>
+                            <div className={styles.info}>{project.projectDetail.totalQuadrature} м2</div>
+                        </div>
+                        <div>
+                            <div className={styles.item}>квадратура здания</div>
+                            <div className={styles.info}>{project.projectDetail.squareBuilding} м2</div>
+                        </div>
+                        <div>
+                            <div className={styles.item}>работа выполнена за</div>
+                            <div className={styles.info}>{project.projectDetail.workTime} месяца</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div className={styles.slider}>
+                    <div>
+                        <Image
+                            src={leftArrow}
+                            alt=""
+                            className={styles.btn}
+                        />
+                    </div>
+                    <div>
+                        <Image
+                            src={slider}
+                            alt="icon"
+                            className={styles.img}
+                        />
+                    </div>
+                    <div>
+                        <Image
+                            src={rightArrow}
+                            alt=""
+                            className={styles.btn}
+                        />
+                    </div>
+                </div>
 
-        </div>
+            </div> : <></>
     );
 };
 

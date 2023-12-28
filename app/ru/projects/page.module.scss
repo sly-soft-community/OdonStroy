@@ -3,7 +3,7 @@
 .wrapper {
     // max-width: 1300px;
     // margin: 0 auto;
-    // padding: 0 15px;
+    // padding: 0 15px; 
 }
 
 .title {
@@ -23,7 +23,7 @@
 .gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-gap: 20px;
 
 

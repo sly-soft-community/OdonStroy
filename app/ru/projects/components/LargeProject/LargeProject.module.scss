@@ -6,7 +6,7 @@
     height: 100%;
     position: relative;
 
-    @include respond-to("lg") {
+    @include respond-to("md") {
         max-width: 420px;
         // position: relative;
         // z-index: 1;
@@ -19,7 +19,7 @@
     border-radius: 10px;
     width: 100%;
     // height: auto;
-    @include respond-to("lg") {
+    @include respond-to("md") {
         max-width: 420px;
         
         max-height: 320px;

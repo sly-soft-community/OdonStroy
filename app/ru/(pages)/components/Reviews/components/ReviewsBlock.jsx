@@ -20,7 +20,7 @@ const ReviewsBlock = ({ item, setActive }) => {
                         {item}
                     </p>)}
             </div>
-            <button onClick={() => setActive(false)} className={styles.btn}>
+            <button onClick={() => setActive(false )} className={styles.btn}>
                         Скрыть
                     </button>
                 

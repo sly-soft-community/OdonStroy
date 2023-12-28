@@ -18,7 +18,7 @@ function Header({ isFirstBlock = true,
     scrollTo }) {
     const navArray = [
         { label: 'Главная', link: '/ru' },
-        { label: 'Проекты', link: '#' },
+        { label: 'Проекты', link: '/ru/projects' },
         { label: 'Контакты', link: '/ru/contact' },
     ]
     const [modalView, setModalView] = useState(false)
