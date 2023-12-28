@@ -49,6 +49,7 @@ const Reviews = () => {
     const [data, setData] = useState([
         {
             active: false,
+            id: 0,
             shortData: {
                 img: img1,
                 title: 'Газпром социальные инициативы',
@@ -69,6 +70,7 @@ const Reviews = () => {
         },
         {
             active: false,
+            id: 1,
             shortData: {
                 img: img2,
                 title: 'Металлопрокатный завод  им. М. В. Фрунзе',
@@ -89,6 +91,7 @@ const Reviews = () => {
         },
         {
             active: false,
+            id: 2,
             shortData: {
                 img: img3,
                 title: 'KERAMA MARAZZI',
@@ -107,6 +110,7 @@ const Reviews = () => {
         },
         {
             active: false,
+            id: 3,
             shortData: {
                 img: img4,
                 title: 'МТУ №15, Первомайского района мэрии г. Бишкек',
@@ -194,7 +198,8 @@ const Reviews = () => {
                     <div className={styles.sliderWrapper}>
                         {data.map((item, i) =>
                             <SwiperSlide className={styles.slide} key={i}>
-                                <ReviewsCard setActive={(state) => activeHandler(state, i)} item={{ ...item.shortData, active: item.active }} />
+                                <ReviewsCard setActive={(state) => activeHandler(state, i)}
+                                 item={{ ...item.shortData, active: item.active }} />
                             </SwiperSlide>
                         )}
                     </div>
@@ -226,14 +231,15 @@ const Reviews = () => {
                     className={view.view ? `${styles.viewBox} ${styles.active}`
                         : styles.viewBox}>
                     {
-                        transition((style, item) => (
+                        transition((style, item, i) => (
                             item.active && <animated.div
                                 style={{
                                     ...style,
                                 }}
                                 className={styles.item}
                             >
-                                <ReviewsBlock item={item.fullDiscription} />
+                                <ReviewsBlock item={item.fullDiscription}
+                                                setActive={(state) => activeHandler(state, item.id)}  />
                             </animated.div>
                         ))
                     }

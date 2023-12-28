@@ -18,8 +18,10 @@
     margin: 0 auto;
     padding-top: 24px;
 
-    @include respond-to("md") {
-        display: none;
+    @include respond-to("sm") {
+        display: flex;
+        max-width: 280px;
+        overflow: visible;  
     }
 }
 

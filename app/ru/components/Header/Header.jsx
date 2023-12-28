@@ -3,6 +3,7 @@ import React, { memo, useState } from 'react';
 import styles from "./Header.module.scss"
 import Link from 'next/link';
 import desctopLogo from '../../media/img/DesctopLogo.svg'
+// import desctopLogo from '../../media/img/DesctopLogo.png'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ModalWindow from '@/contact/components/ModalWindow/ModalWindow';
@@ -17,7 +18,7 @@ function Header({ isFirstBlock = true,
     scrollTo }) {
     const navArray = [
         { label: 'Главная', link: '/ru' },
-        { label: 'Проекты', link: '#' },
+        { label: 'Проекты', link: '/ru/projects' },
         { label: 'Контакты', link: '/ru/contact' },
     ]
     const [modalView, setModalView] = useState(false)
@@ -33,6 +34,7 @@ function Header({ isFirstBlock = true,
     ]
     const router = useRouter();
     return (
+        
         <div className={`${styles.wrapper} ${!isIndexPage && styles.fixed}`} >
             <div className={styles.headerWrapper}>
                 <header className={`${styles.header} container`}>

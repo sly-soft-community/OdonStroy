@@ -1,0 +1,78 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+    display: flex;
+    // max-width: 1300px;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 48px;
+    @include respond-to("lg") {
+        flex-direction: column;
+        
+    }
+
+}
+
+.title {
+    color: #000;
+    font-family: "Buyan";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+}
+
+.description {
+    max-width: 530px;
+    margin-top: 16px;
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.itemBox {
+    max-width: 530px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.item {
+    margin-top: 24px;
+    color: #000;
+    font-family: "Buyan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.9px;
+}
+
+.info {
+    margin-top: 8px;
+    color: #000;
+    font-family: "Buyan";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.92px;
+
+}
+
+.slider{
+    display: flex;
+    position: relative;
+    gap: 16px;
+
+}
+.btn{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
