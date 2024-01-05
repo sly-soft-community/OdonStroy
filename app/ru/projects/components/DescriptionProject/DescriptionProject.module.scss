@@ -1,16 +1,25 @@
 @import "@/styles/mixins.scss";
 
 .wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 560px minmax(350px, 720px);
+    // flex-direction: row;
     // max-width: 1300px;
+    margin: 0 auto;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     padding-top: 48px;
+
     @include respond-to("lg") {
         flex-direction: column;
-        
+
     }
 
+}
+
+.contentBox {
+    min-width: 530px;
 }
 
 .title {
@@ -24,7 +33,7 @@
 }
 
 .description {
-    max-width: 530px;
+    max-width: 100%;
     margin-top: 16px;
     color: #000;
     font-family: "Gilroy";
@@ -35,9 +44,19 @@
 }
 
 .itemBox {
-    max-width: 530px;
     display: flex;
+    // max-width: 530px;
     justify-content: space-between;
+    // gap: 80px;
+    text-align: center;
+
+}
+
+.itemBox2 {
+    display: flex;
+    // max-width: 530px;
+    justify-content: center;
+    gap: 80px;
     text-align: center;
 
 }
@@ -65,14 +84,31 @@
 
 }
 
-.slider{
-    display: flex;
+.sliderBox {
+    display: grid;
+    grid-template-columns: 40px minmax(300px, 639px) 40px;
     position: relative;
     gap: 16px;
-
 }
-.btn{
+
+.btn {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(0%);
 }
+
+.slider {
+    width: 100%; 
+    max-height: 408px; 
+    border-radius: 10px;
+
+
+}
+// .img {
+//     width: 100%;
+//     max-height: 408px;
+//     height: 100%;
+//     // max-width: 639px;
+    
+// }
+
