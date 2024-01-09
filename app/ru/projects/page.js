@@ -1,25 +1,25 @@
 'use client'
 import React, { useState, Suspense } from 'react';
-// import { redirect } from 'next/navigation';
-import { useMediaQuery } from 'react-responsive'
-import styles from "./page.module.scss";
+import { redirect } from 'next/navigation';
+// import { useMediaQuery } from 'react-responsive'
+// import styles from "./page.module.scss";
 
-import projectsSmall1 from '@/media/img/projects/projectsSmall1.png'
-import projectsSmall2 from '@/media/img/projects/projectsSmall2.png'
-import projectsSmall3 from '@/media/img/projects/projectsSmall3.png'
-import projectsSmall4 from '@/media/img/projects/projectsSmall4.png'
-import projectsSmall5 from '@/media/img/projects/projectsSmall5.png'
-import projectsSmall6 from '@/media/img/projects/projectsSmall6.png'
-import projectsSmall7 from '@/media/img/projects/projectsSmall7.png'
-import projectsSmall8 from '@/media/img/projects/projectsSmall8.png'
-import projectsSmall9 from '@/media/img/projects/projectsSmall9.png'
-import projectsSmall10 from '@/media/img/projects/projectsSmall10.png'
-import projectsLarge1 from '@/media/img/projects/projectsLarge1.png'
-import projectsLarge2 from '@/media/img/projects/projectsLarge2.png'
+// import projectsSmall1 from '@/media/img/projects/projectsSmall1.png'
+// import projectsSmall2 from '@/media/img/projects/projectsSmall2.png'
+// import projectsSmall3 from '@/media/img/projects/projectsSmall3.png'
+// import projectsSmall4 from '@/media/img/projects/projectsSmall4.png'
+// import projectsSmall5 from '@/media/img/projects/projectsSmall5.png'
+// import projectsSmall6 from '@/media/img/projects/projectsSmall6.png'
+// import projectsSmall7 from '@/media/img/projects/projectsSmall7.png'
+// import projectsSmall8 from '@/media/img/projects/projectsSmall8.png'
+// import projectsSmall9 from '@/media/img/projects/projectsSmall9.png'
+// import projectsSmall10 from '@/media/img/projects/projectsSmall10.png'
+// import projectsLarge1 from '@/media/img/projects/projectsLarge1.png'
+// import projectsLarge2 from '@/media/img/projects/projectsLarge2.png'
 
-import FokGazprom1 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image1.jpg'
-import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
-import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image3.jpg'
+// import FokGazprom1 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image1.jpg'
+// import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
+// import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image3.jpg'
 // import FokGazprom4 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image4.jpg'
 // import FokGazprom5 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image5.jpg'
 // import FokGazprom6 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image6.jpg'
@@ -150,8 +150,8 @@ import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/imag
 // import ChonAryk11 from '@/media/img/projects/pojectSlider/sliderChonAryk/image11.jpg'
 // import ChonAryk12 from '@/media/img/projects/pojectSlider/sliderChonAryk/image12.jpg'
 
-import Image from 'next/image';
-import mapObj from '@/media/mapObj.png'
+// import Image from 'next/image';
+// import mapObj from '@/media/mapObj.png'
 // import LargeProject from './components/LargeProject/LargeProject';
 // import SmallProject from './components/SmallProject/SmallProject';
 
@@ -164,710 +164,711 @@ const SmallProject = React.lazy(() => import('./components/SmallProject/SmallPro
 const DescriptionProject = React.lazy(() => import('./components/DescriptionProject/DescriptionProject'));
 
 const page = () => {
-    const [data, setData] = useState([
-        {
-            type: 'large',
-            data: [
-                {
-                    active: false,
-                    id: 1,
-                    type: 'large',
-                    orintation: 'left',
-                    title: 'Фок Газпром (физкультурно-оздоровительный комплекс)',
-                    image: projectsLarge1,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, ул. Жайыл Баатыра 66.',
-                            'Интересный факт, это первый ФОК, построенный на территории КР. Благодаря партнерству нашей компании и компании Газпром Кыргызстан в последующем начали появляться и в других областях данные сооружения, для развития спорта среди детей и подростков, также для комфорта спортсменов.',
-                            'Здание возводилось из сборных металлоконструкций и сэндвич-панелей. Объект был оснащен современным спортивным оборудованием и помещениями, для проведения различных видов соревнований: ареной, спортивными залами, медкабинетом, душевыми и санузлами.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая квадратура',
-                                value: 5000,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'Вместимость',
-                                value: 700,
-                                unitMash: ' чел',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 4,
-                                unitMash: ' месяца',
-                            },
-                        ],
-                        sliderImages: [
-                            FokGazprom1,
-                            FokGazprom2,
-                            FokGazprom3,
-                            // FokGazprom4,
-                            // FokGazprom5,
-                            // FokGazprom6,
-                            // FokGazprom7,
-                            // FokGazprom8,
-                            // FokGazprom9,
-                            // FokGazprom10,
-                            // FokGazprom11
-                        ],
-                    },
-                    style: {
-                        position: 'left'
-                    }
-                },
-                {
-                    active: false,
-                    id: 2,
-                    type: 'small', title: 'АЗС №31 Газпром, мкр. Улан',
-                    image: projectsSmall1,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, мкр. Улан-2, 2а/1.',
-                            'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
-                            'В каждом проекте по строительству АЗС с нами работают квалифицированные рабочие, включая инженеров, архитекторов, специалистов по безопасности и других экспертов, чтобы обеспечить эффективное и безопасное функционирование станции.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 1100,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'Площадь застройки',
-                                value: 200,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 4,
-                                unitMash: ' месяца',
-                            },
-                        ],
-                        sliderImages: [
-                            // UlanGazprom1,
-                            // UlanGazprom2,
-                            // UlanGazprom3,
-                            // UlanGazprom4,
-                            // UlanGazprom5,
-                            // UlanGazprom6,
-                            // UlanGazprom7
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 3, type: 'small',
-                    title: 'Фруктохранилище',
-                    image: projectsSmall2,
-                    projectDetail: {
-                        text: [
-                            'Строительство склада велось в городе Кант. Было возведено сооружение из сборных конструкций, таких как металлокаркас и заполнение из сэндвич-панелей, были проведены системы вентиляции, кондиционирования и электрика, а следом отделочные работы и установка специализированного оборудования. Учлись все стандарты строительства для дальнейшего хранения, обработки и производства продукции, для этого склад был поделен на секции.',
-                            'Промышленное строительство наш основной вид услуг, который с годами мы отработали до автоматизма и готовы дальше развивать, но уже в более широких масштабах. Мы всегда рады новым партнерам в этой сфере, чтобы вместе улучшать экономическую, технологическую и инфраструктурную сферы Кыргызской Республики.',
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 3300,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 15,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // FrutStorage1,
-                            // FrutStorage2,
-                            // FrutStorage3,
-                            // FrutStorage4,
-                            // FrutStorage5,
-                            // FrutStorage6,
-                            // FrutStorage7,
-                            // FrutStorage8,
-                            // FrutStorage9,
-                            // FrutStorage10,
-                            // FrutStorage11,
-                            // FrutStorage12,
-                            // FrutStorage13,
-                            // FrutStorage14
-                        ],
-                    },
-                },
-            ]
-        },
-        {
-            type: 'small',
-            data: [
+    // const [data, setData] = useState([
+    //     {
+    //         type: 'large',
+    //         data: [
+    //             {
+    //                 active: false,
+    //                 id: 1,
+    //                 type: 'large',
+    //                 orintation: 'left',
+    //                 title: 'Фок Газпром (физкультурно-оздоровительный комплекс)',
+    //                 image: projectsLarge1,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, ул. Жайыл Баатыра 66.',
+    //                         'Интересный факт, это первый ФОК, построенный на территории КР. Благодаря партнерству нашей компании и компании Газпром Кыргызстан в последующем начали появляться и в других областях данные сооружения, для развития спорта среди детей и подростков, также для комфорта спортсменов.',
+    //                         'Здание возводилось из сборных металлоконструкций и сэндвич-панелей. Объект был оснащен современным спортивным оборудованием и помещениями, для проведения различных видов соревнований: ареной, спортивными залами, медкабинетом, душевыми и санузлами.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая квадратура',
+    //                             value: 5000,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'Вместимость',
+    //                             value: 700,
+    //                             unitMash: ' чел',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 4,
+    //                             unitMash: ' месяца',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         FokGazprom1,
+    //                         FokGazprom2,
+    //                         FokGazprom3,
+    //                         FokGazprom4,
+    //                         FokGazprom5,
+    //                         FokGazprom6,
+    //                         FokGazprom7,
+    //                         FokGazprom8,
+    //                         FokGazprom9,
+    //                         FokGazprom10,
+    //                         FokGazprom11
+    //                     ],
+    //                 },
+    //                 style: {
+    //                     position: 'left'
+    //                 }
+    //             },
+    //             {
+    //                 active: false,
+    //                 id: 2,
+    //                 type: 'small', title: 'АЗС №31 Газпром, мкр. Улан',
+    //                 image: projectsSmall1,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, мкр. Улан-2, 2а/1.',
+    //                         'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
+    //                         'В каждом проекте по строительству АЗС с нами работают квалифицированные рабочие, включая инженеров, архитекторов, специалистов по безопасности и других экспертов, чтобы обеспечить эффективное и безопасное функционирование станции.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 1100,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'Площадь застройки',
+    //                             value: 200,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 4,
+    //                             unitMash: ' месяца',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         UlanGazprom1,
+    //                         UlanGazprom2,
+    //                         UlanGazprom3,
+    //                         UlanGazprom4,
+    //                         UlanGazprom5,
+    //                         UlanGazprom6,
+    //                         UlanGazprom7
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 3, type: 'small',
+    //                 title: 'Фруктохранилище',
+    //                 image: projectsSmall2,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Строительство склада велось в городе Кант. Было возведено сооружение из сборных конструкций, таких как металлокаркас и заполнение из сэндвич-панелей, были проведены системы вентиляции, кондиционирования и электрика, а следом отделочные работы и установка специализированного оборудования. Учлись все стандарты строительства для дальнейшего хранения, обработки и производства продукции, для этого склад был поделен на секции.',
+    //                         'Промышленное строительство наш основной вид услуг, который с годами мы отработали до автоматизма и готовы дальше развивать, но уже в более широких масштабах. Мы всегда рады новым партнерам в этой сфере, чтобы вместе улучшать экономическую, технологическую и инфраструктурную сферы Кыргызской Республики.',
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 3300,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 15,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // FrutStorage1,
+    //                         // FrutStorage2,
+    //                         // FrutStorage3,
+    //                         // FrutStorage4,
+    //                         // FrutStorage5,
+    //                         // FrutStorage6,
+    //                         // FrutStorage7,
+    //                         // FrutStorage8,
+    //                         // FrutStorage9,
+    //                         // FrutStorage10,
+    //                         // FrutStorage11,
+    //                         // FrutStorage12,
+    //                         // FrutStorage13,
+    //                         // FrutStorage14
+    //                     ],
+    //                 },
+    //             },
+    //         ]
+    //     },
+    //     {
+    //         type: 'small',
+    //         data: [
 
-                {
-                    active: false, id: 4, type: 'small',
-                    title: 'Кап. ремонт газовой службы “Чуйгаз”',
-                    image: projectsSmall3,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Кара-Балта, ул. Ильича 2/9. ',
-                            'В данном проекте производился капитальный ремонт газовой службы, а именно: демонтаж отделки зданий и монтаж новой отделки, замена старых коммуникаций, постройка гаража с ямами и склада для хранения труб из металлоконструкций, также асфальтирование всей территории. Здание было оснащено современным оборудованием видеонаблюдения и пожарной безопасности.',
-                            'На данном объекте наша компания производила все работы от демонтажных до отделочных под ключ.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 1200,
-                                unitMash: ' м2',
-                            },
+    //             {
+    //                 active: false, id: 4, type: 'small',
+    //                 title: 'Кап. ремонт газовой службы “Чуйгаз”',
+    //                 image: projectsSmall3,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Кара-Балта, ул. Ильича 2/9. ',
+    //                         'В данном проекте производился капитальный ремонт газовой службы, а именно: демонтаж отделки зданий и монтаж новой отделки, замена старых коммуникаций, постройка гаража с ямами и склада для хранения труб из металлоконструкций, также асфальтирование всей территории. Здание было оснащено современным оборудованием видеонаблюдения и пожарной безопасности.',
+    //                         'На данном объекте наша компания производила все работы от демонтажных до отделочных под ключ.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 1200,
+    //                             unitMash: ' м2',
+    //                         },
 
-                            {
-                                label: 'работа выполнена за',
-                                value: 6,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // ChuyGaz1,
-                            // ChuyGaz2,
-                            // ChuyGaz3,
-                            // ChuyGaz4,
-                            // ChuyGaz5,
-                            // ChuyGaz6,
-                            // ChuyGaz7
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 5, type: 'small',
-                    title: 'Стадион Школы Газпром',
-                    image: projectsSmall4,
-                    projectDetail: {
-                        text: [
-                            'На данном объекте были произведены работы по созданию спортивной и воркаут площадки, футбольного, баскетбольного поля и теннисного корта из современных материалов. Все ограждения стадиона, сиденья, баскетбольные кольца и турники собирались по индивидуальному проекту заказчика, а в дальнейшем и устанавливались на площадке.',
-                            'Наша компания производила все работы по монтажу спортивной площадки под ключ, взаимодействовав с поставщиками качественных материалов в сфере спорта и безопасности активного отдыха детей.',
-                            'Адрес: г. Бишкек, ул. Токомбаева, 23/11.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 5000,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'Вместимость',
-                                value: 1500,
-                                unitMash: ' чел',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 3,
-                                unitMash: ' месяца',
-                            },
-                        ],
-                        sliderImages: [
-                            // SchoolStadion1,
-                            // SchoolStadion2,
-                            // SchoolStadion3,
-                            // SchoolStadion4,
-                            // SchoolStadion5,
-                            // SchoolStadion6,
-                            // SchoolStadion7,
-                            // SchoolStadion8
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 6, type: 'small',
-                    title: 'АЗС №18 Газпром',
-                    image: projectsSmall5,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, ул. Исы Ахунбаева 188.',
-                            'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
-                            'В каждом проекте по строительству АЗС с нами работают квалифицированные рабочие, включая инженеров, архитекторов и специалистов по безопасности, чтобы обеспечить эффективное и безопасное функционирование станции.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 1000,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'площадь застройки',
-                                value: 200,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 4,
-                                unitMash: ' месяца',
-                            },
-                        ],
-                        sliderImages: [
-                            // AzsGazprom1,
-                            // AzsGazprom2,
-                            // AzsGazprom3,
-                            // AzsGazprom4,
-                            // AzsGazprom5,
-                            // AzsGazprom6,
-                            // AzsGazprom7
-                        ],
-                    },
-                },
-            ]
-        },
-        {
-            type: 'large',
-            data: [
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 6,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // ChuyGaz1,
+    //                         // ChuyGaz2,
+    //                         // ChuyGaz3,
+    //                         // ChuyGaz4,
+    //                         // ChuyGaz5,
+    //                         // ChuyGaz6,
+    //                         // ChuyGaz7
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 5, type: 'small',
+    //                 title: 'Стадион Школы Газпром',
+    //                 image: projectsSmall4,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'На данном объекте были произведены работы по созданию спортивной и воркаут площадки, футбольного, баскетбольного поля и теннисного корта из современных материалов. Все ограждения стадиона, сиденья, баскетбольные кольца и турники собирались по индивидуальному проекту заказчика, а в дальнейшем и устанавливались на площадке.',
+    //                         'Наша компания производила все работы по монтажу спортивной площадки под ключ, взаимодействовав с поставщиками качественных материалов в сфере спорта и безопасности активного отдыха детей.',
+    //                         'Адрес: г. Бишкек, ул. Токомбаева, 23/11.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 5000,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'Вместимость',
+    //                             value: 1500,
+    //                             unitMash: ' чел',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 3,
+    //                             unitMash: ' месяца',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // SchoolStadion1,
+    //                         // SchoolStadion2,
+    //                         // SchoolStadion3,
+    //                         // SchoolStadion4,
+    //                         // SchoolStadion5,
+    //                         // SchoolStadion6,
+    //                         // SchoolStadion7,
+    //                         // SchoolStadion8
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 6, type: 'small',
+    //                 title: 'АЗС №18 Газпром',
+    //                 image: projectsSmall5,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, ул. Исы Ахунбаева 188.',
+    //                         'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
+    //                         'В каждом проекте по строительству АЗС с нами работают квалифицированные рабочие, включая инженеров, архитекторов и специалистов по безопасности, чтобы обеспечить эффективное и безопасное функционирование станции.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 1000,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'площадь застройки',
+    //                             value: 200,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 4,
+    //                             unitMash: ' месяца',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // AzsGazprom1,
+    //                         // AzsGazprom2,
+    //                         // AzsGazprom3,
+    //                         // AzsGazprom4,
+    //                         // AzsGazprom5,
+    //                         // AzsGazprom6,
+    //                         // AzsGazprom7
+    //                     ],
+    //                 },
+    //             },
+    //         ]
+    //     },
+    //     {
+    //         type: 'large',
+    //         data: [
 
-                {
-                    active: false, id: 7, type: 'small',
-                    title: 'салих',
-                    image: projectsSmall6,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, село Ленинское, ул. Алма-Атинская 252.',
-                            'Все цеха и склады реализованы с помощью сборных конструкций, основной материал каркаса-металл, заполнение из сэндвич-панелей. Перед нашей командой стоял большой спектр работ от земельных и монтажных до оснащения цехов специализированным оборудованием. Строительство данного объекта обеспечивает все условия для производства и хранения продукции, а также соответствует всем современным нормам пищевой промышленности.',
-                            'Промышленное строительство наш основной вид услуг, который с годами мы отработали до автоматизма и готовы дальше развивать, но уже в более широких масштабах. Мы всегда рады новым партнерам в этой сфере, чтобы вместе улучшать экономическую, технологическую и инфраструктурную сферы Кыргызской Республики.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 7500,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 10,
-                                unitMash: ' месяцев',
-                            },
-                            {
-                                label: 'Было построено',
-                                value: 6,
-                                unitMash: ' цехов',
-                            },
-                        ],
-                        sliderImages: [
-                            // Salih1,
-                            // Salih2,
-                            // Salih3,
-                            // Salih4,
-                            // Salih5,
-                            // Salih6,
-                            // Salih7,
-                            // Salih8,
-                            // Salih9,
-                            // Salih10,
-                            // Salih11,
-                            // Salih12,
-                            // Salih13,
-                            // Salih14,
-                            // Salih15,
-                            // Salih16,
-                            // Salih17,
-                            // Salih18,
-                            // Salih19,
-                            // Salih20,
-                            // Salih21
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 8, type: 'small',
-                    title: 'Севертрансгаз   ',
-                    image: projectsSmall7,
-                    projectDetail: {
-                        text: [
-                            'База газовой службы находится в селе Сокулук. Нашей компанией был произведен капитальный ремонт здания и строительство склада для труб. Основная часть работы была в демонтаже старой отделки фасада и монтаже новой, в возведение металлоконструкции навеса для хранения труб и ремонте внутренних помещений филиала.',
-                            'Также объект был оснащен современным оборудованием видеонаблюдения и пожарной безопасности. Ремонт освежил здание, были созданы более комфортные условия для сотрудников, а конструкции упростили работу в хранении материалов.',
-                            'На данном объекте наша компания производила все работы от демонтажных до отделочных под ключ.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 700,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 5,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // Severtransgaz1,
-                            // Severtransgaz2,
-                            // Severtransgaz3,
-                            // Severtransgaz4,
-                            // Severtransgaz5,
-                            // Severtransgaz6,
-                            // Severtransgaz7,
-                            // Severtransgaz8,
-                            // Severtransgaz9,
-                            // Severtransgaz10,
-                            // Severtransgaz11,
-                            // Severtransgaz12
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 9, type: 'large',
-                    title: 'АЗС №30, Сухэ-батора',
-                    image: projectsLarge2,
-                    style: {
-                        position: 'right'
-                    },
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, ул. Сухэ-Батора 1б.',
-                            'Был проведен ряд работ: возведение заправки из металлокаркаса, переходящего в здание магазина, строительство самого магазина из железобетонной конструкции с кирпичным заполнением, монтаж резервуарного парка, рекламная отделка фасада, внутренняя отделка и прокладка всех коммуникаций.',
-                            'Строительство автозаправочных станций, это всегда работа со специфическими норами и требованиями, чтобы обеспечить безопасность и эффективность. Компания «Одон-Строй» возвела множество АЗС на территории КР, что помогает нам строить качественные и безопасные взрывопожароопасные сооружения.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 1000,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'площадь застройки',
-                                value: 200,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 3,
-                                unitMash: ' месяца',
-                            },
-                        ],
-                        sliderImages: [
-                            // AzsBatora1,
-                            // AzsBatora2,
-                            // AzsBatora3,
-                            // AzsBatora4,
-                            // AzsBatora5,
-                            // AzsBatora6,
-                            // AzsBatora7,
-                            // AzsBatora8
-                        ],
-                    },
-                },
-            ]
-        },
-        {
-            type: 'small',
-            data: [
-                {
-                    active: false, id: 10, type: 'small',
-                    title: 'Распределительные сети, Фере',
-                    image: projectsSmall8,
-                    projectDetail: {
-                        text: [
-                            'Данный проект был реализован по улице Фере, в отрезке от Карагачевой рощи до улицы Махатмы Ганди. Стратегически важный проект, при строительстве которого мы помогли оснастить нижний район города газом, обеспечив альтернативой выбора при отоплении домов у жителей.',
-                            'Проект был не из лёгких, так как из-за песчано-глиняных грунтов и близости воды (1,5м) мы монтировали трубы на глубину 2м, поэтому сварка труб производилась короткими участками, выкачивая воду круглосуточно наша команда делала сварочные швы быстро и четко. На каждой стадии работы результат проверялся специальными надзорными службами по определенным гостам и требованиям.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'Давление',
-                                value: 6000,
-                                unitMash: ' м',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 6,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // GazFere1,
-                            // GazFere2,
-                            // GazFere3,
-                            // GazFere4,
-                            // GazFere5,
-                            // GazFere6
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 11, type: 'small',
-                    title: 'АЗС №13 Газпром',
-                    image: projectsSmall9,
-                    projectDetail: {
-                        text: [
-                            'Объект по адресу г. Бишкек, ул. Махатмы Ганди 177/1.',
-                            'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
-                            'Наша компания «Одон-Строй» возвела множество АЗС на территории КР с помощью своей системы управления, что помогает нам строить качественные и безопасные взрывопожароопасные сооружения.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'общая площадь',
-                                value: 1400,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'площадь застройки',
-                                value: 250,
-                                unitMash: ' м2',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 5,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // AzsGazpromGandi1,
-                            // AzsGazpromGandi2,
-                            // AzsGazpromGandi3,
-                            // AzsGazpromGandi4,
-                            // AzsGazpromGandi5,
-                            // AzsGazpromGandi6,
-                            // AzsGazpromGandi7,
-                            // AzsGazpromGandi8
-                        ],
-                    },
-                },
-                {
-                    active: false, id: 12, type: 'small',
-                    title: 'Распределительные сети, Чон-арык',
-                    image: projectsSmall10,
-                    projectDetail: {
-                        text: [
-                            'Данный проект имеет статус стратегического, так как производилась газификация жилого массива.',
-                            'На территории нами проводились все работы по установке труб газа и систем контроля. Последовательность работ: уплотнение грунта, засыпка подушки, прокладка и сварка труб, засыпка песком, трамбовка и укладка асфальта, другая часть труб была возведена воздушно с опорными стойками. На каждой стадии работы результат проверялся специальными надзорными службами по определенным гостам и требованиям.',
-                            'Газификация жилого района является важным этапом в обеспечении удобства и комфорта для населения, а также способствует более эффективному использованию энергии и в создании альтернативного выбора при отоплении домов.'
-                        ],
-                        itemProjects: [
-                            {
-                                label: 'давление',
-                                value: 18600,
-                                unitMash: ' м',
-                            },
-                            {
-                                label: 'работа выполнена за',
-                                value: 6,
-                                unitMash: ' месяцев',
-                            },
-                        ],
-                        sliderImages: [
-                            // ChonAryk1,
-                            // ChonAryk2,
-                            // ChonAryk3,
-                            // ChonAryk4,
-                            // ChonAryk5,
-                            // ChonAryk6,
-                            // ChonAryk7,
-                            // ChonAryk8,
-                            // ChonAryk9,
-                            // ChonAryk10,
-                            // ChonAryk11,
-                            // ChonAryk12
-                        ],
-                    },
-                }
-            ]
-        },
+    //             {
+    //                 active: false, id: 7, type: 'small',
+    //                 title: 'салих',
+    //                 image: projectsSmall6,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, село Ленинское, ул. Алма-Атинская 252.',
+    //                         'Все цеха и склады реализованы с помощью сборных конструкций, основной материал каркаса-металл, заполнение из сэндвич-панелей. Перед нашей командой стоял большой спектр работ от земельных и монтажных до оснащения цехов специализированным оборудованием. Строительство данного объекта обеспечивает все условия для производства и хранения продукции, а также соответствует всем современным нормам пищевой промышленности.',
+    //                         'Промышленное строительство наш основной вид услуг, который с годами мы отработали до автоматизма и готовы дальше развивать, но уже в более широких масштабах. Мы всегда рады новым партнерам в этой сфере, чтобы вместе улучшать экономическую, технологическую и инфраструктурную сферы Кыргызской Республики.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 7500,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 10,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                         {
+    //                             label: 'Было построено',
+    //                             value: 6,
+    //                             unitMash: ' цехов',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // Salih1,
+    //                         // Salih2,
+    //                         // Salih3,
+    //                         // Salih4,
+    //                         // Salih5,
+    //                         // Salih6,
+    //                         // Salih7,
+    //                         // Salih8,
+    //                         // Salih9,
+    //                         // Salih10,
+    //                         // Salih11,
+    //                         // Salih12,
+    //                         // Salih13,
+    //                         // Salih14,
+    //                         // Salih15,
+    //                         // Salih16,
+    //                         // Salih17,
+    //                         // Salih18,
+    //                         // Salih19,
+    //                         // Salih20,
+    //                         // Salih21
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 8, type: 'small',
+    //                 title: 'Севертрансгаз   ',
+    //                 image: projectsSmall7,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'База газовой службы находится в селе Сокулук. Нашей компанией был произведен капитальный ремонт здания и строительство склада для труб. Основная часть работы была в демонтаже старой отделки фасада и монтаже новой, в возведение металлоконструкции навеса для хранения труб и ремонте внутренних помещений филиала.',
+    //                         'Также объект был оснащен современным оборудованием видеонаблюдения и пожарной безопасности. Ремонт освежил здание, были созданы более комфортные условия для сотрудников, а конструкции упростили работу в хранении материалов.',
+    //                         'На данном объекте наша компания производила все работы от демонтажных до отделочных под ключ.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 700,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 5,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // Severtransgaz1,
+    //                         // Severtransgaz2,
+    //                         // Severtransgaz3,
+    //                         // Severtransgaz4,
+    //                         // Severtransgaz5,
+    //                         // Severtransgaz6,
+    //                         // Severtransgaz7,
+    //                         // Severtransgaz8,
+    //                         // Severtransgaz9,
+    //                         // Severtransgaz10,
+    //                         // Severtransgaz11,
+    //                         // Severtransgaz12
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 9, type: 'large',
+    //                 title: 'АЗС №30, Сухэ-батора',
+    //                 image: projectsLarge2,
+    //                 style: {
+    //                     position: 'right'
+    //                 },
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, ул. Сухэ-Батора 1б.',
+    //                         'Был проведен ряд работ: возведение заправки из металлокаркаса, переходящего в здание магазина, строительство самого магазина из железобетонной конструкции с кирпичным заполнением, монтаж резервуарного парка, рекламная отделка фасада, внутренняя отделка и прокладка всех коммуникаций.',
+    //                         'Строительство автозаправочных станций, это всегда работа со специфическими норами и требованиями, чтобы обеспечить безопасность и эффективность. Компания «Одон-Строй» возвела множество АЗС на территории КР, что помогает нам строить качественные и безопасные взрывопожароопасные сооружения.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 1000,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'площадь застройки',
+    //                             value: 200,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 3,
+    //                             unitMash: ' месяца',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // AzsBatora1,
+    //                         // AzsBatora2,
+    //                         // AzsBatora3,
+    //                         // AzsBatora4,
+    //                         // AzsBatora5,
+    //                         // AzsBatora6,
+    //                         // AzsBatora7,
+    //                         // AzsBatora8
+    //                     ],
+    //                 },
+    //             },
+    //         ]
+    //     },
+    //     {
+    //         type: 'small',
+    //         data: [
+    //             {
+    //                 active: false, id: 10, type: 'small',
+    //                 title: 'Распределительные сети, Фере',
+    //                 image: projectsSmall8,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Данный проект был реализован по улице Фере, в отрезке от Карагачевой рощи до улицы Махатмы Ганди. Стратегически важный проект, при строительстве которого мы помогли оснастить нижний район города газом, обеспечив альтернативой выбора при отоплении домов у жителей.',
+    //                         'Проект был не из лёгких, так как из-за песчано-глиняных грунтов и близости воды (1,5м) мы монтировали трубы на глубину 2м, поэтому сварка труб производилась короткими участками, выкачивая воду круглосуточно наша команда делала сварочные швы быстро и четко. На каждой стадии работы результат проверялся специальными надзорными службами по определенным гостам и требованиям.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'Давление',
+    //                             value: 6000,
+    //                             unitMash: ' м',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 6,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // GazFere1,
+    //                         // GazFere2,
+    //                         // GazFere3,
+    //                         // GazFere4,
+    //                         // GazFere5,
+    //                         // GazFere6
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 11, type: 'small',
+    //                 title: 'АЗС №13 Газпром',
+    //                 image: projectsSmall9,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Объект по адресу г. Бишкек, ул. Махатмы Ганди 177/1.',
+    //                         'Нашей командой осуществлялась реконструкция данной заправки, был проведен ряд работ, а именно: демонтаж здания и монтаж монолитной конструкции с кирпичной кладкой, демонтаж старой системы подачи топлива, прокладка коммуникаций, земельные работы, бетонные и сварочные работы, возведение навеса из металла, асфальтирование территории, отделка фасада и внутренних помещений, установка систем вентиляции и кондиционирования в здании.',
+    //                         'Наша компания «Одон-Строй» возвела множество АЗС на территории КР с помощью своей системы управления, что помогает нам строить качественные и безопасные взрывопожароопасные сооружения.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'общая площадь',
+    //                             value: 1400,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'площадь застройки',
+    //                             value: 250,
+    //                             unitMash: ' м2',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 5,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // AzsGazpromGandi1,
+    //                         // AzsGazpromGandi2,
+    //                         // AzsGazpromGandi3,
+    //                         // AzsGazpromGandi4,
+    //                         // AzsGazpromGandi5,
+    //                         // AzsGazpromGandi6,
+    //                         // AzsGazpromGandi7,
+    //                         // AzsGazpromGandi8
+    //                     ],
+    //                 },
+    //             },
+    //             {
+    //                 active: false, id: 12, type: 'small',
+    //                 title: 'Распределительные сети, Чон-арык',
+    //                 image: projectsSmall10,
+    //                 projectDetail: {
+    //                     text: [
+    //                         'Данный проект имеет статус стратегического, так как производилась газификация жилого массива.',
+    //                         'На территории нами проводились все работы по установке труб газа и систем контроля. Последовательность работ: уплотнение грунта, засыпка подушки, прокладка и сварка труб, засыпка песком, трамбовка и укладка асфальта, другая часть труб была возведена воздушно с опорными стойками. На каждой стадии работы результат проверялся специальными надзорными службами по определенным гостам и требованиям.',
+    //                         'Газификация жилого района является важным этапом в обеспечении удобства и комфорта для населения, а также способствует более эффективному использованию энергии и в создании альтернативного выбора при отоплении домов.'
+    //                     ],
+    //                     itemProjects: [
+    //                         {
+    //                             label: 'давление',
+    //                             value: 18600,
+    //                             unitMash: ' м',
+    //                         },
+    //                         {
+    //                             label: 'работа выполнена за',
+    //                             value: 6,
+    //                             unitMash: ' месяцев',
+    //                         },
+    //                     ],
+    //                     sliderImages: [
+    //                         // ChonAryk1,
+    //                         // ChonAryk2,
+    //                         // ChonAryk3,
+    //                         // ChonAryk4,
+    //                         // ChonAryk5,
+    //                         // ChonAryk6,
+    //                         // ChonAryk7,
+    //                         // ChonAryk8,
+    //                         // ChonAryk9,
+    //                         // ChonAryk10,
+    //                         // ChonAryk11,
+    //                         // ChonAryk12
+    //                     ],
+    //                 },
+    //             }
+    //         ]
+    //     },
 
-    ]);
-    const [discriptionPosition, setDiscriptionPosition] = useState({
-        busyRows: 0,
-        activeTemplate: 666,
-        style: {
+    // ]);
+    // const [discriptionPosition, setDiscriptionPosition] = useState({
+    //     busyRows: 0,
+    //     activeTemplate: 666,
+    //     style: {
 
-        }
-    })
+    //     }
+    // })
 
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+    // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
 
-    // const activeProject = data.find(p => p.active);
+    // // const activeProject = data.find(p => p.active);
 
-    const discriptionStylesTemplate = {
-        xl: {
-            gridRowStart: 1,
-            gridRowEnd: 2,
-            gridColumnStart: 1,
-            gridColumnEnd: 4,
-        },
-        md: {
-            gridColumn: '1 / 2',
-            gridRow: '1 / 2',
-        }
-    }
-
-
-    const activeHandler = (isActive, templateKey, projectkey, type) => {
-        let newState = [...data]
-        newState = newState.map((template) => {
-            let newTemplate = { ...template }
-            newTemplate = {
-                ...newTemplate,
-                data: newTemplate.data.map(project =>
-                    ({ ...project, active: false }))
-            }
-            return newTemplate
-        })
-        let busyRows = 0
-        newState.forEach((template, iT) => {
-            if (iT < templateKey + 1) {
-                if (template.type === 'small') busyRows = busyRows + 1
-                else busyRows = busyRows + 2
-            }
-        })
-        console.log('busyRows', busyRows)
-        newState[templateKey].data[projectkey].active = isActive
-        setDiscriptionPosition(prev => ({
-            ...prev,
-            busyRows: isActive ? busyRows : 0,
-            activeTemplate: isActive ? templateKey : 666,
-            style: discriptionStyleGenerator(templateKey + 1, type, busyRows)
-        }))
-
-        setData(newState)
-    }
-
-    const discriptionStyleGenerator = (index, type, busyRows) => {
-        const multiply = type === 'small' ? 1 : 2
-        console.log('multiply', multiply, 'index', index)
-        return isTabletOrMobile ?
-            discriptionStylesTemplate.md : {
-                gridColumnStart: discriptionStylesTemplate.xl.gridColumnStart,
-                gridColumnEnd: discriptionStylesTemplate.xl.gridColumnEnd,
-                gridRowStart: discriptionStylesTemplate.xl.gridRowStart + busyRows,
-                gridRowEnd: discriptionStylesTemplate.xl.gridRowEnd + busyRows,
-            }
-    }
-
-    const stylesTemplate = {
-        xl: {
-            gridRowStart: 1,
-            gridRowEnd: 3,
-            left: {
-                gridColumnStart: 1,
-                gridColumnEnd: 3,
-            },
-            right: {
-                gridColumnStart: 2,
-                gridColumnEnd: 4,
-            }
-        },
-        md: {
-            gridRowStart: 1,
-            gridRowEnd: 2,
-            gridColumnStart: 1,
-            gridColumnEnd: 2,
+    // const discriptionStylesTemplate = {
+    //     xl: {
+    //         gridRowStart: 1,
+    //         gridRowEnd: 2,
+    //         gridColumnStart: 1,
+    //         gridColumnEnd: 4,
+    //     },
+    //     md: {
+    //         gridColumn: '1 / 2',
+    //         gridRow: '1 / 2',
+    //     }
+    // }
 
 
-        }
-    }
+    // const activeHandler = (isActive, templateKey, projectkey, type) => {
+    //     let newState = [...data]
+    //     newState = newState.map((template) => {
+    //         let newTemplate = { ...template }
+    //         newTemplate = {
+    //             ...newTemplate,
+    //             data: newTemplate.data.map(project =>
+    //                 ({ ...project, active: false }))
+    //         }
+    //         return newTemplate
+    //     })
+    //     let busyRows = 0
+    //     newState.forEach((template, iT) => {
+    //         if (iT < templateKey + 1) {
+    //             if (template.type === 'small') busyRows = busyRows + 1
+    //             else busyRows = busyRows + 2
+    //         }
+    //     })
+    //     console.log('busyRows', busyRows)
+    //     newState[templateKey].data[projectkey].active = isActive
+    //     setDiscriptionPosition(prev => ({
+    //         ...prev,
+    //         busyRows: isActive ? busyRows : 0,
+    //         activeTemplate: isActive ? templateKey : 666,
+    //         style: discriptionStyleGenerator(templateKey + 1, type, busyRows)
+    //     }))
 
-    const styleGenerator = (templateId, position = 'left') => {
-        let styles = isTabletOrMobile ?
-            {
-                gridColumnStart: stylesTemplate.md.gridColumnStart,
-                gridColumnEnd: stylesTemplate.md.gridColumnEnd,
-                gridRowStart: templateId > 1 ?
-                    stylesTemplate.md.gridRowStart + templateId :
-                    stylesTemplate.md.gridRowStart,
-                gridRowEnd: templateId > 1 ?
-                    stylesTemplate.md.gridRowEnd + templateId :
-                    stylesTemplate.md.gridRowEnd,
-            }
-            : {
-                gridColumnStart: stylesTemplate.xl[position].gridColumnStart,
-                gridColumnEnd: stylesTemplate.xl[position].gridColumnEnd,
-                gridRowStart: templateId > 1 ?
-                    stylesTemplate.xl.gridRowStart + templateId :
-                    stylesTemplate.xl.gridRowStart,
-                gridRowEnd: templateId > 1 ?
-                    stylesTemplate.xl.gridRowEnd + templateId :
-                    stylesTemplate.xl.gridRowEnd,
-            }
-        if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
-            (templateId - 1 > discriptionPosition.activeTemplate)
-        ) {
-            styles.gridRowStart = styles.gridRowStart + 1
-            styles.gridRowEnd = styles.gridRowEnd + 1
-        }
+    //     setData(newState)
+    // }
+
+    // const discriptionStyleGenerator = (index, type, busyRows) => {
+    //     const multiply = type === 'small' ? 1 : 2
+    //     console.log('multiply', multiply, 'index', index)
+    //     return isTabletOrMobile ?
+    //         discriptionStylesTemplate.md : {
+    //             gridColumnStart: discriptionStylesTemplate.xl.gridColumnStart,
+    //             gridColumnEnd: discriptionStylesTemplate.xl.gridColumnEnd,
+    //             gridRowStart: discriptionStylesTemplate.xl.gridRowStart + busyRows,
+    //             gridRowEnd: discriptionStylesTemplate.xl.gridRowEnd + busyRows,
+    //         }
+    // }
+
+    // const stylesTemplate = {
+    //     xl: {
+    //         gridRowStart: 1,
+    //         gridRowEnd: 3,
+    //         left: {
+    //             gridColumnStart: 1,
+    //             gridColumnEnd: 3,
+    //         },
+    //         right: {
+    //             gridColumnStart: 2,
+    //             gridColumnEnd: 4,
+    //         }
+    //     },
+    //     md: {
+    //         gridRowStart: 1,
+    //         gridRowEnd: 2,
+    //         gridColumnStart: 1,
+    //         gridColumnEnd: 2,
 
 
-        return styles
-    }
+    //     }
+    // }
+
+    // const styleGenerator = (templateId, position = 'left') => {
+    //     let styles = isTabletOrMobile ?
+    //         {
+    //             gridColumnStart: stylesTemplate.md.gridColumnStart,
+    //             gridColumnEnd: stylesTemplate.md.gridColumnEnd,
+    //             gridRowStart: templateId > 1 ?
+    //                 stylesTemplate.md.gridRowStart + templateId :
+    //                 stylesTemplate.md.gridRowStart,
+    //             gridRowEnd: templateId > 1 ?
+    //                 stylesTemplate.md.gridRowEnd + templateId :
+    //                 stylesTemplate.md.gridRowEnd,
+    //         }
+    //         : {
+    //             gridColumnStart: stylesTemplate.xl[position].gridColumnStart,
+    //             gridColumnEnd: stylesTemplate.xl[position].gridColumnEnd,
+    //             gridRowStart: templateId > 1 ?
+    //                 stylesTemplate.xl.gridRowStart + templateId :
+    //                 stylesTemplate.xl.gridRowStart,
+    //             gridRowEnd: templateId > 1 ?
+    //                 stylesTemplate.xl.gridRowEnd + templateId :
+    //                 stylesTemplate.xl.gridRowEnd,
+    //         }
+    //     if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
+    //         (templateId - 1 > discriptionPosition.activeTemplate)
+    //     ) {
+    //         styles.gridRowStart = styles.gridRowStart + 1
+    //         styles.gridRowEnd = styles.gridRowEnd + 1
+    //     }
+
+
+    //     return styles
+    // }
     return (
-        // redirect("/ru")
-        <Suspense fallback={<div>Загрузка...</div>}>
-        <main>
-            <div className='container'>
-                <h1 className={styles.title}>
-                    Портфолио наших Проектов
-                </h1>
-                <div className={styles.gridWrapper}>
-                    {
-                        data.map((template, templateKey) =>
-                            template.data.map((project, projectkey) => (
-                                project.type === 'large' ? (
-                                    <LargeProject
-                                        style={styleGenerator(templateKey + 1, project.style.position)}
-                                        key={project.id}
-                                        active={project.active}
-                                        title={project.title}
-                                        image={project.image}
-                                        className={styles.largeProject}
-                                        setActive={(isActive) =>
-                                            activeHandler(isActive,
-                                                templateKey,
-                                                projectkey,
-                                                template.type
-                                            )}
-                                    />
-                                ) : (
-                                    <SmallProject
-                                        setActive={(isActive) =>
-                                            activeHandler(isActive,
-                                                templateKey,
-                                                projectkey,
-                                                template.type
-                                            )}
-                                        key={project.id}
-                                        title={project.title}
-                                        image={project.image}
-                                        active={project.active}
-                                        className={styles.smallProject} />
-                                )
-                            )
-                            )
-                        )
-                    }
-                    {data.map((template, templateKey) =>
-                        template.data.map((project, projectKey) =>
-                            project.active ? <DescriptionProject
-                                style={discriptionPosition.style}
-                                key={`${templateKey}${projectKey}`}
-                                project={project}
-                            /> : <></>
-                        )
+        redirect("/ru")
+        // <Suspense fallback={<div>Загрузка...</div>}>
+        // <main>
+        //     <div className='container'>
+        //         <h1 className={styles.title}>
+        //             Портфолио наших Проектов
+        //         </h1>
+        //         <div className={styles.gridWrapper}>
+        //             {
+        //                 data.map((template, templateKey) =>
+        //                     template.data.map((project, projectkey) => (
+        //                         project.type === 'large' ? (
+        //                             <LargeProject
+        //                                 style={styleGenerator(templateKey + 1, project.style.position)}
+        //                                 key={project.id}
+        //                                 active={project.active}
+        //                                 title={project.title}
+        //                                 image={project.image}
+        //                                 className={styles.largeProject}
+        //                                 setActive={(isActive) =>
+        //                                     activeHandler(isActive,
+        //                                         templateKey,
+        //                                         projectkey,
+        //                                         template.type
+        //                                     )}
+        //                             />
+        //                         ) : (
+        //                             <SmallProject
+        //                                 setActive={(isActive) =>
+        //                                     activeHandler(isActive,
+        //                                         templateKey,
+        //                                         projectkey,
+        //                                         template.type
+        //                                     )}
+        //                                 key={project.id}
+        //                                 title={project.title}
+        //                                 image={project.image}
+        //                                 active={project.active}
+        //                                 className={styles.smallProject} />
+        //                         )
+        //                     )
+        //                     )
+        //                 )
+        //             }
+        //             {data.map((template, templateKey) =>
+        //                 template.data.map((project, projectKey) =>
+        //                     project.active ? <DescriptionProject
+        //                         style={discriptionPosition.style}
+        //                         key={`${templateKey}${projectKey}`}
+        //                         project={project}
+        //                     /> : <></>
+        //                 )
 
-                    )}
-                </div>
-                {/* <DescriptionProject
-                    project={data.find((item) => item.active)}
-                /> */}
+        //             )}
+        //         </div>
+               
 
-                <div className={styles.boxBtn}>
-                    <button className={styles.btn}>
-                        Получить консультацию
-                    </button>
-                </div>
-            </div>
-            <div className='container'>
-                <h1 className={styles.titleObj}>
-                    География объектов
-                </h1>
-                <Image
-                    src={mapObj}
-                    alt="mapObj"
-                    className={styles.mapObj}
-                />
-            </div>
-        </main>
-        </Suspense>
+        //         <div className={styles.boxBtn}>
+        //             <button className={styles.btn}>
+        //                 Получить консультацию
+        //             </button>
+        //         </div>
+        //     </div>
+        //     <div className='container'>
+        //         <h1 className={styles.titleObj}>
+        //             География объектов
+        //         </h1>
+        //         <Image
+        //             src={mapObj}
+        //             alt="mapObj"
+        //             className={styles.mapObj}
+        //         />
+        //     </div>
+        // </main>
+        // </Suspense>
     );
 };
 
 export default page;
+
+
+
