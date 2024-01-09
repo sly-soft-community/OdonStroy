@@ -157,11 +157,11 @@ import { redirect } from 'next/navigation';
 
 // import DescriptionProject from './components/DescriptionProject/DescriptionProject';
 
-const LargeProject = React.lazy(() => import('./components/LargeProject/LargeProject'));
+// const LargeProject = React.lazy(() => import('./components/LargeProject/LargeProject'));
 
-const SmallProject = React.lazy(() => import('./components/SmallProject/SmallProject'));
+// const SmallProject = React.lazy(() => import('./components/SmallProject/SmallProject'));
 
-const DescriptionProject = React.lazy(() => import('./components/DescriptionProject/DescriptionProject'));
+// const DescriptionProject = React.lazy(() => import('./components/DescriptionProject/DescriptionProject'));
 
 const page = () => {
     // const [data, setData] = useState([
