@@ -81,8 +81,9 @@
         position: relative;
 
         @include respond-to("md") {
-            display: none;
+            // display: none;
         }
+        
     }
 
     &__img {
