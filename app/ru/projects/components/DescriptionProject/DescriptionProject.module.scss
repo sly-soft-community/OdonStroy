@@ -98,17 +98,25 @@
 }
 
 .slider {
-    width: 100%; 
-    max-height: 408px; 
+    width: 100%;
+    max-height: 408px;
     border-radius: 10px;
 
 
 }
+
+.placeholder {
+    min-height: 408px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--02-block-02, #BFD4E4);
+}
+
 // .img {
 //     width: 100%;
 //     max-height: 408px;
 //     height: 100%;
 //     // max-width: 639px;
-    
-// }
 
+// }

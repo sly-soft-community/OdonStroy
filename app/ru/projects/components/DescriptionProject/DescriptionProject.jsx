@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import styles from "./DescriptionProject.module.scss";
 import Image from 'next/image';
-import slider from '@/media/img/projects/pojectSlider/slider.png'
-import leftArrow from '@/media/img/projects/pojectSlider/leftArrow.svg'
-import rightArrow from '@/media/img/projects/pojectSlider/rightArrow.svg'
+
+import leftArrow from './leftArrow.svg'
+import rightArrow from './rightArrow.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/bundle'
@@ -39,15 +39,15 @@ const DescriptionProject = ({ project, style }) => {
     //     { id: 3, item: 'работа выполнена за', info: '3 месяца' },
     // ];
     const swiperRef = useRef(null);
-    
+
     const goNext = () => {
-        if(swiperRef.current && swiperRef.current.swiper) {
+        if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slideNext();
         }
     };
 
     const goPrev = () => {
-        if(swiperRef.current && swiperRef.current.swiper) {
+        if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slidePrev();
         }
     };
@@ -77,29 +77,40 @@ const DescriptionProject = ({ project, style }) => {
                     </div>
                 </div>
                 <div className={styles.sliderBox}>
-                <div onClick={goPrev} className={styles.btn}>
-                        <Image 
-                        src={leftArrow} 
-                        alt="Prev slide"  />
+                    <div onClick={goPrev} className={styles.btn}>
+                        <Image
+                            src={leftArrow}
+                            alt="Prev slide" />
                     </div>
-                <Swiper
-                    ref={swiperRef}
-                    loop={true} 
-                    className={styles.slider}
-                >
-                    { project.projectDetail.sliderImages.map((imageSrc, index) => (
-                        <SwiperSlide key={index}>
-                            <Image src={imageSrc} 
-                            alt="sliderImages" 
-                             />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                    
+                    <Swiper
+                        ref={swiperRef}
+                        loop={true}
+                        className={styles.slider}
+                    >
+                        {project.projectDetail.sliderImages.length ?
+                            project.projectDetail.sliderImages.map(
+                                (imageSrc, index) => (
+                                    <SwiperSlide
+                                        key={index}>
+                                        <Image src={imageSrc}
+                                            alt="sliderImages"
+                                        />
+                                    </SwiperSlide>
+                                ))
+                            :
+                            <SwiperSlide
+                                key={1}>
+                                <div className={styles.placeholder}>
+                                </div>
+                            </SwiperSlide>
+
+                        }
+                    </Swiper>
+
                     <div onClick={goNext} className={styles.btn}>
-                        <Image 
-                        src={rightArrow} 
-                        alt="Next slide"  />
+                        <Image
+                            src={rightArrow}
+                            alt="Next slide" />
                     </div>
                 </div>
                 {/* <div className={styles.slider}>
