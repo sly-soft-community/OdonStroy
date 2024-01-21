@@ -92,8 +92,10 @@ const DescriptionProject = ({ project, style }) => {
                                 (imageSrc, index) => (
                                     <SwiperSlide
                                         key={index}>
-                                        <Image src={imageSrc}
+                                        <Image
+                                            src={imageSrc}
                                             alt="sliderImages"
+                                            className={styles.image}
                                         />
                                     </SwiperSlide>
                                 ))
