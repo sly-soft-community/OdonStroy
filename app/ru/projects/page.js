@@ -163,7 +163,7 @@ import DescriptionProject from './components/DescriptionProject/DescriptionProje
 
 // const DescriptionProject = React.lazy(() => import('./components/DescriptionProject/DescriptionProject'));
 
-const page = () => {
+const Page = () => {
     const [data, setData] = useState([
         {
             type: 'large',
@@ -867,7 +867,7 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
 
 
 

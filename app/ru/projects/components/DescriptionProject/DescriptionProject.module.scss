@@ -10,6 +10,7 @@
     align-items: center;
     width: 100%;
     padding-top: 48px;
+    animation: slidein .5s ease-in-out;
 
     @include respond-to("lg") {
         flex-direction: column;
@@ -119,10 +120,13 @@
     height: 100%;
 }
 
-// .img {
-//     width: 100%;
-//     max-height: 408px;
-//     height: 100%;
-//     // max-width: 639px;
+@keyframes slidein {
+    from {
+        transform: scale(.3);
+        // display: flex;
+    }
 
-// }
+    to {
+        transform: scale(1);
+    }
+}

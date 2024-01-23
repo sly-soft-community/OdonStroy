@@ -31,26 +31,21 @@ import 'swiper/scss/thumbs'
 import 'swiper/scss/virtual'
 import 'swiper/scss/zoom'
 import 'swiper/react'
+import LoadingImage from '@/components/LoadingImg/LoadingImg';
 
 const DescriptionProject = ({ project, style }) => {
-    // const data = [
-    //     { id: 1, item: 'общая квадратура', info: '1000 м2' },
-    //     { id: 2, item: 'квадратура здания', info: '200 м2' },
-    //     { id: 3, item: 'работа выполнена за', info: '3 месяца' },
-    // ];
     const swiperRef = useRef(null);
-
     const goNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slideNext();
         }
     };
-
     const goPrev = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slidePrev();
         }
     };
+
 
     return (
         project ?
@@ -92,11 +87,10 @@ const DescriptionProject = ({ project, style }) => {
                                 (imageSrc, index) => (
                                     <SwiperSlide
                                         key={index}>
-                                        <Image
+                                        <LoadingImage
                                             src={imageSrc}
                                             alt="sliderImages"
-                                            className={styles.image}
-                                        />
+                                            className={styles.image} />
                                     </SwiperSlide>
                                 ))
                             :
@@ -115,30 +109,6 @@ const DescriptionProject = ({ project, style }) => {
                             alt="Next slide" />
                     </div>
                 </div>
-                {/* <div className={styles.slider}>
-                    <div>
-                        <Image
-                            src={leftArrow}
-                            alt="Prev slide"
-                            className={styles.btn}
-                        />
-                    </div>
-                    <div>
-                        <Image
-                            src={slider}
-                            alt="icon"
-                            className={styles.img}
-                        />
-                    </div>
-                    <div>
-                        <Image
-                            src={rightArrow}
-                            alt="Next slide"
-                            className={styles.btn}
-                        />
-                    </div>
-                </div> */}
-
             </div> : <></>
     );
 };
