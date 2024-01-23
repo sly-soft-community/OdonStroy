@@ -21,7 +21,7 @@ const ContactContant = () => {
     const scrollTo = (target) => {
         gsap.to('body', { duration: .6, scrollTo: '#form' })
         // gsap.to('body', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true });
-        gsap.to('#form', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true })
+        // gsap.to('#form', { y: 12, ease: "power1.inOut", repeat: -1, yoyo: true })
         // gsap.to('#form', { rotation: 180, x: 100, duration: 1, repeat: -2, yoyo: true })
     }
     // useEffect(() => {
