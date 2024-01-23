@@ -17,8 +17,8 @@ import projectsSmall10 from '@/media/img/projects/projectsSmall10.png'
 import projectsLarge1 from '@/media/img/projects/projectsLarge1.png'
 import projectsLarge2 from '@/media/img/projects/projectsLarge2.png'
 
-import FokGazprom1 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image1.jpg'
-import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
+// import FokGazprom1 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image1.jpg'
+// import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
 // import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image3.jpg'
 // import FokGazprom4 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image4.jpg'
 // import FokGazprom5 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image5.jpg'
@@ -29,16 +29,16 @@ import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/imag
 // import FokGazprom10 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image10.jpg'
 // import FokGazprom11 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image11.jpg'
 
-import UlanGazprom1 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image1.jpg'
-import UlanGazprom2 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image2.jpg'
+// import UlanGazprom1 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image1.jpg'
+// import UlanGazprom2 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image2.jpg'
 // import UlanGazprom3 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image3.jpg'
 // import UlanGazprom4 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image4.jpg'
 // import UlanGazprom5 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image5.jpg'
 // import UlanGazprom6 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image6.jpg'
 // import UlanGazprom7 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image7.jpg'
 
-import FrutStorage1 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image1.jpg'
-import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image2.jpg'
+// import FrutStorage1 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image1.jpg'
+// import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image2.jpg'
 // import FrutStorage3 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image3.png'
 // import FrutStorage4 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image4.png'
 // import FrutStorage5 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image5.jpg'
@@ -52,16 +52,16 @@ import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/im
 // import FrutStorage13 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image13.jpg'
 // import FrutStorage14 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image14.png'
 
-import ChuyGaz1 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image1.jpg'
-import ChuyGaz2 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image2.jpg'
+// import ChuyGaz1 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image1.jpg'
+// import ChuyGaz2 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image2.jpg'
 // import ChuyGaz3 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image3.jpg'
 // import ChuyGaz4 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image4.jpg'
 // import ChuyGaz5 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image5.jpg'
 // import ChuyGaz6 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image6.jpg'
 // import ChuyGaz7 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image7.jpg'
 
-import SchoolStadion1 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image1.jpg'
-import SchoolStadion2 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image2.jpg'
+// import SchoolStadion1 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image1.jpg'
+// import SchoolStadion2 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image2.jpg'
 // import SchoolStadion3 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image3.jpg'
 // import SchoolStadion4 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image4.jpg'
 // import SchoolStadion5 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image5.jpg'
@@ -69,16 +69,16 @@ import SchoolStadion2 from '@/media/img/projects/pojectSlider/sliderSchoolStadio
 // import SchoolStadion7 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image7.jpg'
 // import SchoolStadion8 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image8.jpg'
 
-import AzsGazprom1 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image1.jpg'
-import AzsGazprom2 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image2.jpg'
+// import AzsGazprom1 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image1.jpg'
+// import AzsGazprom2 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image2.jpg'
 // import AzsGazprom3 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image3.jpg'
 // import AzsGazprom4 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image4.jpg'
 // import AzsGazprom5 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image5.jpg'
 // import AzsGazprom6 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image6.jpg'
 // import AzsGazprom7 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image7.jpg'
 
-import Salih1 from '@/media/img/projects/pojectSlider/sliderSalih/image1.jpg'
-import Salih2 from '@/media/img/projects/pojectSlider/sliderSalih/image2.jpg'
+// import Salih1 from '@/media/img/projects/pojectSlider/sliderSalih/image1.jpg'
+// import Salih2 from '@/media/img/projects/pojectSlider/sliderSalih/image2.jpg'
 // import Salih3 from '@/media/img/projects/pojectSlider/sliderSalih/image3.jpg'
 // import Salih4 from '@/media/img/projects/pojectSlider/sliderSalih/image4.jpg'
 // import Salih5 from '@/media/img/projects/pojectSlider/sliderSalih/image5.jpg'
@@ -99,8 +99,8 @@ import Salih2 from '@/media/img/projects/pojectSlider/sliderSalih/image2.jpg'
 // import Salih20 from '@/media/img/projects/pojectSlider/sliderSalih/image20.jpg'
 // import Salih21 from '@/media/img/projects/pojectSlider/sliderSalih/image21.jpg'
 
-import Severtransgaz1 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image1.jpg'
-import Severtransgaz2 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image2.jpg'
+// import Severtransgaz1 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image1.jpg'
+// import Severtransgaz2 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image2.jpg'
 // import Severtransgaz3 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image3.jpg'
 // import Severtransgaz4 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image4.jpg'
 // import Severtransgaz5 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image5.jpg'
@@ -112,8 +112,8 @@ import Severtransgaz2 from '@/media/img/projects/pojectSlider/sliderSevertransga
 // import Severtransgaz11 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image11.jpg'
 // import Severtransgaz12 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image12.jpg'
 
-import AzsBatora1 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image1.jpg'
-import AzsBatora2 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image2.jpg'
+// import AzsBatora1 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image1.jpg'
+// import AzsBatora2 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image2.jpg'
 // import AzsBatora3 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image3.jpg'
 // import AzsBatora4 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image4.jpg'
 // import AzsBatora5 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image5.jpg'
@@ -121,15 +121,15 @@ import AzsBatora2 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image2
 // import AzsBatora7 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image7.jpg'
 // import AzsBatora8 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image8.jpg'
 
-import GazFere1 from '@/media/img/projects/pojectSlider/sliderGazFere/image1.jpg'
-import GazFere2 from '@/media/img/projects/pojectSlider/sliderGazFere/image2.jpg'
+// import GazFere1 from '@/media/img/projects/pojectSlider/sliderGazFere/image1.jpg'
+// import GazFere2 from '@/media/img/projects/pojectSlider/sliderGazFere/image2.jpg'
 // import GazFere3 from '@/media/img/projects/pojectSlider/sliderGazFere/image3.jpg'
 // import GazFere4 from '@/media/img/projects/pojectSlider/sliderGazFere/image4.jpg'
 // import GazFere5 from '@/media/img/projects/pojectSlider/sliderGazFere/image5.jpg'
 // import GazFere6 from '@/media/img/projects/pojectSlider/sliderGazFere/image6.jpg'
 
-import AzsGazpromGandi1 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image1.jpg'
-import AzsGazpromGandi2 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image2.jpg'
+// import AzsGazpromGandi1 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image1.jpg'
+// import AzsGazpromGandi2 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image2.jpg'
 // import AzsGazpromGandi3 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image3.jpg'
 // import AzsGazpromGandi4 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image4.jpg'
 // import AzsGazpromGandi5 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image5.jpg'
@@ -137,8 +137,8 @@ import AzsGazpromGandi2 from '@/media/img/projects/pojectSlider/sliderAzsGazprom
 // import AzsGazpromGandi7 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image7.jpg'
 // import AzsGazpromGandi8 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image8.jpg'
 
-import ChonAryk1 from '@/media/img/projects/pojectSlider/sliderChonAryk/image1.jpg'
-import ChonAryk2 from '@/media/img/projects/pojectSlider/sliderChonAryk/image2.jpg'
+// import ChonAryk1 from '@/media/img/projects/pojectSlider/sliderChonAryk/image1.jpg'
+// import ChonAryk2 from '@/media/img/projects/pojectSlider/sliderChonAryk/image2.jpg'
 // import ChonAryk3 from '@/media/img/projects/pojectSlider/sliderChonAryk/image3.jpg'
 // import ChonAryk4 from '@/media/img/projects/pojectSlider/sliderChonAryk/image4.jpg'
 // import ChonAryk5 from '@/media/img/projects/pojectSlider/sliderChonAryk/image5.jpg'
@@ -199,7 +199,7 @@ const Page = () => {
                             },
                         ],
                         sliderImages: [
-                            FokGazprom1,
+                            // FokGazprom1,
                             // FokGazprom2,
                             // FokGazprom3,
                             // FokGazprom4,
@@ -245,7 +245,7 @@ const Page = () => {
                             },
                         ],
                         sliderImages: [
-                            UlanGazprom1,
+                            // UlanGazprom1,
                             // UlanGazprom2,
                             // UlanGazprom3,
                             // UlanGazprom4,
@@ -277,7 +277,7 @@ const Page = () => {
                             },
                         ],
                         sliderImages: [
-                            FrutStorage1,
+                            // FrutStorage1,
                             // FrutStorage2,
                             // FrutStorage3,
                             // FrutStorage4,
@@ -419,7 +419,7 @@ const Page = () => {
 
                 {
                     active: false, id: 7, type: 'small',
-                    title: 'салих',
+                    title: 'Cалих',
                     image: projectsSmall6,
                     projectDetail: {
                         text: [
@@ -674,9 +674,9 @@ const Page = () => {
         }
     })
 
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+    const isTablet = useMediaQuery({ query: '(max-width: 1000px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-    // const activeProject = data.find(p => p.active);
 
     const discriptionStylesTemplate = {
         xl: {
@@ -686,11 +686,18 @@ const Page = () => {
             gridColumnEnd: 4,
         },
         md: {
-            gridColumn: '1 / 2',
-            gridRow: '1 / 2',
-        }
+            gridRowStart: 1,
+            gridRowEnd: 2,
+            gridColumnStart: 1,
+            gridColumnEnd: 3,
+        },
+        sm: {
+            gridRowStart: 1,
+            gridRowEnd: 2,
+            gridColumnStart: 1,
+            gridColumnEnd: 2,
+        },
     }
-
 
     const activeHandler = (isActive, templateKey, projectkey, type) => {
         let newState = [...data]
@@ -710,23 +717,48 @@ const Page = () => {
                 else busyRows = busyRows + 2
             }
         })
-        console.log('busyRows', busyRows)
         newState[templateKey].data[projectkey].active = isActive
-        setDiscriptionPosition(prev => ({
-            ...prev,
-            busyRows: isActive ? busyRows : 0,
-            activeTemplate: isActive ? templateKey : 666,
-            style: discriptionStyleGenerator(templateKey + 1, type, busyRows)
-        }))
+        if (!isActive) {
+            setTimeout(() => {
+                setDiscriptionPosition(prev => ({
+                    ...prev,
+                    busyRows: isActive ? busyRows : 0,
+                    activeTemplate: isActive ? templateKey : 666,
+                    style: discriptionStyleGenerator(templateKey + 1, type, busyRows)
+                }))
+            }, 500)
+
+        } else {
+            setDiscriptionPosition(prev => ({
+                ...prev,
+                busyRows: isActive ? busyRows : 0,
+                activeTemplate: isActive ? templateKey : 666,
+                style: discriptionStyleGenerator(templateKey + 1, type, busyRows)
+            }))
+        }
+
 
         setData(newState)
     }
 
     const discriptionStyleGenerator = (index, type, busyRows) => {
-        const multiply = type === 'small' ? 1 : 2
-        console.log('multiply', multiply, 'index', index)
-        return isTabletOrMobile ?
-            discriptionStylesTemplate.md : {
+        return isTablet ?
+            (isMobile ?
+                {
+                    gridColumnStart: discriptionStylesTemplate.sm.gridColumnStart,
+                    gridColumnEnd: discriptionStylesTemplate.sm.gridColumnEnd,
+                    gridRowStart: discriptionStylesTemplate.sm.gridRowStart + busyRows,
+                    gridRowEnd: discriptionStylesTemplate.sm.gridRowEnd + busyRows,
+                } :
+                {
+                    gridColumnStart: discriptionStylesTemplate.md.gridColumnStart,
+                    gridColumnEnd: discriptionStylesTemplate.md.gridColumnEnd,
+                    gridRowStart: discriptionStylesTemplate.md.gridRowStart + busyRows,
+                    gridRowEnd: discriptionStylesTemplate.md.gridRowEnd + busyRows,
+                }
+            )
+
+            : {
                 gridColumnStart: discriptionStylesTemplate.xl.gridColumnStart,
                 gridColumnEnd: discriptionStylesTemplate.xl.gridColumnEnd,
                 gridRowStart: discriptionStylesTemplate.xl.gridRowStart + busyRows,
@@ -748,27 +780,42 @@ const Page = () => {
             }
         },
         md: {
+            gridRowStart: 2,
+            gridRowEnd: 3,
+            gridColumnStart: 1,
+            gridColumnEnd: 3,
+        },
+        sm: {
             gridRowStart: 1,
             gridRowEnd: 2,
             gridColumnStart: 1,
             gridColumnEnd: 2,
-
-
-        }
+        },
     }
 
     const styleGenerator = (templateId, position = 'left') => {
-        let styles = isTabletOrMobile ?
-            {
-                gridColumnStart: stylesTemplate.md.gridColumnStart,
-                gridColumnEnd: stylesTemplate.md.gridColumnEnd,
+        let styles = isTablet ?
+            (isMobile ? {
+                gridColumnStart: stylesTemplate.sm.gridColumnStart,
+                gridColumnEnd: stylesTemplate.sm.gridColumnEnd,
                 gridRowStart: templateId > 1 ?
-                    stylesTemplate.md.gridRowStart + templateId :
-                    stylesTemplate.md.gridRowStart,
+                    stylesTemplate.sm.gridRowStart + templateId :
+                    stylesTemplate.sm.gridRowStart,
                 gridRowEnd: templateId > 1 ?
-                    stylesTemplate.md.gridRowEnd + templateId :
-                    stylesTemplate.md.gridRowEnd,
+                    stylesTemplate.sm.gridRowEnd + templateId :
+                    stylesTemplate.sm.gridRowEnd,
             }
+                : {
+                    gridColumnStart: stylesTemplate.md.gridColumnStart,
+                    gridColumnEnd: stylesTemplate.md.gridColumnEnd,
+                    gridRowStart: templateId > 1 ?
+                        stylesTemplate.md.gridRowStart + templateId :
+                        stylesTemplate.md.gridRowStart,
+                    gridRowEnd: templateId > 1 ?
+                        stylesTemplate.md.gridRowEnd + templateId :
+                        stylesTemplate.md.gridRowEnd,
+                }
+            )
             : {
                 gridColumnStart: stylesTemplate.xl[position].gridColumnStart,
                 gridColumnEnd: stylesTemplate.xl[position].gridColumnEnd,
@@ -779,6 +826,7 @@ const Page = () => {
                     stylesTemplate.xl.gridRowEnd + templateId :
                     stylesTemplate.xl.gridRowEnd,
             }
+
         if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
             (templateId - 1 > discriptionPosition.activeTemplate)
         ) {
@@ -789,6 +837,7 @@ const Page = () => {
 
         return styles
     }
+
     return (
         <Suspense fallback={<div>Загрузка...</div>}>
             <main>
@@ -835,11 +884,12 @@ const Page = () => {
                         }
                         {data.map((template, templateKey) =>
                             template.data.map((project, projectKey) =>
-                                project.active ? <DescriptionProject
+                                <DescriptionProject
+                                    isActive={project.active}
                                     style={discriptionPosition.style}
                                     key={`${templateKey}${projectKey}`}
                                     project={project}
-                                /> : <></>
+                                />
                             )
 
                         )}

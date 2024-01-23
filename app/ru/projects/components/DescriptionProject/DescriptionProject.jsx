@@ -33,7 +33,7 @@ import 'swiper/scss/zoom'
 import 'swiper/react'
 import LoadingImage from '@/components/LoadingImg/LoadingImg';
 
-const DescriptionProject = ({ project, style }) => {
+const DescriptionProject = ({ project, style, isActive }) => {
     const swiperRef = useRef(null);
     const goNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
@@ -48,68 +48,68 @@ const DescriptionProject = ({ project, style }) => {
 
 
     return (
-        project ?
-            <div style={style} className={styles.wrapper}>
-                <div className={styles.contentBox} >
-                    <h1 className={styles.title}>{project.title}</h1>
-                    <div className={style.textBox}>
-                        {project.projectDetail.text.map((item, i) =>
-                            <p key={i} className={styles.description}>
-                                {item}
-                            </p>
-                        )}
-                    </div>
+        <div style={style} className={isActive ? `${styles.wrapper} ${styles.active}` : styles.wrapper}>
+            <div className={styles.contentBox} >
+                <h1 className={styles.title}>{project.title}</h1>
+                <div className={style.textBox}>
+                    {project.projectDetail.text.map((item, i) =>
+                        <p key={i} className={styles.description}>
+                            {item}
+                        </p>
+                    )}
+                </div>
 
-                    <div className={project.projectDetail.itemProjects.length === 3 ?
-                        styles.itemBox : styles.itemBox2}>
-                        {project.projectDetail.itemProjects.map((item, i) =>
-                            <div key={i}>
-                                <div className={styles.item}>{item.label}</div>
-                                <div className={styles.info}>{item.value}{item.unitMash}</div>
+                <div className={project.projectDetail.itemProjects.length === 3 ?
+                    styles.itemBox : styles.itemBox2}>
+                    {project.projectDetail.itemProjects.map((item, i) =>
+                        <div key={i}>
+                            <div className={styles.item}>{item.label}</div>
+                            <div className={styles.info}>{item.value}{item.unitMash}</div>
+                        </div>
+                    )}
+
+                </div>
+            </div>
+            <div className={styles.sliderBox}>
+                <div onClick={goPrev} className={styles.btn}>
+                    <Image
+                        src={leftArrow}
+                        alt="Prev slide" />
+                </div>
+                <Swiper
+                    ref={swiperRef}
+                    loop={true}
+
+                    className={styles.slider}
+                >
+                    {project.projectDetail.sliderImages.length ?
+                        project.projectDetail.sliderImages.map(
+                            (imageSrc, index) => (
+                                <SwiperSlide
+                                    key={index}>
+                                    <LoadingImage
+                                        src={imageSrc}
+                                        alt="sliderImages"
+                                        className={styles.image} />
+                                </SwiperSlide>
+                            ))
+                        :
+                        <SwiperSlide
+                            key={1}>
+                            <div className={styles.placeholder}>
                             </div>
-                        )}
+                        </SwiperSlide>
 
-                    </div>
+                    }
+                </Swiper>
+
+                <div onClick={goNext} className={styles.btn}>
+                    <Image
+                        src={rightArrow}
+                        alt="Next slide" />
                 </div>
-                <div className={styles.sliderBox}>
-                    <div onClick={goPrev} className={styles.btn}>
-                        <Image
-                            src={leftArrow}
-                            alt="Prev slide" />
-                    </div>
-                    <Swiper
-                        ref={swiperRef}
-                        loop={true}
-                        className={styles.slider}
-                    >
-                        {project.projectDetail.sliderImages.length ?
-                            project.projectDetail.sliderImages.map(
-                                (imageSrc, index) => (
-                                    <SwiperSlide
-                                        key={index}>
-                                        <LoadingImage
-                                            src={imageSrc}
-                                            alt="sliderImages"
-                                            className={styles.image} />
-                                    </SwiperSlide>
-                                ))
-                            :
-                            <SwiperSlide
-                                key={1}>
-                                <div className={styles.placeholder}>
-                                </div>
-                            </SwiperSlide>
-
-                        }
-                    </Swiper>
-
-                    <div onClick={goNext} className={styles.btn}>
-                        <Image
-                            src={rightArrow}
-                            alt="Next slide" />
-                    </div>
-                </div>
-            </div> : <></>
+            </div>
+        </div>
     );
 };
 

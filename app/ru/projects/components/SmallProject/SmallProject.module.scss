@@ -49,5 +49,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: .5s;
+
+
+    &.active {
+        transition: .5s;
+        transform: rotate(180deg);
+    }
 
 }

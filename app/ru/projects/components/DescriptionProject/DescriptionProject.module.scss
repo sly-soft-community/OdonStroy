@@ -1,7 +1,7 @@
 @import "@/styles/mixins.scss";
 
 .wrapper {
-    display: grid;
+    display: none;
     grid-template-columns: 560px minmax(350px, 720px);
     // flex-direction: row;
     // max-width: 1300px;
@@ -10,10 +10,16 @@
     align-items: center;
     width: 100%;
     padding-top: 48px;
-    animation: slidein .5s ease-in-out;
+    animation: slideout .5s ease-in-out;
+
+    &.active {
+        display: grid;
+        animation: slidein .5s ease-in-out;
+
+    }
 
     @include respond-to("lg") {
-        flex-direction: column;
+        grid-template-columns: minmax(320px, 540px);
 
     }
 
@@ -122,11 +128,35 @@
 
 @keyframes slidein {
     from {
-        transform: scale(.3);
-        // display: flex;
+        transform: scale(.2);
+        opacity: 0;
+
     }
 
     to {
+        opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: scale(1);
+        display: grid;
+        // background: white;
+        opacity: 1;
+    }
+
+
+    99% {
+        transform: scale(0);
+        opacity: 0;
+        // background: transparent;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
     }
 }
