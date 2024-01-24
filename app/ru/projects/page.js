@@ -156,6 +156,7 @@ import LargeProject from './components/LargeProject/LargeProject';
 import SmallProject from './components/SmallProject/SmallProject';
 
 import DescriptionProject from './components/DescriptionProject/DescriptionProject';
+import ProjectMap from './components/ProjectMap/ProjectMap';
 
 // const LargeProject = React.lazy(() => import('./components/LargeProject/LargeProject'));
 
@@ -173,7 +174,7 @@ const Page = () => {
                     id: 1,
                     type: 'large',
                     orintation: 'left',
-                    title: 'Фок Газпром (физкультурно-оздоровительный комплекс)',
+                    title: 'ФОК Газпром',
                     image: projectsLarge1,
                     projectDetail: {
                         text: [
@@ -713,8 +714,12 @@ const Page = () => {
         let busyRows = 0
         newState.forEach((template, iT) => {
             if (iT < templateKey + 1) {
-                if (template.type === 'small') busyRows = busyRows + 1
-                else busyRows = busyRows + 2
+                if (isTablet) {
+                    busyRows = busyRows + 1
+                } else {
+                    if (template.type === 'small') busyRows = busyRows + 1
+                    else busyRows = busyRows + 2
+                }
             }
         })
         newState[templateKey].data[projectkey].active = isActive
@@ -780,8 +785,8 @@ const Page = () => {
             }
         },
         md: {
-            gridRowStart: 2,
-            gridRowEnd: 3,
+            gridRowStart: 1,
+            gridRowEnd: 2,
             gridColumnStart: 1,
             gridColumnEnd: 3,
         },
@@ -827,13 +832,30 @@ const Page = () => {
                     stylesTemplate.xl.gridRowEnd,
             }
 
-        if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
-            (templateId - 1 > discriptionPosition.activeTemplate)
-        ) {
-            styles.gridRowStart = styles.gridRowStart + 1
-            styles.gridRowEnd = styles.gridRowEnd + 1
+        if (isTablet) {
+            if (isMobile) {
+                if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
+                    (templateId - 1 > discriptionPosition.activeTemplate)
+                ) {
+                    styles.gridRowStart = styles.gridRowStart + 1
+                    styles.gridRowEnd = styles.gridRowEnd + 1
+                }
+            } else {
+                if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
+                    (discriptionPosition.activeTemplate && templateId !== 1)
+                ) {
+                    styles.gridRowStart = styles.gridRowStart + 1
+                    styles.gridRowEnd = styles.gridRowEnd + 1
+                }
+            }
+        } else {
+            if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
+                (templateId - 1 > discriptionPosition.activeTemplate)
+            ) {
+                styles.gridRowStart = styles.gridRowStart + 1
+                styles.gridRowEnd = styles.gridRowEnd + 1
+            }
         }
-
 
         return styles
     }
@@ -902,15 +924,11 @@ const Page = () => {
                         </button>
                     </div>
                 </div>
-                <div className='container'>
+                <div className={`${styles.mapSection} container`}>
                     <h1 className={styles.titleObj}>
                         География объектов
                     </h1>
-                    <Image
-                        src={mapObj}
-                        alt="mapObj"
-                        className={styles.mapObj}
-                    />
+                    <ProjectMap />
                 </div>
             </main>
         </Suspense>

@@ -1,14 +1,39 @@
+@import "@/styles/mixins.scss";
+
+
 .card {
     max-width: 420px;
     position: relative;
     z-index: 1;
     max-height: 320px;
 
+    @include respond-to("md") {
+        max-width: 100%;
+        width: 100%;
+        height: 656px;
+        max-height: fit-content;
+    }
+
+    @include respond-to("sm") {
+        max-width: 420px;
+        max-height: 320px;
+    }
 }
 
 .img {
     border-radius: 10px;
     width: 100%;
+
+    @include respond-to("md") {
+        height: 100%;
+        
+    }
+
+    @include respond-to("sm") {
+        max-width: 420px;
+
+        max-height: 320px;
+    }
 }
 
 .footer {
