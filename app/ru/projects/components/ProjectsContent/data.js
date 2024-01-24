@@ -35,16 +35,16 @@ import FrutStorage1 from '@/media/img/projects/pojectSlider/sliderFrutStorage/im
 import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image2.png'
 import FrutStorage3 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image3.png'
 import FrutStorage4 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image4.png'
-import FrutStorage5 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image5.jpg'
-import FrutStorage6 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image6.png'
-import FrutStorage7 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image7.jpg'
+import FrutStorage5 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image5.png'
+import FrutStorage6 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image6.jpg'
+import FrutStorage7 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image7.png'
 import FrutStorage8 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image8.jpg'
 import FrutStorage9 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image9.jpg'
 import FrutStorage10 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image10.jpg'
 import FrutStorage11 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image11.jpg'
 import FrutStorage12 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image12.jpg'
 import FrutStorage13 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image13.jpg'
-import FrutStorage14 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image14.png'
+import FrutStorage14 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image14.jpg'
 
 import ChuyGaz1 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image1.jpg'
 import ChuyGaz2 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image2.jpg'
@@ -129,7 +129,6 @@ import AzsGazpromGandi4 from '@/media/img/projects/pojectSlider/sliderAzsGazprom
 import AzsGazpromGandi5 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image5.jpg'
 import AzsGazpromGandi6 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image6.jpg'
 import AzsGazpromGandi7 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image7.jpg'
-import AzsGazpromGandi8 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image8.jpg'
 
 import ChonAryk1 from '@/media/img/projects/pojectSlider/sliderChonAryk/image1.jpg'
 import ChonAryk2 from '@/media/img/projects/pojectSlider/sliderChonAryk/image2.jpg'
@@ -603,7 +602,6 @@ export let baseState = [
                         AzsGazpromGandi5,
                         AzsGazpromGandi6,
                         AzsGazpromGandi7,
-                        AzsGazpromGandi8
                     ],
                 },
             },
