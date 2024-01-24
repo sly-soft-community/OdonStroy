@@ -14,9 +14,18 @@
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.96px;
-    padding: 128px 0 0;
+    padding: 128px 0 24px;
     text-align: center;
-    padding-bottom: 24px;
+
+    @include respond-to("lg") {
+        padding: 116px 0 24px;
+
+    }
+
+    @include respond-to("md") {
+        padding: 72px 0 24px;
+
+    }
 
 }
 
@@ -29,68 +38,19 @@
 
     @include respond-to("lg") {
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
 
     }
+
     @include respond-to("md") {
         grid-template-columns: 1fr;
         justify-items: center;
     }
 }
 
-.largeProject {
-    // grid-column: span 2; 
-    // grid-row: span 2;    
-}
 
-.smallProject {
-    // grid-column: span 1; 
-    // grid-row: span 1; 
-}
 
-// .gridBox1 {
-//     display: grid;
-//     grid-template-columns: minmax(600px, 860px) minmax(350px, 420px);
-//     grid-template-rows: repeat(2, 1fr);
-//     gap: 20px;
-//     // @include respond-to("lg") {
-//     //     grid-template-columns: 1fr 1fr;
-
-//     // }
-// }
-
-// .gridBox2 {
-//     display: grid;
-//     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) minmax(350px, 420px);
-//     gap: 20px;
-//     padding-top: 24px;
-//     // @include respond-to("lg") {
-//     //     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) ;
-//     // }
-// }
-
-// .gridBox3 {
-//     display: grid;
-//     grid-template-rows: repeat(2, 1fr);
-//     grid-template-columns: minmax(350px, 420px) minmax(600px, 860px);
-//     gap: 20px;
-//     padding-top: 24px;
-//     // @include respond-to("lg") {
-//     // grid-template-columns: minmax(350px, 420px) minmax(350px, 420px);
-
-//     // }
-
-// }
-
-// .gridBox4 {
-//     display: grid;
-//     grid-template-columns: minmax(350px, 420px) minmax(350px, 420px) minmax(350px, 420px);
-//     gap: 20px;
-//     padding-top: 24px;
-//     // @include respond-to("lg") {
-//     // grid-template-columns: minmax(350px, 420px) minmax(350px, 420px);
-
-//     // }
-// }
 
 .boxBtn {
     display: flex;
@@ -130,4 +90,18 @@
     max-width: 1300px;
     // width: 100%;
     margin-bottom: 200px;
+}
+
+.mapSection {
+    margin-bottom: 80px;
+
+    @include respond-to("md") {
+        margin-bottom: 56px;
+
+    }
+
+    @include respond-to("sm") {
+        margin-bottom: 32px;
+
+    }
 }

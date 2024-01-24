@@ -17,42 +17,9 @@ function Map() {
     });
 
     const center = {
-        //42.874301, 74.599050
         lat: 42.893498022858616,
         lng: 74.68226654704037,
     };
-
-    useEffect(() => {
-        // gsap.to("#card-wrapper", {
-        //     duration: 10,
-        //     ease: "none",
-        //     repeat: -1,
-        //     scale: 0.2,
-        //     duration: 1.5
-        // })
-        var scales = [{ scale: 0 }, { scale: 1 }];
-
-        // gsap.to('#card-wrapper', {
-        //     motionPath: {
-        //         path: [
-        //             { scale: 0.5, rotation: 160, x: 180 },
-        //             { scale: 0.8, rotation: 280, x: 380, y: 30 },
-        //             { scale: 0.8, rotation: 360, x: 500, y: 60 },
-        //             { scale: 0.8, rotation: 280, x: 320, y: 30 },
-        //             { scale: 0.8, rotation: 280, x: 180, y: 30 },
-        //             { scale: 0.5, rotation: 160, x: 60 },
-
-        //             // { scale: 0.8, rotation: 3 },
-        //         ],
-        //         curviness: 0
-        //     },
-        //     duration: 3,
-        //     ease: "none",
-        //     repeat: -1,
-        //     repeatDelay: 1
-        // });
-
-    }, [isLoaded])
 
     return isLoaded ? (
         <div id='card-wrapper' className={styles.cardWrapper}>

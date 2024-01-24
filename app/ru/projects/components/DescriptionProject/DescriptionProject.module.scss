@@ -1,7 +1,7 @@
 @import "@/styles/mixins.scss";
 
 .wrapper {
-    display: grid;
+    display: none;
     grid-template-columns: 560px minmax(350px, 720px);
     // flex-direction: row;
     // max-width: 1300px;
@@ -10,16 +10,34 @@
     align-items: center;
     width: 100%;
     padding-top: 48px;
+    padding-bottom: 36px;
+    animation: slideout .5s ease-in-out;
+
+    &.active {
+        display: grid;
+        animation: slidein .5s ease-in-out;
+
+    }
 
     @include respond-to("lg") {
-        flex-direction: column;
+        padding-top: 10px;
+        grid-template-columns: minmax(320px, 540px);
 
+    }
+
+    @include respond-to("sm") {
+        max-width: 450px;
     }
 
 }
 
 .contentBox {
     min-width: 530px;
+    margin-bottom: 20px;
+
+    @include respond-to("sm") {
+        min-width: fit-content;
+    }
 }
 
 .title {
@@ -50,6 +68,16 @@
     // gap: 80px;
     text-align: center;
 
+    @include respond-to("sm") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
+        .itemBox__item:nth-child(3) {
+            grid-column: 1 /3;
+        }
+    }
+
 }
 
 .itemBox2 {
@@ -58,6 +86,8 @@
     justify-content: center;
     gap: 80px;
     text-align: center;
+
+
 
 }
 
@@ -89,26 +119,76 @@
     grid-template-columns: 40px minmax(300px, 639px) 40px;
     position: relative;
     gap: 16px;
+
+    @include respond-to("sm") {
+        grid-template-columns: minmax(300px, 639px);
+
+    }
 }
 
 .btn {
     position: relative;
     top: 50%;
     transform: translateY(0%);
+
+    @include respond-to("sm") {
+        display: none;
+    }
 }
 
 .slider {
-    width: 100%; 
-    max-height: 408px; 
+    width: 100%;
+    max-height: 408px;
     border-radius: 10px;
 
 
 }
-// .img {
-//     width: 100%;
-//     max-height: 408px;
-//     height: 100%;
-//     // max-width: 639px;
-    
-// }
 
+.placeholder {
+    min-height: 408px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--02-block-02, #BFD4E4);
+}
+
+.image {
+    width: 100%;
+    max-height: 408px;
+    height: 100%;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(.2);
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: scale(1);
+        display: grid;
+        // background: white;
+        opacity: 1;
+    }
+
+
+    99% {
+        transform: scale(0);
+        opacity: 0;
+        // background: transparent;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+        display: none;
+    }
+}

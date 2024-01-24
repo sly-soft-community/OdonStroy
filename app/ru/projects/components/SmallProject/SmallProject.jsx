@@ -12,16 +12,28 @@ const SmallProject = ({ title, image, setActive, active }) => {
                 className={styles.img}
             />
             <div
-                onClick={() => setActive(!active)}
+                onClick={(e) => {
+                    e.preventDefault()
+                    setActive(!active)
+                }}
+                onSelectS
                 className={styles.footer}>
-                <div className={styles.footer__wrapper}>
-                    <div className={styles.title}>
-                        {title}
+                <div
+                    onClick={e => e.preventDefault()}
+                    className={styles.footer__wrapper}>
+                    <div
+                        onClick={e => e.preventDefault()}
+                        className={styles.title}>
+                        {active ? 'Свернуть' : title}
                     </div>
                     <Image
+                        onClick={e => e.preventDefault()}
                         src={icon}
                         alt="icon"
-                        className={styles.arrow}
+                        className={active ?
+                            `${styles.arrow} ${styles.active}` :
+                            styles.arrow
+                        }
                     />
                 </div>
 

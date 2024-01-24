@@ -11,18 +11,25 @@ const LargeProject = ({ title, image, style, active, setActive }) => {
                 alt=""
                 className={styles.img}
             />
-            <div onClick={() => setActive(!active)}>
-            <div className={styles.footer}>
-                <div className={styles.footer__wrapper}>
-                    <div className={styles.title}>
-                        {title}
-                    </div>
-                    
-
+            <div onClick={(e) => {
+                setActive(!active)
+                e.preventDefault()
+            }}>
+                <div onClick={e => e.preventDefault()} className={styles.footer}>
+                    <div className={styles.footer__wrapper}>
+                        <div
+                            onClick={e => e.preventDefault()}
+                            className={styles.title}>
+                            {active ? 'Свернуть' : title}
+                        </div>
                         <Image
+                            onClick={e => e.preventDefault()}
                             src={icon}
                             alt="icon"
-                            className={styles.arrow}
+                            className={active ?
+                                `${styles.arrow} ${styles.active}` :
+                                styles.arrow
+                            }
                         />
                     </div>
 
