@@ -14,9 +14,18 @@
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.96px;
-    padding: 128px 0 0;
+    padding: 128px 0 24px;
     text-align: center;
-    padding-bottom: 24px;
+
+    @include respond-to("lg") {
+        padding: 116px 0 24px;
+
+    }
+
+    @include respond-to("md") {
+        padding: 72px 0 24px;
+
+    }
 
 }
 
@@ -90,6 +99,7 @@
         margin-bottom: 56px;
 
     }
+
     @include respond-to("sm") {
         margin-bottom: 32px;
 
