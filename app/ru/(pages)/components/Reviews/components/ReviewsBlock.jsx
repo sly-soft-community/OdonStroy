@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./ReviewsBlock.module.scss";
 import Image from "next/image";
+import Button from '@/components/Button/Button';
 
 const ReviewsBlock = ({ item, setActive }) => {
     return (
@@ -20,10 +21,13 @@ const ReviewsBlock = ({ item, setActive }) => {
                         {item}
                     </p>)}
             </div>
-            <button onClick={() => setActive(false )} className={styles.btn}>
-                        Скрыть
-                    </button>
-                
+            {/* <button onClick={() => setActive(false)} className={styles.btn}>
+                Скрыть
+            </button> */}
+            <Button type="readMore" onClick={() => setActive(false)}>
+                Скрыть
+            </Button>
+
         </div>
     );
 };
