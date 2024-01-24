@@ -4,8 +4,7 @@
     padding-bottom: 15px;
     padding-top: 35px;
     background: url('./Union.svg');
-    background-repeat: no-repeat;
-    background-size:cover;
+    background-size: auto 100%;
     margin: auto 0 ;
 
     @include respond-to("md") {
@@ -17,7 +16,7 @@
 .sectionWrapper {
     padding-top: 120px;
     @include respond-to("md") {
-        padding-top: 85px;
+        padding-top: 60px;
         padding-bottom: 25px;
         // display: flex;
         min-height: 100vh;
@@ -46,10 +45,6 @@
 .sliderWrapper {
     padding-bottom: 0px;
 }
-
-
-
-
 
 @include respond-to("sm") {
     .slide {
