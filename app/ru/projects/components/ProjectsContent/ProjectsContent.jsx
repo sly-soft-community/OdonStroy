@@ -7,11 +7,13 @@ import SmallProject from '../SmallProject/SmallProject';
 import DescriptionProject from '../DescriptionProject/DescriptionProject';
 import ProjectMap from '../ProjectMap/ProjectMap';
 import { baseState } from './data';
+import ModalWindow from '@/contact/components/ModalWindow/ModalWindow';
 
 
 
 const ProjectsContent = () => {
     const [data, setData] = useState([...baseState]);
+    const [modalView, setModalView] = useState(false);
     const [discriptionPosition, setDiscriptionPosition] = useState({
         busyRows: 0,
         activeTemplate: 666,
@@ -249,6 +251,9 @@ const ProjectsContent = () => {
     return (
         <Suspense fallback={<div>Загрузка...</div>}>
             <main>
+                <ModalWindow
+                    isOpen={modalView}
+                    setClose={() => setModalView(false)} />
                 <div className='container'>
                     <h1 className={styles.title}>
                         Портфолио наших Проектов
@@ -325,7 +330,7 @@ const ProjectsContent = () => {
 
 
                     <div className={styles.boxBtn}>
-                        <button className={styles.btn}>
+                        <button onClick={() => setModalView(true)} className={styles.btn}>
                             Получить консультацию
                         </button>
                     </div>
