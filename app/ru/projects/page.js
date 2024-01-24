@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense, useEffect } from 'react';
 import { redirect } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive'
 import styles from "./page.module.scss";
@@ -165,7 +165,7 @@ import ProjectMap from './components/ProjectMap/ProjectMap';
 // const DescriptionProject = React.lazy(() => import('./components/DescriptionProject/DescriptionProject'));
 
 const Page = () => {
-    const [data, setData] = useState([
+    let baseState = [
         {
             type: 'large',
             data: [
@@ -666,7 +666,9 @@ const Page = () => {
             ]
         },
 
-    ]);
+    ]
+
+    const [data, setData] = useState([...baseState]);
     const [discriptionPosition, setDiscriptionPosition] = useState({
         busyRows: 0,
         activeTemplate: 666,
@@ -715,13 +717,43 @@ const Page = () => {
         newState.forEach((template, iT) => {
             if (iT < templateKey + 1) {
                 if (isTablet) {
-                    busyRows = busyRows + 1
+                    if (isMobile) {
+                        template.data.forEach ((project, iP) => {
+                            if (iT === templateKey) {
+                                if (iP < projectkey + 1) busyRows = busyRows + 1
+                            }
+                            else {
+                                busyRows = busyRows + 1
+                            }
+                        })
+                     }
+                    else {
+                        busyRows = busyRows + 1
+                        template.data.forEach((project, iP) => {
+                            if (iT === templateKey) {
+                                if (iP < projectkey + 1) {
+                                    if (template.type === 'large') {
+                                        busyRows = busyRows + 0.333
+                                    } else {
+                                        busyRows = busyRows + 0.222
+
+                                    }
+                                }
+                            } else {
+                                busyRows = busyRows + 0.333
+                            }
+                        }
+                        )
+                    }
                 } else {
                     if (template.type === 'small') busyRows = busyRows + 1
                     else busyRows = busyRows + 2
                 }
+                if (template.type === 'small') busyRows = Math.round(busyRows)
             }
         })
+        busyRows = Math.round(busyRows)
+
         newState[templateKey].data[projectkey].active = isActive
         if (!isActive) {
             setTimeout(() => {
@@ -785,8 +817,14 @@ const Page = () => {
             }
         },
         md: {
-            gridRowStart: 1,
-            gridRowEnd: 2,
+            left: {
+                gridRowStart: 1,
+                gridRowEnd: 2,
+            },
+            right: {
+                gridRowStart: 2,
+                gridRowEnd: 3,
+            },
             gridColumnStart: 1,
             gridColumnEnd: 3,
         },
@@ -801,24 +839,20 @@ const Page = () => {
     const styleGenerator = (templateId, position = 'left') => {
         let styles = isTablet ?
             (isMobile ? {
-                gridColumnStart: stylesTemplate.sm.gridColumnStart,
-                gridColumnEnd: stylesTemplate.sm.gridColumnEnd,
-                gridRowStart: templateId > 1 ?
-                    stylesTemplate.sm.gridRowStart + templateId :
-                    stylesTemplate.sm.gridRowStart,
-                gridRowEnd: templateId > 1 ?
-                    stylesTemplate.sm.gridRowEnd + templateId :
-                    stylesTemplate.sm.gridRowEnd,
+                gridColumnStart: 'auto',
+                gridColumnEnd: 'auto',
+                gridRowStart: 'auto',
+                gridRowEnd: 'auto',
             }
                 : {
                     gridColumnStart: stylesTemplate.md.gridColumnStart,
                     gridColumnEnd: stylesTemplate.md.gridColumnEnd,
                     gridRowStart: templateId > 1 ?
-                        stylesTemplate.md.gridRowStart + templateId :
-                        stylesTemplate.md.gridRowStart,
+                        stylesTemplate.md[position].gridRowStart + templateId :
+                        stylesTemplate.md[position].gridRowStart,
                     gridRowEnd: templateId > 1 ?
-                        stylesTemplate.md.gridRowEnd + templateId :
-                        stylesTemplate.md.gridRowEnd,
+                        stylesTemplate.md[position].gridRowEnd + templateId :
+                        stylesTemplate.md[position].gridRowEnd,
                 }
             )
             : {
@@ -834,12 +868,6 @@ const Page = () => {
 
         if (isTablet) {
             if (isMobile) {
-                if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
-                    (templateId - 1 > discriptionPosition.activeTemplate)
-                ) {
-                    styles.gridRowStart = styles.gridRowStart + 1
-                    styles.gridRowEnd = styles.gridRowEnd + 1
-                }
             } else {
                 if ((styles.gridRowStart > discriptionPosition.busyRows + 2 && discriptionPosition.activeTemplate === templateId - 1) ||
                     (discriptionPosition.activeTemplate && templateId !== 1)
@@ -859,6 +887,23 @@ const Page = () => {
 
         return styles
     }
+
+    useEffect(() => {
+        if (isTablet) {
+            if (isMobile) {
+                setData(baseState)
+            } else {
+                let newData = [...data]
+                let newEllement = data[2]
+                newData.splice(2, 1)
+                newData.push(newEllement)
+                setData(newData)
+            }
+        }
+        else {
+            setData(baseState)
+        }
+    }, [window.innerWidth])
 
     return (
         <Suspense fallback={<div>Загрузка...</div>}>
@@ -888,12 +933,32 @@ const Page = () => {
                                         />
                                     ) : (
                                         <SmallProject
-                                            setActive={(isActive) =>
-                                                activeHandler(isActive,
-                                                    templateKey,
-                                                    projectkey,
-                                                    template.type
-                                                )}
+                                            setActive={(isActive) => {
+                                                if (isTablet) {
+                                                    if (isMobile) {
+                                                        activeHandler(isActive,
+                                                            templateKey,
+                                                            projectkey,
+                                                            template.type
+                                                        )
+                                                    }
+                                                    else {
+                                                        if (project.id !== 12) {
+                                                            activeHandler(isActive,
+                                                                templateKey,
+                                                                projectkey,
+                                                                template.type
+                                                            )
+                                                        }
+                                                    }
+                                                } else {
+                                                    activeHandler(isActive,
+                                                        templateKey,
+                                                        projectkey,
+                                                        template.type
+                                                    )
+                                                }
+                                            }}
                                             key={project.id}
                                             title={project.title}
                                             image={project.image}
