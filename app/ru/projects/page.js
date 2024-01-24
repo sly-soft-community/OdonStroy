@@ -718,7 +718,7 @@ const Page = () => {
             if (iT < templateKey + 1) {
                 if (isTablet) {
                     if (isMobile) {
-                        template.data.forEach ((project, iP) => {
+                        template.data.forEach((project, iP) => {
                             if (iT === templateKey) {
                                 if (iP < projectkey + 1) busyRows = busyRows + 1
                             }
@@ -726,7 +726,7 @@ const Page = () => {
                                 busyRows = busyRows + 1
                             }
                         })
-                     }
+                    }
                     else {
                         busyRows = busyRows + 1
                         template.data.forEach((project, iP) => {
@@ -903,7 +903,7 @@ const Page = () => {
         else {
             setData(baseState)
         }
-    }, [window.innerWidth])
+    }, [isTablet, isMobile])
 
     return (
         <Suspense fallback={<div>Загрузка...</div>}>
