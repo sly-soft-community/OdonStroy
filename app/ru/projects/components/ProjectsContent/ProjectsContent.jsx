@@ -8,6 +8,7 @@ import DescriptionProject from '../DescriptionProject/DescriptionProject';
 import ProjectMap from '../ProjectMap/ProjectMap';
 import { baseState } from './data';
 import ModalWindow from '@/contact/components/ModalWindow/ModalWindow';
+import Button from '@/components/Button/Button';
 
 
 
@@ -330,9 +331,9 @@ const ProjectsContent = () => {
 
 
                     <div className={styles.boxBtn}>
-                        <button onClick={() => setModalView(true)} className={styles.btn}>
-                            Получить консультацию
-                        </button>
+                        <Button  onClick={() => setModalView(true)} >
+                        Получить консультацию
+                        </Button>
                     </div>
                 </div>
                 <div className={`${styles.mapSection} container`}>
