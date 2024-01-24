@@ -12,137 +12,137 @@ import projectsLarge1 from '@/media/img/projects/projectsLarge1.png'
 import projectsLarge2 from '@/media/img/projects/projectsLarge2.png'
 
 import FokGazprom1 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image1.jpg'
-// import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
-// import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image3.jpg'
-// import FokGazprom4 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image4.jpg'
-// import FokGazprom5 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image5.jpg'
-// import FokGazprom6 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image6.jpg'
-// import FokGazprom7 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image7.jpg'
-// import FokGazprom8 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image8.jpg'
-// import FokGazprom9 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image9.jpg'
-// import FokGazprom10 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image10.jpg'
-// import FokGazprom11 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image11.jpg'
+import FokGazprom2 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image2.jpg'
+import FokGazprom3 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image3.jpg'
+import FokGazprom4 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image4.jpg'
+import FokGazprom5 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image5.jpg'
+import FokGazprom6 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image6.jpg'
+import FokGazprom7 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image7.jpg'
+import FokGazprom8 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image8.jpg'
+import FokGazprom9 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image9.jpg'
+import FokGazprom10 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image10.jpg'
+import FokGazprom11 from '@/media/img/projects/pojectSlider/sliderFokGazprom/image11.jpg'
 
 import UlanGazprom1 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image1.jpg'
-// import UlanGazprom2 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image2.jpg'
-// import UlanGazprom3 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image3.jpg'
-// import UlanGazprom4 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image4.jpg'
-// import UlanGazprom5 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image5.jpg'
-// import UlanGazprom6 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image6.jpg'
-// import UlanGazprom7 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image7.jpg'
+import UlanGazprom2 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image2.jpg'
+import UlanGazprom3 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image3.jpg'
+import UlanGazprom4 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image4.jpg'
+import UlanGazprom5 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image5.jpg'
+import UlanGazprom6 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image6.jpg'
+import UlanGazprom7 from '@/media/img/projects/pojectSlider/sliderUlanGazprom/image7.jpg'
 
 import FrutStorage1 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image1.jpg'
-// import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image2.jpg'
-// import FrutStorage3 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image3.png'
-// import FrutStorage4 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image4.png'
-// import FrutStorage5 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image5.jpg'
-// import FrutStorage6 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image6.png'
-// import FrutStorage7 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image7.jpg'
-// import FrutStorage8 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image8.jpg'
-// import FrutStorage9 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image9.jpg'
-// import FrutStorage10 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image10.jpg'
-// import FrutStorage11 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image11.jpg'
-// import FrutStorage12 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image12.jpg'
-// import FrutStorage13 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image13.jpg'
-// import FrutStorage14 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image14.png'
+import FrutStorage2 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image2.png'
+import FrutStorage3 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image3.png'
+import FrutStorage4 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image4.png'
+import FrutStorage5 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image5.jpg'
+import FrutStorage6 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image6.png'
+import FrutStorage7 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image7.jpg'
+import FrutStorage8 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image8.jpg'
+import FrutStorage9 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image9.jpg'
+import FrutStorage10 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image10.jpg'
+import FrutStorage11 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image11.jpg'
+import FrutStorage12 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image12.jpg'
+import FrutStorage13 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image13.jpg'
+import FrutStorage14 from '@/media/img/projects/pojectSlider/sliderFrutStorage/image14.png'
 
 import ChuyGaz1 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image1.jpg'
-// import ChuyGaz2 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image2.jpg'
-// import ChuyGaz3 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image3.jpg'
-// import ChuyGaz4 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image4.jpg'
-// import ChuyGaz5 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image5.jpg'
-// import ChuyGaz6 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image6.jpg'
-// import ChuyGaz7 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image7.jpg'
+import ChuyGaz2 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image2.jpg'
+import ChuyGaz3 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image3.jpg'
+import ChuyGaz4 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image4.jpg'
+import ChuyGaz5 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image5.jpg'
+import ChuyGaz6 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image6.jpg'
+import ChuyGaz7 from '@/media/img/projects/pojectSlider/sliderChuyGaz/image7.jpg'
 
 import SchoolStadion1 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image1.jpg'
-// import SchoolStadion2 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image2.jpg'
-// import SchoolStadion3 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image3.jpg'
-// import SchoolStadion4 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image4.jpg'
-// import SchoolStadion5 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image5.jpg'
-// import SchoolStadion6 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image6.jpg'
-// import SchoolStadion7 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image7.jpg'
-// import SchoolStadion8 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image8.jpg'
+import SchoolStadion2 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image2.jpg'
+import SchoolStadion3 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image3.jpg'
+import SchoolStadion4 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image4.jpg'
+import SchoolStadion5 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image5.jpg'
+import SchoolStadion6 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image6.jpg'
+import SchoolStadion7 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image7.jpg'
+import SchoolStadion8 from '@/media/img/projects/pojectSlider/sliderSchoolStadion/image8.jpg'
 
 import AzsGazprom1 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image1.jpg'
-// import AzsGazprom2 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image2.jpg'
-// import AzsGazprom3 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image3.jpg'
-// import AzsGazprom4 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image4.jpg'
-// import AzsGazprom5 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image5.jpg'
-// import AzsGazprom6 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image6.jpg'
-// import AzsGazprom7 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image7.jpg'
+import AzsGazprom2 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image2.jpg'
+import AzsGazprom3 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image3.jpg'
+import AzsGazprom4 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image4.jpg'
+import AzsGazprom5 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image5.jpg'
+import AzsGazprom6 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image6.jpg'
+import AzsGazprom7 from '@/media/img/projects/pojectSlider/sliderAzsGazprom/image7.jpg'
 
 import Salih1 from '@/media/img/projects/pojectSlider/sliderSalih/image1.jpg'
-// import Salih2 from '@/media/img/projects/pojectSlider/sliderSalih/image2.jpg'
-// import Salih3 from '@/media/img/projects/pojectSlider/sliderSalih/image3.jpg'
-// import Salih4 from '@/media/img/projects/pojectSlider/sliderSalih/image4.jpg'
-// import Salih5 from '@/media/img/projects/pojectSlider/sliderSalih/image5.jpg'
-// import Salih6 from '@/media/img/projects/pojectSlider/sliderSalih/image6.jpg'
-// import Salih7 from '@/media/img/projects/pojectSlider/sliderSalih/image7.jpg'
-// import Salih8 from '@/media/img/projects/pojectSlider/sliderSalih/image8.jpg'
-// import Salih9 from '@/media/img/projects/pojectSlider/sliderSalih/image9.jpg'
-// import Salih10 from '@/media/img/projects/pojectSlider/sliderSalih/image10.jpg'
-// import Salih11 from '@/media/img/projects/pojectSlider/sliderSalih/image11.jpg'
-// import Salih12 from '@/media/img/projects/pojectSlider/sliderSalih/image12.jpg'
-// import Salih13 from '@/media/img/projects/pojectSlider/sliderSalih/image13.jpg'
-// import Salih14 from '@/media/img/projects/pojectSlider/sliderSalih/image14.jpg'
-// import Salih15 from '@/media/img/projects/pojectSlider/sliderSalih/image15.png'
-// import Salih16 from '@/media/img/projects/pojectSlider/sliderSalih/image16.png'
-// import Salih17 from '@/media/img/projects/pojectSlider/sliderSalih/image17.png'
-// import Salih18 from '@/media/img/projects/pojectSlider/sliderSalih/image18.jpg'
-// import Salih19 from '@/media/img/projects/pojectSlider/sliderSalih/image19.jpg'
-// import Salih20 from '@/media/img/projects/pojectSlider/sliderSalih/image20.jpg'
-// import Salih21 from '@/media/img/projects/pojectSlider/sliderSalih/image21.jpg'
+import Salih2 from '@/media/img/projects/pojectSlider/sliderSalih/image2.jpg'
+import Salih3 from '@/media/img/projects/pojectSlider/sliderSalih/image3.jpg'
+import Salih4 from '@/media/img/projects/pojectSlider/sliderSalih/image4.jpg'
+import Salih5 from '@/media/img/projects/pojectSlider/sliderSalih/image5.jpg'
+import Salih6 from '@/media/img/projects/pojectSlider/sliderSalih/image6.jpg'
+import Salih7 from '@/media/img/projects/pojectSlider/sliderSalih/image7.jpg'
+import Salih8 from '@/media/img/projects/pojectSlider/sliderSalih/image8.jpg'
+import Salih9 from '@/media/img/projects/pojectSlider/sliderSalih/image9.jpg'
+import Salih10 from '@/media/img/projects/pojectSlider/sliderSalih/image10.jpg'
+import Salih11 from '@/media/img/projects/pojectSlider/sliderSalih/image11.jpg'
+import Salih12 from '@/media/img/projects/pojectSlider/sliderSalih/image12.jpg'
+import Salih13 from '@/media/img/projects/pojectSlider/sliderSalih/image13.jpg'
+import Salih14 from '@/media/img/projects/pojectSlider/sliderSalih/image14.jpg'
+import Salih15 from '@/media/img/projects/pojectSlider/sliderSalih/image15.png'
+import Salih16 from '@/media/img/projects/pojectSlider/sliderSalih/image16.png'
+import Salih17 from '@/media/img/projects/pojectSlider/sliderSalih/image17.png'
+import Salih18 from '@/media/img/projects/pojectSlider/sliderSalih/image18.jpg'
+import Salih19 from '@/media/img/projects/pojectSlider/sliderSalih/image19.jpg'
+import Salih20 from '@/media/img/projects/pojectSlider/sliderSalih/image20.jpg'
+import Salih21 from '@/media/img/projects/pojectSlider/sliderSalih/image21.jpg'
 
 import Severtransgaz1 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image1.jpg'
-// import Severtransgaz2 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image2.jpg'
-// import Severtransgaz3 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image3.jpg'
-// import Severtransgaz4 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image4.jpg'
-// import Severtransgaz5 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image5.jpg'
-// import Severtransgaz6 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image6.jpg'
-// import Severtransgaz7 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image7.jpg'
-// import Severtransgaz8 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image8.jpg'
-// import Severtransgaz9 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image9.jpg'
-// import Severtransgaz10 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image10.jpg'
-// import Severtransgaz11 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image11.jpg'
-// import Severtransgaz12 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image12.jpg'
+import Severtransgaz2 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image2.jpg'
+import Severtransgaz3 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image3.jpg'
+import Severtransgaz4 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image4.jpg'
+import Severtransgaz5 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image5.jpg'
+import Severtransgaz6 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image6.jpg'
+import Severtransgaz7 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image7.jpg'
+import Severtransgaz8 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image8.jpg'
+import Severtransgaz9 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image9.jpg'
+import Severtransgaz10 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image10.jpg'
+import Severtransgaz11 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image11.jpg'
+import Severtransgaz12 from '@/media/img/projects/pojectSlider/sliderSevertransgaz/image12.jpg'
 
 import AzsBatora1 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image1.jpg'
-// import AzsBatora2 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image2.jpg'
-// import AzsBatora3 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image3.jpg'
-// import AzsBatora4 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image4.jpg'
-// import AzsBatora5 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image5.jpg'
-// import AzsBatora6 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image6.jpg'
-// import AzsBatora7 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image7.jpg'
-// import AzsBatora8 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image8.jpg'
+import AzsBatora2 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image2.jpg'
+import AzsBatora3 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image3.jpg'
+import AzsBatora4 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image4.jpg'
+import AzsBatora5 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image5.jpg'
+import AzsBatora6 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image6.jpg'
+import AzsBatora7 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image7.jpg'
+import AzsBatora8 from '@/media/img/projects/pojectSlider/sliderAzsBatora/image8.jpg'
 
 import GazFere1 from '@/media/img/projects/pojectSlider/sliderGazFere/image1.jpg'
-// import GazFere2 from '@/media/img/projects/pojectSlider/sliderGazFere/image2.jpg'
-// import GazFere3 from '@/media/img/projects/pojectSlider/sliderGazFere/image3.jpg'
-// import GazFere4 from '@/media/img/projects/pojectSlider/sliderGazFere/image4.jpg'
-// import GazFere5 from '@/media/img/projects/pojectSlider/sliderGazFere/image5.jpg'
-// import GazFere6 from '@/media/img/projects/pojectSlider/sliderGazFere/image6.jpg'
+import GazFere2 from '@/media/img/projects/pojectSlider/sliderGazFere/image2.jpg'
+import GazFere3 from '@/media/img/projects/pojectSlider/sliderGazFere/image3.jpg'
+import GazFere4 from '@/media/img/projects/pojectSlider/sliderGazFere/image4.jpg'
+import GazFere5 from '@/media/img/projects/pojectSlider/sliderGazFere/image5.jpg'
+import GazFere6 from '@/media/img/projects/pojectSlider/sliderGazFere/image6.jpg'
 
 import AzsGazpromGandi1 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image1.jpg'
-// import AzsGazpromGandi2 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image2.jpg'
-// import AzsGazpromGandi3 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image3.jpg'
-// import AzsGazpromGandi4 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image4.jpg'
-// import AzsGazpromGandi5 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image5.jpg'
-// import AzsGazpromGandi6 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image6.jpg'
-// import AzsGazpromGandi7 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image7.jpg'
-// import AzsGazpromGandi8 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image8.jpg'
+import AzsGazpromGandi2 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image2.jpg'
+import AzsGazpromGandi3 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image3.jpg'
+import AzsGazpromGandi4 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image4.jpg'
+import AzsGazpromGandi5 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image5.jpg'
+import AzsGazpromGandi6 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image6.jpg'
+import AzsGazpromGandi7 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image7.jpg'
+import AzsGazpromGandi8 from '@/media/img/projects/pojectSlider/sliderAzsGazpromGandi/image8.jpg'
 
 import ChonAryk1 from '@/media/img/projects/pojectSlider/sliderChonAryk/image1.jpg'
-// import ChonAryk2 from '@/media/img/projects/pojectSlider/sliderChonAryk/image2.jpg'
-// import ChonAryk3 from '@/media/img/projects/pojectSlider/sliderChonAryk/image3.jpg'
-// import ChonAryk4 from '@/media/img/projects/pojectSlider/sliderChonAryk/image4.jpg'
-// import ChonAryk5 from '@/media/img/projects/pojectSlider/sliderChonAryk/image5.jpg'
-// import ChonAryk6 from '@/media/img/projects/pojectSlider/sliderChonAryk/image6.jpg'
-// import ChonAryk7 from '@/media/img/projects/pojectSlider/sliderChonAryk/image7.jpg'
-// import ChonAryk8 from '@/media/img/projects/pojectSlider/sliderChonAryk/image8.jpg'
-// import ChonAryk9 from '@/media/img/projects/pojectSlider/sliderChonAryk/image9.jpg'
-// import ChonAryk10 from '@/media/img/projects/pojectSlider/sliderChonAryk/image10.jpg'
-// import ChonAryk11 from '@/media/img/projects/pojectSlider/sliderChonAryk/image11.jpg'
-// import ChonAryk12 from '@/media/img/projects/pojectSlider/sliderChonAryk/image12.jpg'
+import ChonAryk2 from '@/media/img/projects/pojectSlider/sliderChonAryk/image2.jpg'
+import ChonAryk3 from '@/media/img/projects/pojectSlider/sliderChonAryk/image3.jpg'
+import ChonAryk4 from '@/media/img/projects/pojectSlider/sliderChonAryk/image4.jpg'
+import ChonAryk5 from '@/media/img/projects/pojectSlider/sliderChonAryk/image5.jpg'
+import ChonAryk6 from '@/media/img/projects/pojectSlider/sliderChonAryk/image6.jpg'
+import ChonAryk7 from '@/media/img/projects/pojectSlider/sliderChonAryk/image7.jpg'
+import ChonAryk8 from '@/media/img/projects/pojectSlider/sliderChonAryk/image8.jpg'
+import ChonAryk9 from '@/media/img/projects/pojectSlider/sliderChonAryk/image9.jpg'
+import ChonAryk10 from '@/media/img/projects/pojectSlider/sliderChonAryk/image10.jpg'
+import ChonAryk11 from '@/media/img/projects/pojectSlider/sliderChonAryk/image11.jpg'
+import ChonAryk12 from '@/media/img/projects/pojectSlider/sliderChonAryk/image12.jpg'
 
 
 
@@ -183,16 +183,16 @@ export let baseState = [
                     ],
                     sliderImages: [
                         FokGazprom1,
-                        // FokGazprom2,
-                        // FokGazprom3,
-                        // FokGazprom4,
-                        // FokGazprom5,
-                        // FokGazprom6,
-                        // FokGazprom7,
-                        // FokGazprom8,
-                        // FokGazprom9,
-                        // FokGazprom10,
-                        // FokGazprom11
+                        FokGazprom2,
+                        FokGazprom3,
+                        FokGazprom4,
+                        FokGazprom5,
+                        FokGazprom6,
+                        FokGazprom7,
+                        FokGazprom8,
+                        FokGazprom9,
+                        FokGazprom10,
+                        FokGazprom11
                     ],
                 },
                 style: {
@@ -229,12 +229,12 @@ export let baseState = [
                     ],
                     sliderImages: [
                         UlanGazprom1,
-                        // UlanGazprom2,
-                        // UlanGazprom3,
-                        // UlanGazprom4,
-                        // UlanGazprom5,
-                        // UlanGazprom6,
-                        // UlanGazprom7
+                        UlanGazprom2,
+                        UlanGazprom3,
+                        UlanGazprom4,
+                        UlanGazprom5,
+                        UlanGazprom6,
+                        UlanGazprom7
                     ],
                 },
             },
@@ -261,19 +261,19 @@ export let baseState = [
                     ],
                     sliderImages: [
                         FrutStorage1,
-                        // FrutStorage2,
-                        // FrutStorage3,
-                        // FrutStorage4,
-                        // FrutStorage5,
-                        // FrutStorage6,
-                        // FrutStorage7,
-                        // FrutStorage8,
-                        // FrutStorage9,
-                        // FrutStorage10,
-                        // FrutStorage11,
-                        // FrutStorage12,
-                        // FrutStorage13,
-                        // FrutStorage14
+                        FrutStorage2,
+                        FrutStorage3,
+                        FrutStorage4,
+                        FrutStorage5,
+                        FrutStorage6,
+                        FrutStorage7,
+                        FrutStorage8,
+                        FrutStorage9,
+                        FrutStorage10,
+                        FrutStorage11,
+                        FrutStorage12,
+                        FrutStorage13,
+                        FrutStorage14
                     ],
                 },
             },
@@ -308,12 +308,12 @@ export let baseState = [
                     ],
                     sliderImages: [
                         ChuyGaz1,
-                        // ChuyGaz2,
-                        // ChuyGaz3,
-                        // ChuyGaz4,
-                        // ChuyGaz5,
-                        // ChuyGaz6,
-                        // ChuyGaz7
+                        ChuyGaz2,
+                        ChuyGaz3,
+                        ChuyGaz4,
+                        ChuyGaz5,
+                        ChuyGaz6,
+                        ChuyGaz7
                     ],
                 },
             },
@@ -346,13 +346,13 @@ export let baseState = [
                     ],
                     sliderImages: [
                         SchoolStadion1,
-                        // SchoolStadion2,
-                        // SchoolStadion3,
-                        // SchoolStadion4,
-                        // SchoolStadion5,
-                        // SchoolStadion6,
-                        // SchoolStadion7,
-                        // SchoolStadion8
+                        SchoolStadion2,
+                        SchoolStadion3,
+                        SchoolStadion4,
+                        SchoolStadion5,
+                        SchoolStadion6,
+                        SchoolStadion7,
+                        SchoolStadion8
                     ],
                 },
             },
@@ -385,12 +385,12 @@ export let baseState = [
                     ],
                     sliderImages: [
                         AzsGazprom1,
-                        // AzsGazprom2,
-                        // AzsGazprom3,
-                        // AzsGazprom4,
-                        // AzsGazprom5,
-                        // AzsGazprom6,
-                        // AzsGazprom7
+                        AzsGazprom2,
+                        AzsGazprom3,
+                        AzsGazprom4,
+                        AzsGazprom5,
+                        AzsGazprom6,
+                        AzsGazprom7
                     ],
                 },
             },
@@ -429,26 +429,26 @@ export let baseState = [
                     ],
                     sliderImages: [
                         Salih1,
-                        // Salih2,
-                        // Salih3,
-                        // Salih4,
-                        // Salih5,
-                        // Salih6,
-                        // Salih7,
-                        // Salih8,
-                        // Salih9,
-                        // Salih10,
-                        // Salih11,
-                        // Salih12,
-                        // Salih13,
-                        // Salih14,
-                        // Salih15,
-                        // Salih16,
-                        // Salih17,
-                        // Salih18,
-                        // Salih19,
-                        // Salih20,
-                        // Salih21
+                        Salih2,
+                        Salih3,
+                        Salih4,
+                        Salih5,
+                        Salih6,
+                        Salih7,
+                        Salih8,
+                        Salih9,
+                        Salih10,
+                        Salih11,
+                        Salih12,
+                        Salih13,
+                        Salih14,
+                        Salih15,
+                        Salih16,
+                        Salih17,
+                        Salih18,
+                        Salih19,
+                        Salih20,
+                        Salih21
                     ],
                 },
             },
@@ -476,17 +476,17 @@ export let baseState = [
                     ],
                     sliderImages: [
                         Severtransgaz1,
-                        // Severtransgaz2,
-                        // Severtransgaz3,
-                        // Severtransgaz4,
-                        // Severtransgaz5,
-                        // Severtransgaz6,
-                        // Severtransgaz7,
-                        // Severtransgaz8,
-                        // Severtransgaz9,
-                        // Severtransgaz10,
-                        // Severtransgaz11,
-                        // Severtransgaz12
+                        Severtransgaz2,
+                        Severtransgaz3,
+                        Severtransgaz4,
+                        Severtransgaz5,
+                        Severtransgaz6,
+                        Severtransgaz7,
+                        Severtransgaz8,
+                        Severtransgaz9,
+                        Severtransgaz10,
+                        Severtransgaz11,
+                        Severtransgaz12
                     ],
                 },
             },
@@ -522,13 +522,13 @@ export let baseState = [
                     ],
                     sliderImages: [
                         AzsBatora1,
-                        // AzsBatora2,
-                        // AzsBatora3,
-                        // AzsBatora4,
-                        // AzsBatora5,
-                        // AzsBatora6,
-                        // AzsBatora7,
-                        // AzsBatora8
+                        AzsBatora2,
+                        AzsBatora3,
+                        AzsBatora4,
+                        AzsBatora5,
+                        AzsBatora6,
+                        AzsBatora7,
+                        AzsBatora8
                     ],
                 },
             },
@@ -560,11 +560,11 @@ export let baseState = [
                     ],
                     sliderImages: [
                         GazFere1,
-                        // GazFere2,
-                        // GazFere3,
-                        // GazFere4,
-                        // GazFere5,
-                        // GazFere6
+                        GazFere2,
+                        GazFere3,
+                        GazFere4,
+                        GazFere5,
+                        GazFere6
                     ],
                 },
             },
@@ -597,13 +597,13 @@ export let baseState = [
                     ],
                     sliderImages: [
                         AzsGazpromGandi1,
-                        // AzsGazpromGandi2,
-                        // AzsGazpromGandi3,
-                        // AzsGazpromGandi4,
-                        // AzsGazpromGandi5,
-                        // AzsGazpromGandi6,
-                        // AzsGazpromGandi7,
-                        // AzsGazpromGandi8
+                        AzsGazpromGandi2,
+                        AzsGazpromGandi3,
+                        AzsGazpromGandi4,
+                        AzsGazpromGandi5,
+                        AzsGazpromGandi6,
+                        AzsGazpromGandi7,
+                        AzsGazpromGandi8
                     ],
                 },
             },
@@ -631,17 +631,17 @@ export let baseState = [
                     ],
                     sliderImages: [
                         ChonAryk1,
-                        // ChonAryk2,
-                        // ChonAryk3,
-                        // ChonAryk4,
-                        // ChonAryk5,
-                        // ChonAryk6,
-                        // ChonAryk7,
-                        // ChonAryk8,
-                        // ChonAryk9,
-                        // ChonAryk10,
-                        // ChonAryk11,
-                        // ChonAryk12
+                        ChonAryk2,
+                        ChonAryk3,
+                        ChonAryk4,
+                        ChonAryk5,
+                        ChonAryk6,
+                        ChonAryk7,
+                        ChonAryk8,
+                        ChonAryk9,
+                        ChonAryk10,
+                        ChonAryk11,
+                        ChonAryk12
                     ],
                 },
             }
