@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import styles from "./DescriptionProject.module.scss";
 import Image from 'next/image';
-
 import leftArrow from './leftArrow.svg'
 import rightArrow from './rightArrow.svg'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -62,7 +61,7 @@ const DescriptionProject = ({ project, style, isActive }) => {
                 <div className={project.projectDetail.itemProjects.length === 3 ?
                     styles.itemBox : styles.itemBox2}>
                     {project.projectDetail.itemProjects.map((item, i) =>
-                        <div key={i}>
+                        <div className={styles.itemBox__item} key={i}>
                             <div className={styles.item}>{item.label}</div>
                             <div className={styles.info}>{item.value}{item.unitMash}</div>
                         </div>
