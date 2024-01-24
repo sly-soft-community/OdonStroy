@@ -7,6 +7,7 @@ import { useFormik } from 'formik'
 import img from '@/media/img/contacts/contact.svg'
 import emailjs from "@emailjs/browser";
 import { useMask } from '@react-input/mask';
+import Button from '@/components/Button/Button';
 
 
 const ModalWindow = ({ setClose, isOpen }) => {
@@ -118,11 +119,9 @@ const ModalWindow = ({ setClose, isOpen }) => {
                                     }}
                                 />
                             </div>
-                            <button
-                                className={styles.form__btn}
-                                type="submit">
+                            <Button type="submitForm" onClick={() => {}} disabled={!formik.values.submitPrivacyPolicy}>
                                 Отправить форму
-                            </button>
+                            </Button>
                         </div>
                     </form>
                 </div>
