@@ -8,6 +8,7 @@ import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import loaderImg from "@/media/icons/my-loader.svg"
 import { useMask } from '@react-input/mask';
+import Button from '@/components/Button/Button';
 
 
 const Сontacts = () => {
@@ -55,7 +56,7 @@ const Сontacts = () => {
         <section className={styles.section} >
             <h2 className='title'>Возник вопрос? – Напишите нам!</h2>
             <div className={styles.contant}>
-                <div className={styles.contant__popFolter}/>
+                <div className={styles.contant__popFolter} />
                 <form className={styles.box} onSubmit={formik.handleSubmit}>
                     <div className={styles.form__wrapper}>
                         <div className={styles.form__row}>
@@ -111,18 +112,10 @@ const Сontacts = () => {
                                 onClick={e => formik.setFieldValue('submitNewsletter', e)} // Исправлено имя поля с 'submitPrivacyPolicy' на 'submitNewsletter'
                             />
                         </div> */}
-                        <button
-                            className={formik.values.submitPrivacyPolicy ? `${styles.form__btn} ${styles.active}` : styles.form__btn}
-                            type="submit">
-                            <span>
-                                Отправить форму
-                            </span>
-                            {loader ? <Image
-                                src={loaderImg}
-                                alt="partner image"
-                                className={styles.loader}
-                            /> : ''}
-                        </button>
+                        
+                        <Button type="submitForm" onClick={() => { }} disabled={!formik.values.submitPrivacyPolicy}>
+                            Отправить форму
+                        </Button>
                     </div>
                 </form>
                 <div className={styles.imageBox}>

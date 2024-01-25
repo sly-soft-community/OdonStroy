@@ -9,6 +9,7 @@ import Footer from '@/components/Footer/Footer';
 import emailjs from "@emailjs/browser";
 import loaderImg from "@/media/icons/my-loader.svg"
 import { useMask } from '@react-input/mask';
+import Button from '@/components/Button/Button';
 
 
 const Сontacts = ({ openModal }) => {
@@ -112,18 +113,10 @@ const Сontacts = ({ openModal }) => {
                                     }}
                                 />
                             </div>
-                            <button
-                                className={formik.values.submitPrivacyPolicy? `${styles.form__btn} ${styles.active}` : styles.form__btn}
-                                type="submit">
-                                <span>
-                                    Отправить форму
-                                </span>
-                                {loader ? <Image
-                                    src={loaderImg}
-                                    alt="partner image"
-                                    className={styles.loader}
-                                /> : ''}
-                            </button>
+                            <Button type="submitForm" onClick={() => {}} disabled={!formik.values.submitPrivacyPolicy}>
+                                Отправить форму
+                            </Button>
+
                         </div>
                     </form>
                 </div>

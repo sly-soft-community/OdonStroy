@@ -4,6 +4,7 @@ import styles from "./ServiceCard.module.scss";
 import Image from "next/image";
 import icon from '@/media/icons/ServiceArrow.svg'
 import { useState } from "react";
+import Button from "@/components/Button/Button";
 
 const ServiceCard = ({ img, value, goToContact, contant = { title: "", text: '' } }) => {
     const [open, setOpen] = useState(false)
@@ -21,7 +22,9 @@ const ServiceCard = ({ img, value, goToContact, contant = { title: "", text: '' 
                     <div className={styles.popBox__text}>{contant.text}</div>
                 </div>
                 <div className={styles.popBox__footer}>
-                    <button onClick={() => goToContact()} className={styles.popBox__btn}>Получить консультацию</button>
+                    <Button  onClick={() => goToContact()} >
+                    Получить консультацию
+                    </Button>
                 </div>
             </div>
             <div className={styles.card__iconWrapper}>
